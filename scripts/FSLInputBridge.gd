@@ -1,26 +1,32 @@
 extends Node
 
 signal sign_received(sign_id)
-
-var active = false
-var sign_map = {}
-
-func _on_dialogue_start():
-	active = true
-
-func _on_dialogue_end():
-	active = false
+signal letter_received(letter)
 
 
-func on_sign_detected(sign_id: String):
-
-	if !active:
+func receive_sign(sign_id: String):
+	if not DialogueManager.active and not GameManager.has_active_challenge():
 		return
 
 	sign_received.emit(sign_id)
+	if GameManager.has_active_challenge():
+		GameManager.submit_sign(sign_id)
+		return
 
-	if sign_id in sign_map:
-		var choice_index = sign_map[sign_id]
-		DialogueManager.choose(choice_index)
-		
-		
+	DialogueManager.process_sign(sign_id)
+
+
+func receive_letter(letter: String):
+	if not GameManager.has_active_challenge():
+		return
+
+	var normalized_letter = SignProcessor.normalize_letter_input(letter)
+	if normalized_letter.is_empty():
+		return
+
+	letter_received.emit(normalized_letter)
+	GameManager.submit_letter(normalized_letter)
+
+
+func on_sign_detected(sign_id: String):
+	receive_sign(sign_id)

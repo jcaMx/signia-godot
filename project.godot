@@ -19,11 +19,13 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://bhos21hticimx"
 FslInputBridge="*uid://u68k45l17vjv"
+GameManager="*uid://dvi64kaqbdj2r"
+SignProcessor="*uid://blipsq3j2jr36"
 
 [display]
 
-window/size/viewport_width=450
-window/size/viewport_height=271
+window/size/viewport_width=456
+window/size/viewport_height=273
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"

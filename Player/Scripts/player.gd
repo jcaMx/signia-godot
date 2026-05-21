@@ -7,11 +7,14 @@ var waypoints = []
 var current_index = 0
 var last_direction = Vector2.DOWN
 var can_move = true
+var waiting_for_continue_input := false
 
 @onready var sprite = $AnimatedSprite2D
 
 
 func _ready():
+	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
+		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 	# Get all waypoint nodes
 	waypoints = get_parent().get_node("Waypoints").get_children()
@@ -21,8 +24,10 @@ func _ready():
 		print("No waypoints found!")
 
 
-func _physics_process(delta):
-	if !can_move:
+func _physics_process(_delta):
+	_advance_waypoint_if_reached()
+
+	if DialogueManager.active or waiting_for_continue_input or not can_move:
 		velocity = Vector2.ZERO
 		play_idle_animation()
 		move_and_slide()
@@ -66,8 +71,34 @@ func _physics_process(delta):
 	update_animation(direction)
 
 	# Check if waypoint reached
+	_advance_waypoint_if_reached()
+
+
+func _advance_waypoint_if_reached():
+	if waypoints.is_empty():
+		return
+
+	if current_index >= waypoints.size():
+		return
+
+	var target = waypoints[current_index].global_position
 	if global_position.distance_to(target) < 5:
 		current_index += 1
+
+
+func _unhandled_input(event):
+	if not waiting_for_continue_input:
+		return
+
+	if event is InputEventKey and event.pressed and not event.echo:
+		waiting_for_continue_input = false
+		DialogueManager.consume_player_continue_request()
+		get_viewport().set_input_as_handled()
+
+
+func _on_dialogue_ended():
+	if DialogueManager.should_wait_for_player_continue():
+		waiting_for_continue_input = true
 
 
 func update_animation(direction):
@@ -106,17 +137,3 @@ func play_idle_animation():
 			sprite.play("idle_down")
 		else:
 			sprite.play("idle_up")
-
-func _input(event):
-
-	if event.is_action_pressed("interact"):
-
-		var npcs = get_tree().get_nodes_in_group("npc")
-
-		for npc in npcs:
-
-			if npc.player_inside:
-
-				can_move = false
-
-				print("Start Dialogue")

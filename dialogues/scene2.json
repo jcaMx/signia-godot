@@ -1,0 +1,221 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Pagdating ni Leo sa silangang bahagi ng baryo, napansin niyang mas tahimik doon kumpara sa plaza. Mahina ang ihip ng hangin habang unti-unting lumulubog ang araw.",
+	"next": 1
+  },
+
+  {
+	"id": 1,
+	"type": "narrator",
+	"text": "Sa ilalim ng isang malaking puno, may matandang lalaki na maingat na nag-aayos ng mga lumang kahon at kagamitan.",
+	"next": 2
+  },
+
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Ikaw ba si Leo? Ikaw yata ang sinasabi ni Mira.",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 3
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Ahh, mabuti naman. Medyo nag-aalala si Mira dahil bago ka pa lang dito sa Luntian.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 5
+	  },
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Pasensya ka na. Kaunti lang kasi ang mga bagong mukha rito kaya madaling mapansin.",
+	"choices": [
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 5,
+	"type": "narrator",
+	"text": "Napansin ni Leo na kahit tahimik si Mang Ben, mahinahon itong magsalita at tila sanay tumulong sa mga tao sa baryo.",
+	"next": 6
+  },
+
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Nawawala raw ang mapa mo. Tama ba?",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 7
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Karaniwan talagang maligaw ang mga bagong dating dito. Maraming magkakaparehong daan sa baryo.",
+	"choices": [
+	  {
+		"text": "KONTI",
+		"sign": "SPELL_KONTI",
+		"next": 9
+	  },
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 9
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Mabuti naman kung ganoon. Pero kung kailangan mo ng tulong, huwag kang mahihiyang magtanong.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 9
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Marunong ka na bang magsenyas, Leo?",
+	"choices": [
+	  {
+		"text": "KONTI",
+		"sign": "SPELL_KONTI",
+		"next": 10
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 11
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Magandang simula na iyon. Ang mahalaga ay patuloy kang natututo.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 12
+	  },
+	  {
+		"text": "PRAKTIS",
+		"sign": "SPELL_PRAKTIS",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Ayos lang iyon. Lahat naman nagsisimula sa wala. Unti-unti mo ring matututunan.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 12,
+	"type": "narrator",
+	"text": "Habang nakikinig si Leo kay Mang Ben, pakiramdam niya ay unti-unti na siyang nagiging komportable sa baryo ng Luntian.",
+	"next": 13
+  },
+
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Kung gusto mo, maaari kitang samahan bukas sa plaza. Marami kang matututunan doon.",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 14
+	  },
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 14,
+	"type": "narrator",
+	"text": "Dahan-dahang dumilim ang kalangitan habang nagpapatuloy ang tahimik na gabi sa baryo ng Luntian.",
+	"next": -1
+  }
+]

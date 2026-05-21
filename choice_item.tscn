@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b27qon3njbrcj"]
+
+[ext_resource type="FontFile" uid="uid://c0lscnjhbgoll" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="1_83f38"]
+[ext_resource type="Script" uid="uid://fmhdle1rfytm" path="res://Scripts/choice_item.gd" id="1_k4qow"]
+
+[node name="ChoiceItem" type="Button" unique_id=365235784]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("1_83f38")
+theme_override_font_sizes/font_size = 15
+text = "Choice"
+script = ExtResource("1_k4qow")

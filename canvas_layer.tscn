@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lfiqh5qkx6w5"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1261655121]
+
+[node name="Panel" type="Panel" parent="." unique_id=778615592]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatusLabel" type="Label" parent="Panel" unique_id=2060773747]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CurrentInputLabel" type="Label" parent="Panel" unique_id=1045972664]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -15,6 +15,9 @@ func _ready():
 
 
 func _process(delta):
+	if DialogueManager.active:
+		play_idle_animation()
+		return
 
 	# Stop if finished all waypoints
 	if current_index >= waypoints.size():
