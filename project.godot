@@ -18,9 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://bhos21hticimx"
-FslInputBridge="*uid://u68k45l17vjv"
 GameManager="*uid://dvi64kaqbdj2r"
 SignProcessor="*uid://blipsq3j2jr36"
+FSLInputBridge="*uid://u68k45l17vjv"
 
 [display]
 

@@ -9,6 +9,7 @@ func receive_sign(sign_id: String):
 		return
 
 	sign_received.emit(sign_id)
+
 	if GameManager.has_active_challenge():
 		GameManager.submit_sign(sign_id)
 		return
@@ -21,6 +22,7 @@ func receive_letter(letter: String):
 		return
 
 	var normalized_letter = SignProcessor.normalize_letter_input(letter)
+
 	if normalized_letter.is_empty():
 		return
 
