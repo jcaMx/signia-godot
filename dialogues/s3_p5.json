@@ -1,0 +1,110 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Bago makaalis sa palengke, tiningnan ni Leo ang mga dala niya. Bigla niyang napansin na may kulang pa sa kailangan ni Mira.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "narrator",
+	"text": "Palubog na ang araw. Mas dumami pa ang tao sa palengke, at mas mabilis na ang kilos ng mga tindero.",
+	"next": 2
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "MABILIS lang. Ano pa ang kulang?",
+	"choices": [
+	  {
+		"text": "CHICKEN",
+		"sign": "CHICKEN_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "MILK",
+		"sign": "MILK_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "BREAD",
+		"sign": "BREAD_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "CHICKEN? Sige. Ito ang huling piraso, kaya mabuti at nakabalik ka agad.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "MILK? Para ba ito sa inumin? Sandali, tingnan natin kung ito ang nasa listahan.",
+	"choices": [
+	  {
+		"text": "DON’T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 7
+	  },
+	  {
+		"text": "CHICKEN",
+		"sign": "CHICKEN_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "BREAD? Mayroon ka na niyan kanina. Baka iba ang kulang.",
+	"choices": [
+	  {
+		"text": "CHICKEN",
+		"sign": "CHICKEN_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "narrator",
+	"text": "Nakahinga nang maluwag si Leo. Kumpleto na ang mga dala niya, pero kabado pa rin siyang bumalik kay Mira.",
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "Sige, babagalan ko. Ang kulang sa listahan ay CHICKEN.",
+	"choices": [
+	  {
+		"text": "CHICKEN",
+		"sign": "CHICKEN_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  }
+]

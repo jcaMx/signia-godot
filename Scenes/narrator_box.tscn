@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cy3nh7fx0pv3e"]
+
+[ext_resource type="Texture2D" uid="uid://ukd3fyo2173j" path="res://Sprites/narrator-box.png" id="2_el3rx"]
+[ext_resource type="FontFile" uid="uid://c0lscnjhbgoll" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="2_font"]
+[ext_resource type="Script" uid="uid://7s7bmn11x58b" path="res://Scripts/narrator_box.gd" id="3_script"]
+
+[node name="NarratorBox" type="Control" unique_id=55782695]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3_script")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=265899722]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 64.0
+texture = ExtResource("2_el3rx")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=782588583]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 64.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="NarrationLabel" type="Label" parent="MarginContainer" unique_id=1482684905]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 14
+text = "Narration"
+horizontal_alignment = 1
+autowrap_mode = 3

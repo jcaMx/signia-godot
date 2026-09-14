@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dgdw6yxrpximv"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=499573458]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="." unique_id=1269537837]
+
+[node name="CorrectSFX" type="AudioStreamPlayer" parent="." unique_id=651706626]
+
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="." unique_id=522474010]
+
+[node name="ChapterCompleteSFX" type="AudioStreamPlayer" parent="." unique_id=667009828]

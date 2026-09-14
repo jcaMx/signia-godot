@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://defbujk5e8k6f"]
+
+[ext_resource type="Script" uid="uid://dora76hmqa4p8" path="res://Scripts/chapter_finished_ui.gd" id="1_bjiom"]
+[ext_resource type="FontFile" uid="uid://c0lscnjhbgoll" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="2_d7il2"]
+[ext_resource type="Theme" uid="uid://cdto336wlv0lp" path="res://new_theme.tres" id="3_c5gjj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6teu"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1951869854]
+layer = 7
+process_mode = 3
+script = ExtResource("1_bjiom")
+
+[node name="Panel" type="Panel" parent="." unique_id=439719899]
+offset_left = 67.0
+offset_top = 64.0
+offset_right = 388.0
+offset_bottom = 210.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g6teu")
+
+[node name="Label" type="Label" parent="Panel" unique_id=536355859]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 308.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("2_d7il2")
+theme_override_font_sizes/font_size = 30
+text = "Chapter Finished"
+
+[node name="Button" type="Button" parent="Panel" unique_id=1422991679]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 90.0
+offset_right = 246.0
+offset_bottom = 121.0
+theme = ExtResource("3_c5gjj")
+text = "Back to Menu"

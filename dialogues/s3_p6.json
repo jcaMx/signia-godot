@@ -1,0 +1,109 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Bumalik si Leo sa plaza bitbit ang mga pinamili. Mabigat ang supot, pero mas mabigat ang kaba sa dibdib niya.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Leo! Nakabalik ka. Kumusta ang palengke?",
+	"choices": [
+	  {
+		"text": "IM FINE",
+		"sign": "IM_FINE_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON’T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Mukhang napagod ka, pero nagawa mo pa rin.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ayos lang. Minsan mahirap talaga kapag mabilis ang mga tao sa palengke.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Nagkamali ka man, bumalik ka naman para ayusin.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Iyan ang mahalaga, Leo. Hindi kailangang perpekto agad. Ang mahalaga, sinusubukan mong makipag-usap.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 6
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "narrator",
+	"text": "Habang tumutulong si Mira sa pag-aayos ng mga pinamili, napangiti si Leo. Sa unang pagkakataon, nagawa niyang harapin ang baryo nang mag-isa.",
+	"next": -1
+  }
+]

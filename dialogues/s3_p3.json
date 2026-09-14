@@ -1,0 +1,118 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Habang lumalalim ang ingay sa palengke, lumapit si Leo sa tindahan ng mga inumin. Maraming mamimili ang sabay-sabay na kumukuha ng order.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "MABILIS lang, anong inumin?",
+	"choices": [
+	  {
+		"text": "COFFEE",
+		"sign": "COFFEE_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "JUICE",
+		"sign": "JUICE_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "TEA",
+		"sign": "TEA_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "COFFEE? Sige, pero mainit ito. Ingatan mo.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "JUICE? Magandang pili iyan para sa mga bata bukas.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "TEA? Sige, ihahanda ko.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "Pasensya na kung mabilis ako. Maraming bumibili ngayon.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 6
+	  },
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "narrator",
+	"text": "Huminga nang malalim si Leo. Naramdaman niyang mas mahirap na ang pamimili kaysa inaakala niya.",
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Tindera",
+	"text": "Sige, babagalan ko. Mabuti at sinabi mo.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  }
+]

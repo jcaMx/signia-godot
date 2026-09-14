@@ -1,0 +1,133 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Nakipagkita si Leo kay Ariel na masayang naglalaro sa tabi ng fountain.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "HELLO! Alam mo ba kung saan ang daan patungong pamilihan?",
+	"choices": [
+	  {
+		"text": "KNOW",
+		"sign": "KNOW_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "DONT_KNOW_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "HOW ARE YOU",
+		"sign": "HOW_ARE_YOU_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Tama ba na nasa kanan ito?",
+	"choices": [
+	  {
+		"text": "CORRECT",
+		"sign": "CORRECT_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "WRONG",
+		"sign": "WRONG_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Okay lang! Nasa kabilang kanto lang iyon.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Mabuti naman ako! Pero alam mo ba ang daan?",
+	"choices": [
+	  {
+		"text": "KNOW",
+		"sign": "KNOW_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "DONT_KNOW_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Salamat, Leo! Ang galing mong sumagot!",
+	"choices": [
+	  {
+		"text": "YOU'RE WELCOME",
+		"sign": "YOURE_WELCOME_SIGN",
+		"next": 7
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Ah, mali pala ako! Sa kaliwa pala. Salamat sa pagwawasto.",
+	"choices": [
+	  {
+		"text": "YOU'RE WELCOME",
+		"sign": "YOURE_WELCOME_SIGN",
+		"next": 7
+	  },
+	  {
+		"text": "CORRECT",
+		"sign": "CORRECT_SIGN",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "narrator",
+	"text": "Masayang kumaway si Ariel bago tumakbo pabalik sa kanyang mga kasama.",
+	"next": -1
+  }
+]

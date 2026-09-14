@@ -1,0 +1,99 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Pagkatapos bumili ng pagkain at inumin, may inabot na supot ang isang tindero kay Leo.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Tindero",
+	"text": "Ito ba ang kulay ng supot?",
+	"choices": [
+	  {
+		"text": "RED",
+		"sign": "RED_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "GREEN",
+		"sign": "GREEN_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "WHITE",
+		"sign": "WHITE_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Tindero",
+	"text": "RED? Ay hindi! Para iyon sa ibang mamimili.",
+	"choices": [
+	  {
+		"text": "SORRY",
+		"sign": "SORRY_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "DON’T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Tindero",
+	"text": "GREEN? Tama. Ito ang supot para kay Mira.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Tindero",
+	"text": "WHITE? Hindi iyan ang supot ni Mira. Subukan mong tingnan ulit.",
+	"choices": [
+	  {
+		"text": "GREEN",
+		"sign": "GREEN_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Tindero",
+	"text": "Okay lang. Maraming supot dito kaya madaling malito. Ang kay Mira ay GREEN.",
+	"choices": [
+	  {
+		"text": "GREEN",
+		"sign": "GREEN_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "narrator",
+	"text": "Kinuha ni Leo ang tamang supot, pero napansin niyang may kulang pa sa listahan ni Mira.",
+	"next": -1
+  }
+]

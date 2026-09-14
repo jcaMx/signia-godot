@@ -2,7 +2,11 @@ extends Control
 
 @onready var container: HBoxContainer = $VBoxContainer
 
-var choice_item_scene = preload("res://choice_item.tscn")
+var choice_item_scene = preload("res://Scenes/choice_item.tscn")
+
+
+func _ready():
+	container.alignment = BoxContainer.ALIGNMENT_CENTER
 
 
 func show_choices(choices: Array):
@@ -38,7 +42,7 @@ func _on_choice_pressed(choice_index: int):
 	if typeof(choice) != TYPE_DICTIONARY:
 		return
 
-	GameManager.start_challenge(String(choice.get("sign", "")), choice.get("next", -1))
+	GameManager.select_choice(choice)
 
 
 func _refresh_size():

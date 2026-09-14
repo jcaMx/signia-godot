@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgmmauttjegyq"]
+
+[ext_resource type="Script" uid="uid://ckfmgqc0per5r" path="res://Scripts/choice_box.gd" id="1_oahpl"]
+
+[node name="ChoiceBox" type="Control" unique_id=671744540]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oahpl")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=126008756]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

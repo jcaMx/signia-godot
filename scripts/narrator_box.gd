@@ -8,6 +8,8 @@ extends Control
 @onready var margin_container: MarginContainer = $MarginContainer
 @onready var content_label: Label = $MarginContainer/NarrationLabel
 
+var tween: Tween
+
 
 func _ready():
 	_update_layout.call_deferred()
@@ -18,6 +20,13 @@ func set_content(text: String, available_width: float = -1.0):
 	if available_width > 0.0:
 		max_content_width = max(min_content_width, available_width - (horizontal_padding * 2.0))
 	_update_layout.call_deferred()
+	
+	if tween:
+		tween.kill()
+	content_label.visible_ratio = 0.0
+	var duration = max(0.2, text.length() * 0.02)
+	tween = create_tween()
+	tween.tween_property(content_label, "visible_ratio", 1.0, duration)
 
 
 func _update_layout():
@@ -25,7 +34,8 @@ func _update_layout():
 		return
 
 	var target_width = _get_target_content_width()
-	content_label.custom_minimum_size = Vector2(target_width, 0.0)
+	var calculated_height = _get_label_multiline_height(content_label, target_width)
+	content_label.custom_minimum_size = Vector2(target_width, calculated_height)
 
 	var margins = Vector2(
 		margin_container.get_theme_constant("margin_left") + margin_container.get_theme_constant("margin_right"),
@@ -54,11 +64,27 @@ func _get_label_text_width(label: Label) -> float:
 	return ceil(font.get_string_size(label.text, HORIZONTAL_ALIGNMENT_CENTER, -1, font_size).x)
 
 
+func _get_label_multiline_height(label: Label, width: float) -> float:
+	var font := label.get_theme_font("font")
+	var font_size := label.get_theme_font_size("font_size")
+
+	if font == null:
+		return 0.0
+
+	return ceil(font.get_multiline_string_size(label.text, label.horizontal_alignment, width, font_size).y)
+
+
 func _gui_input(event: InputEvent):
 	if not DialogueManager.active:
 		return
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if tween and tween.is_running():
+			tween.kill()
+			content_label.visible_ratio = 1.0
+			accept_event()
+			return
+
 		if not DialogueManager.can_accept_advance_input():
 			accept_event()
 			return

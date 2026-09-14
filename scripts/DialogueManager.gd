@@ -154,6 +154,7 @@ func end():
 	last_node_change_frame = -1
 	active_speaker_node = null
 	require_player_continue_after_end = false
+	GameManager.clear_active_choices()
 	dialogue_ended.emit()
 
 
@@ -173,6 +174,12 @@ func _emit_current_node():
 	var choices: Array = []
 	if is_current_node_npc():
 		choices = _sanitize_choices(node.get("choices", []))
+		if not choices.is_empty():
+			GameManager.set_active_choices(choices)
+		else:
+			GameManager.clear_active_choices()
+	else:
+		GameManager.clear_active_choices()
 
 	dialogue_updated.emit(speaker, text, choices)
 

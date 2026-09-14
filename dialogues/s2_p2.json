@@ -1,0 +1,95 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Nakita ni Leo si Mira sa gitna ng plaza. Agad itong kumaway nang mapansin si Leo.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "HELLO, Leo! Nakabalik ka sa plaza! HOW ARE YOU?",
+	"choices": [
+	  {
+		"text": "I'M FINE",
+		"sign": "IM_FINE_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "HOW ARE YOU",
+		"sign": "HOW_ARE_YOU_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "DON'T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Mabuti naman kung ganoon! Mas kalmado ka na ngayon kaysa kanina.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Mabuti rin ako! Handa ka na bang mag-ensayo sa plaza kasama ang iba?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ayos lang! Ang ibig kong sabihin ay kumusta ka?",
+	"choices": [
+	  {
+		"text": "I'M FINE",
+		"sign": "IM_FINE_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "narrator",
+	"text": "Masayang ngumiti si Mira at itinuro si Aling Rosa na nasa kalapit na tindahan.",
+	"next": -1
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Kinabukasan, mas masigla ang baryo ng Luntian. Mula sa plaza, maririnig ang tawanan at ingay ng mga taong naghahanda para sa pagtitipon.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Leo, pwede mo bang tulungan si Aling Rosa sa palengke?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Salamat! Kailangan natin ng pagkain at inumin para bukas.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ayos lang kung kinakabahan ka. Pero kaya mo ito, Leo. Simpleng pamimili lang muna.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Una, bumili ka ng pagkain. Pagkatapos, pumili ka ng inumin. Huwag kalimutan ang kulay ng supot.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "DON’T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "narrator",
+	"text": "Tumango si Leo. Sa unang pagkakataon, siya ang maglalakad mag-isa papunta sa palengke.",
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Sige, uulitin ko. Pagkain muna, tapos inumin, tapos piliin ang tamang kulay ng supot.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  }
+]

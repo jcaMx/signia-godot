@@ -1,15 +1,18 @@
 extends CanvasLayer
 
-const TEXTBOX_MARGIN := Vector2(0, -18)
+const TEXTBOX_MARGIN := Vector2(0, -10)
 const CHOICEBOX_MARGIN := Vector2(0, 10)
 const NARRATOR_SIDE_MARGIN := 18.0
 const NARRATOR_BOTTOM_MARGIN := 14.0
 
-var narrator_box_scene = preload("res://narrator_box.tscn")
+var narrator_box_scene = preload("res://Scenes/narrator_box.tscn")
 
 @onready var textbox = $TextBox
 @onready var choicebox = $ChoiceBox
 @onready var narrator_box = get_node_or_null("NarratorBox")
+@onready var main_menu = get_node_or_null("MainMenu")
+@onready var pause_menu = get_node_or_null("PauseMenu")
+@onready var chapter_finished = get_node_or_null("ChapterFinished")
 
 
 func _ready():
@@ -56,9 +59,26 @@ func _on_dialogue_ended():
 
 
 func _process(_delta):
+	# Check if any overlay menu is visible
+	var menu_open = false
+	if main_menu != null and main_menu.visible:
+		menu_open = true
+	elif pause_menu != null and pause_menu.visible:
+		menu_open = true
+	elif chapter_finished != null and chapter_finished.visible:
+		menu_open = true
+
+	if menu_open:
+		textbox.hide()
+		choicebox.hide()
+		if narrator_box != null:
+			narrator_box.hide()
+		return
+
 	if not visible or not DialogueManager.active:
 		return
 
+	_sync_visible_boxes()
 	_update_dialogue_positions()
 
 
@@ -108,3 +128,5 @@ func _sync_visible_boxes():
 	textbox.visible = not narrator_mode
 	if narrator_box != null:
 		narrator_box.visible = narrator_mode
+	if choicebox != null and choicebox.container != null:
+		choicebox.visible = choicebox.container.get_child_count() > 0

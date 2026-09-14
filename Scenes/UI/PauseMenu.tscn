@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://1yuwnbcitsf6"]
+
+[ext_resource type="Script" uid="uid://kr8w8g3cl1m7" path="res://Scripts/pause_menu.gd" id="1_eod5q"]
+[ext_resource type="Theme" uid="uid://cdto336wlv0lp" path="res://new_theme.tres" id="2_n4i8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4i8v"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1927025640]
+layer = 6
+script = ExtResource("1_eod5q")
+
+[node name="Panel" type="Panel" parent="." unique_id=15674397]
+offset_left = 79.0
+offset_top = 49.0
+offset_right = 379.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_n4i8v")
+
+[node name="RestartButton" type="Button" parent="Panel" unique_id=2049050427]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 262.0
+offset_bottom = 91.0
+theme = ExtResource("2_n4i8v")
+text = "Restart"
+
+[node name="ResumeButton" type="Button" parent="Panel" unique_id=1345036322]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 59.0
+offset_top = 12.0
+offset_right = 261.0
+offset_bottom = 43.0
+theme = ExtResource("2_n4i8v")
+text = "Resume"
+
+[node name="MainMenuButton" type="Button" parent="Panel" unique_id=1725600984]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 62.0
+offset_top = 107.0
+offset_right = 264.0
+offset_bottom = 138.0
+theme = ExtResource("2_n4i8v")
+text = "Main Menu"
+
+[node name="VolumeLabel" type="Label" parent="Panel" unique_id=1967480921]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 62.0
+offset_top = 145.0
+offset_right = 264.0
+offset_bottom = 161.0
+theme = ExtResource("2_n4i8v")
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="Panel" unique_id=1981852889]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 62.0
+offset_top = 165.0
+offset_right = 264.0
+offset_bottom = 181.0
+theme = ExtResource("2_n4i8v")
+max_value = 1.0
+step = 0.05
+value = 0.5

@@ -2,12 +2,14 @@ extends CharacterBody2D
 
 @export var speed = 120
 @export var loop_path = false
+@export var level_id := 1
 
 var waypoints = []
 var current_index = 0
 var last_direction = Vector2.DOWN
 var can_move = true
 var waiting_for_continue_input := false
+var chapter_finish_triggered := false
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -18,7 +20,10 @@ func _ready():
 
 	# Get all waypoint nodes
 	waypoints = get_parent().get_node("Waypoints").get_children()
-
+	
+	LevelManager.setup_level(level_id, waypoints.size())
+	LevelManager.update_waypoint_progress(current_index)
+	
 	# Prevent errors if no waypoints exist
 	if waypoints.is_empty():
 		print("No waypoints found!")
@@ -41,17 +46,21 @@ func _physics_process(_delta):
 
 	# Finished all waypoints
 	if current_index >= waypoints.size():
-
-		# Loop back to start
+		
 		if loop_path:
 			current_index = 0
-
-		# Stop movement
 		else:
 			velocity = Vector2.ZERO
 			play_idle_animation()
 			move_and_slide()
-			return
+
+		if not chapter_finish_triggered:
+			chapter_finish_triggered = true
+			LevelManager.complete_level()
+			GameManager.finish_chapter()
+
+		return
+
 
 	# Current target waypoint
 	var target = waypoints[current_index].global_position
@@ -82,8 +91,11 @@ func _advance_waypoint_if_reached():
 		return
 
 	var target = waypoints[current_index].global_position
+
 	if global_position.distance_to(target) < 5:
 		current_index += 1
+		LevelManager.update_waypoint_progress(current_index)
+		SaveManager.save_game()
 
 
 func _unhandled_input(event):

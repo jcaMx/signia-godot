@@ -5,12 +5,12 @@ signal letter_received(letter)
 
 
 func receive_sign(sign_id: String):
-	if not DialogueManager.active and not GameManager.has_active_challenge():
+	if not DialogueManager.active and not GameManager.has_active_challenge() and not GameManager.has_active_choices():
 		return
 
 	sign_received.emit(sign_id)
 
-	if GameManager.has_active_challenge():
+	if GameManager.has_active_challenge() or GameManager.has_active_choices():
 		GameManager.submit_sign(sign_id)
 		return
 
@@ -18,7 +18,7 @@ func receive_sign(sign_id: String):
 
 
 func receive_letter(letter: String):
-	if not GameManager.has_active_challenge():
+	if not GameManager.has_active_challenge() and not GameManager.has_active_choices():
 		return
 
 	var normalized_letter = SignProcessor.normalize_letter_input(letter)
@@ -30,5 +30,5 @@ func receive_letter(letter: String):
 	GameManager.submit_letter(normalized_letter)
 
 
-func on_sign_detected(sign_id: String):
+func on_sign_detected(sign_id: String, _confidence := 0.0):
 	receive_sign(sign_id)

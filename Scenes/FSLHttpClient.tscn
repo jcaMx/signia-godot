@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b4gii54rx1tfr"]
+
+[ext_resource type="Script" uid="uid://py4delk3wtb8" path="res://Scripts/FSLHttpClient.gd" id="1_rjcnv"]
+
+[sub_resource type="FontFile" id="FontFile_rjcnv"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[node name="Node" type="Node" unique_id=1949361660]
+script = ExtResource("1_rjcnv")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1972926900]
+
+[node name="Timer" type="Timer" parent="." unique_id=1148662892]
+wait_time = 0.1
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=919069506]
+offset_left = 3.0
+offset_top = 202.0
+offset_right = 43.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.9402092, 0.8182245, 0.56327283, 1)
+theme_override_colors/font_shadow_color = Color(0.81240565, 0.8124055, 0.8124055, 0)
+theme_override_fonts/font = SubResource("FontFile_rjcnv")
+theme_override_font_sizes/font_size = 10

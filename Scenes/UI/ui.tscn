@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c1qtnbx1lt1lk"]
+
+[ext_resource type="Script" uid="uid://bgxej50pqj6k6" path="res://Scripts/ui.gd" id="1_jfwrg"]
+[ext_resource type="PackedScene" uid="uid://yi0gvakbduj1" path="res://Scenes/textbox.tscn" id="2_mbl0m"]
+[ext_resource type="PackedScene" uid="uid://cgmmauttjegyq" path="res://Scenes/choice_box.tscn" id="3_s3gqk"]
+[ext_resource type="PackedScene" uid="uid://b4gii54rx1tfr" path="res://Scenes/FSLHttpClient.tscn" id="4_pmm6b"]
+[ext_resource type="PackedScene" uid="uid://dse65mertvmjn" path="res://Scenes/UI/MainMenu.tscn" id="5_vy225"]
+[ext_resource type="PackedScene" uid="uid://1yuwnbcitsf6" path="res://Scenes/UI/PauseMenu.tscn" id="6_fy0us"]
+[ext_resource type="PackedScene" uid="uid://defbujk5e8k6f" path="res://Scenes/UI/ChapterFinished.tscn" id="7_h6tq4"]
+[ext_resource type="PackedScene" uid="uid://dfqi14wigohis" path="res://Scenes/user_input.tscn" id="8_t7te2"]
+[ext_resource type="PackedScene" uid="uid://bi7eyf1ysyqmo" path="res://Scenes/UI/progress_bar_ui.tscn" id="9_mbl0m"]
+
+[node name="UI" type="CanvasLayer" unique_id=1134992687]
+script = ExtResource("1_jfwrg")
+
+[node name="TextBox" parent="." unique_id=1744354788 instance=ExtResource("2_mbl0m")]
+offset_left = 487.0
+offset_top = -30.0
+offset_right = 487.0
+offset_bottom = -30.0
+scale = Vector2(1.11534, 1.112788)
+metadata/_edit_use_anchors_ = true
+
+[node name="ChoiceBox" parent="." unique_id=671744540 instance=ExtResource("3_s3gqk")]
+anchors_preset = -1
+offset_left = 43.0
+offset_top = 150.0
+offset_right = 83.0
+offset_bottom = 190.0
+metadata/_edit_use_anchors_ = true
+
+[node name="FSLHttpClient" parent="." unique_id=1949361660 instance=ExtResource("4_pmm6b")]
+
+[node name="MainMenu" parent="." unique_id=630159361 instance=ExtResource("5_vy225")]
+layer = 5
+
+[node name="PauseMenu" parent="." unique_id=1927025640 instance=ExtResource("6_fy0us")]
+layer = 6
+
+[node name="PauseButton" type="Button" parent="." unique_id=684735467]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ChapterFinished" parent="." unique_id=1951869854 instance=ExtResource("7_h6tq4")]
+layer = 7
+
+[node name="User_Input" parent="." unique_id=181872761 instance=ExtResource("8_t7te2")]
+
+[node name="ProgressBarUI" parent="." unique_id=1086422199 instance=ExtResource("9_mbl0m")]

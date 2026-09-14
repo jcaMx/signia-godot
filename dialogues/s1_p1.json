@@ -1,0 +1,346 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Matapos ang mahabang biyahe, dumating si Leo sa tahimik na baryo ng Luntian. Mahangin ang paligid at maririnig ang mahinang ingay ng mga batang naglalaro sa plaza.",
+	"next": 1
+  },
+
+  {
+	"id": 1,
+	"type": "narrator",
+	"text": "Habang naglalakad si Leo sa makitid na daan, napansin niyang kakaiba ang paraan ng pakikipag-usap ng mga tao rito. Marami sa kanila ang gumagamit ng mga senyas habang nagkukuwentuhan.",
+	"next": 2
+  },
+
+  {
+	"id": 2,
+	"type": "narrator",
+	"text": "May isang dalagitang kumaway kay Leo nang mapansin siyang tila naliligaw. Sumensyas upang pumili ng tugon",
+	"next": 3
+  },
+
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Uy! Bago ka ba dito sa baryo?",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 4
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 5
+	  },
+	  {
+		"text": "PAALAM",
+		"sign": "SPELL_PAALAM",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ayos! Mukha kang bagong salta rito. Ako nga pala si Mira.",
+	"choices": [
+	  {
+		"text": "HI",
+		"sign": "SPELL_HI",
+		"next": 7
+	  },
+	  {
+		"text": "HELLO",
+		"sign": "SPELL_HELLO",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Talaga? Parang hindi pa kita nakita rito noon.",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 7
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Aalis ka agad? Hindi pa tayo nagkikilala.",
+	"choices": [
+	  {
+		"text": "SORRY",
+		"sign": "SPELL_SORRY",
+		"next": 7
+	  },
+	  {
+		"text": "HI",
+		"sign": "SPELL_HI",
+		"next": 7
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ano pangalan mo?",
+	"choices": [
+	  {
+		"text": "LEO",
+		"sign": "SPELL_LEO",
+		"next": 8
+	  },
+	  {
+		"text": "MAX",
+		"sign": "SPELL_MAX",
+		"next": 9
+	  },
+	  {
+		"text": "ARIEL",
+		"sign": "SPELL_ARIEL",
+		"next": 9
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Leo? Ang ganda ng pangalan mo. Masaya akong makilala ka.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 10
+	  },
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 10
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Hmm... parang mali yata iyon. Subukan mo ulit.",
+	"choices": [
+	  {
+		"text": "LEO",
+		"sign": "SPELL_LEO",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Tagasaan ka ba, Leo?",
+	"choices": [
+	  {
+		"text": "MAYNILA",
+		"sign": "SPELL_MAYNILA",
+		"next": 11
+	  },
+	  {
+		"text": "DAVAO",
+		"sign": "SPELL_DAVAO",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ahh, taga-Maynila ka pala. Kaya pala hindi kita kilala. Tahimik ang baryong ito pero mababait ang mga tao rito.",
+	"choices": [
+	  {
+		"text": "AYOS",
+		"sign": "SPELL_AYOS",
+		"next": 13
+	  },
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 13
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 12,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ahh bisaya ka pala! Kaya ang unique mo magsalita. Tahimik ang baryong ito pero mababait ang mga tao rito.",
+	"choices": [
+	  {
+		"text": "AYOS",
+		"sign": "SPELL_AYOS",
+		"next": 13
+	  },
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 13
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 13,
+	"type": "narrator",
+	"text": "Napansin ni Leo na kahit tahimik ang baryo, parang malapit sa isa’t isa ang mga tao rito.",
+	"next": 14
+  },
+
+  {
+	"id": 14,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Marunong ka bang magsenyas?",
+	"choices": [
+	  {
+		"text": "KONTI",
+		"sign": "SPELL_KONTI",
+		"next": 15
+	  },
+	  {
+		"text": "HINDI",
+		"sign": "SPELL_HINDI",
+		"next": 16
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 15,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ayos lang iyon. Dito sa Luntian, tutulungan ka naming matuto.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 17
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 16,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Okay lang! Hindi rin ako magaling noon. Praktis lang lagi hanggang masanay.",
+	"choices": [
+	  {
+		"text": "SALAMAT",
+		"sign": "SPELL_SALAMAT",
+		"next": 17
+	  }
+	],
+	"next": -1
+  },
+
+  {
+	"id": 17,
+	"type": "narrator",
+	"text": "Napansin ni Mira na si Leo ay may hinahanap sa kanyag bag.",
+	"next": 18
+  },
+
+  {
+	"id": 18,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Oh Leo, may problema ka ba?",
+	"choices": [
+	  {
+		"text": "OO",
+		"sign": "SPELL_OO",
+		"next": 19
+	  }, 
+	  {
+		"text": "WALA",
+		"sign": "SPELL_WALA",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 19,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Ahh, nawawala ba ang iyong mapa? Huwag kang mag-alala, tutulungan ka ni Mang Ben.",
+	"choices": [],
+	"next": 20
+  },
+  {
+	"id": 20,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Punta ka lang sa silangan, at makikita mo si Mang Ben.",
+	"choices": [
+		{
+			"text": "SALAMAT",
+			"sign": "SPELL_SALAMAT",
+			"next": 21
+		}, 
+		{
+			"text": "OK",
+			"sign": "SPELL_OK",
+			"next": 21
+		}
+	],
+	"next": 21
+  },
+  
+
+  {
+	"id": 21,
+	"type": "narrator",
+	"text": "Pumumta si Leo sa silangang bahagi ng barrio.",
+	"next": -1
+  }
+]

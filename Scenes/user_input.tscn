@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dfqi14wigohis"]
+
+[ext_resource type="Script" uid="uid://bcfp1d1rbsh2k" path="res://Scripts/user_input.gd" id="1_tj2b1"]
+[ext_resource type="FontFile" uid="uid://c0lscnjhbgoll" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="2_8g7pj"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=181872761]
+script = ExtResource("1_tj2b1")
+
+[node name="Panel" type="Panel" parent="." unique_id=1363582379]
+offset_left = 106.0
+offset_top = 206.0
+offset_right = 369.0
+offset_bottom = 255.0
+
+[node name="StatusLabel" type="Label" parent="Panel" unique_id=522100001]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 216.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("2_8g7pj")
+theme_override_font_sizes/font_size = 9
+text = "Sign the appropriate option to choose an answer"
+
+[node name="CurrentInputLabel" type="Label" parent="Panel" unique_id=1061818686]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 257.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("2_8g7pj")
+text = "_"

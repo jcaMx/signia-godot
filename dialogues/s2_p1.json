@@ -1,0 +1,95 @@
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Dumating sina Leo at Mang Ben sa plaza ng Luntian ngayong hapon.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Leo, hapon na. Ano ang nababagay na bati ngayong hapon sa plaza?",
+	"choices": [
+	  {
+		"text": "GOOD AFTERNOON",
+		"sign": "GOOD_AFTERNOON_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "GOOD MORNING",
+		"sign": "GOOD_MORNING_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "HELLO",
+		"sign": "HELLO_SIGN",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Magaling! Handa ka na bang makipag-usap sa mga taga-baryo?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Hapon na ngayon, kaya GOOD AFTERNOON ang mas angkop. Naiintindihan mo ba?",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "GOOD AFTERNOON",
+		"sign": "GOOD_AFTERNOON_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "narrator",
+	"text": "Tumango si Mang Ben at pumasok na sila sa maingay at masayang plaza.",
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Huwag kang mag-alala. Dahan-dahan lang tayong mag-uusap rito.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "DON'T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  }
+]
