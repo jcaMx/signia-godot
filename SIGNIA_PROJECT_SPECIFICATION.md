@@ -43,6 +43,20 @@
 * **Viewport Resolution:** $456 \times 273$ (Scaled to $1920 \times 1080$ viewport override)
 * **Rendering Style:** 2D Pixel Art with `nearest` texture filtering
 * **Physics Engine:** Jolt Physics 3D / Godot 2D Physics
+* **Web Integration:** Single Web Export target (`/signia-game/index.html?chapter=N`) communicating bi-directionally with Vue/Nuxt web frontend via `JavaScriptBridge` (`window.parent.postMessage`).
+
+---
+
+## 1.1 Web Frontend (Vue / Nuxt) & Single Export Architecture
+
+### URL-Based Chapter Launching
+The Godot engine uses a **Single Web Export**. The Vue frontend launches the game passing `?chapter=1`, `?chapter=2`, etc.
+* [`LevelManager.gd`](file:///c:/Users/Acer/Games/signia/Scripts/LevelManager.gd) reads `new URLSearchParams(window.location.search).get('chapter')` on web startup.
+* [`main_menu.gd`](file:///c:/Users/Acer/Games/signia/Scripts/main_menu.gd) automatically bypasses the main menu UI and directly loads the requested chapter scene (`res://Scenes/scene_1.tscn`, `res://Scenes/scene_2.tscn`, etc.).
+
+### Bi-Directional Web Events (`postMessage`)
+* `SIGNIA_PROGRESS_UPDATE`: Emitted to `window.parent` on every waypoint reached with details (`current_level`, `waypoint_index`, `total_waypoints`, `completed_levels`).
+* `SIGNIA_CHAPTER_FINISHED`: Emitted to `window.parent` when a level/chapter is completed (`level_id`).
 
 ---
 

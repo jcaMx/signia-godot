@@ -7,6 +7,6 @@
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("1_83f38")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 11
 text = "Choice"
 script = ExtResource("1_k4qow")

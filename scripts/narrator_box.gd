@@ -1,8 +1,8 @@
 extends Control
 
 @export var horizontal_padding := 12.0
-@export var min_content_width := 260.0
-@export var max_content_width := 420.0
+@export var min_content_width := 200.0
+@export var max_content_width := 360.0
 
 @onready var background: NinePatchRect = $NinePatchRect
 @onready var margin_container: MarginContainer = $MarginContainer

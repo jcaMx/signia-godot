@@ -1,80 +1,267 @@
 [
-  {
-	"id": 0,
-	"type": "narrator",
-	"text": "Pagdating ni Leo sa palengke, sinalubong siya ng amoy ng bagong lutong pagkain at ingay ng mga mamimili.",
-	"next": 1
-  },
-  {
-	"id": 1,
-	"type": "npc",
-	"speaker": "Tindero",
-	"text": "Ano ang gusto mo?",
-	"choices": [
-	  {
-		"text": "RICE",
-		"sign": "RICE_SIGN",
+	{
+		"id": 0,
+		"type": "narrator",
+		"text": "Pagdating ni Leo sa palengke, napansin niya ang iba't ibang kulay ng mga prutas at gulay sa mga tindahan.",
+		"next": 1
+	},
+	{
+		"id": 1,
+		"type": "narrator",
+		"text": "Sa isang maliit na puwesto, may mga prutas na maayos na nakahilera ayon sa kanilang kulay.",
 		"next": 2
-	  },
-	  {
-		"text": "FISH",
-		"sign": "FISH_SIGN",
-		"next": 3
-	  },
-	  {
-		"text": "BREAD",
-		"sign": "BREAD_SIGN",
-		"next": 4
-	  }
-	],
-	"next": -1
-  },
-  {
-	"id": 2,
-	"type": "npc",
-	"speaker": "Tindero",
-	"text": "RICE? Sige. Kukuha ako ng isang supot.",
-	"choices": [
-	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 5
-	  }
-	],
-	"next": -1
-  },
-  {
-	"id": 3,
-	"type": "npc",
-	"speaker": "Tindero",
-	"text": "FISH? Sariwa ito. Mabuti ang pili mo.",
-	"choices": [
-	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 5
-	  }
-	],
-	"next": -1
-  },
-  {
-	"id": 4,
-	"type": "npc",
-	"speaker": "Tindero",
-	"text": "BREAD? Bagong luto iyan ngayong umaga.",
-	"choices": [
-	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 5
-	  }
-	],
-	"next": -1
-  },
-  {
-	"id": 5,
-	"type": "narrator",
-	"text": "Nakangiti si Leo habang hawak ang unang binili. Naging madali ang unang gawain.",
-	"next": -1
-  }
+	},
+	{
+		"id": 2,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Leo! Marunong ka na bang magsenyas ng mga kulay?",
+		"choices": [
+			{
+				"text": "OO",
+				"sign": "SPELL_OO",
+				"next": 3
+			},
+			{
+				"text": "KONTI",
+				"sign": "SPELL_KONTI",
+				"next": 3
+			},
+			{
+				"text": "HINDI",
+				"sign": "SPELL_HINDI",
+				"next": 3
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 3,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Mabuti! Tingnan mo ang prutas na ito. Anong kulay ito?",
+		"choices": [
+			{
+				"text": "RED",
+				"sign": "COLOR_RED",
+				"next": 4
+			},
+			{
+				"text": "BLUE",
+				"sign": "COLOR_BLUE",
+				"next": 5
+			},
+			{
+				"text": "GREEN",
+				"sign": "COLOR_GREEN",
+				"next": 6
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 4,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Tama! Pula ang mansanas. Magandang halimbawa iyan ng kulay RED.",
+		"choices": [
+			{
+				"text": "RED",
+				"sign": "COLOR_RED",
+				"next": 7
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 5,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. Ang mansanas ay RED. Subukan mong tingnan muli.",
+		"choices": [
+			{
+				"text": "RED",
+				"sign": "COLOR_RED",
+				"next": 7
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 6,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. Ang mansanas ay RED. Subukan mong tingnan muli.",
+		"choices": [
+			{
+				"text": "RED",
+				"sign": "COLOR_RED",
+				"next": 7
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 7,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Ngayon naman, tingnan mo ang dahon. Anong kulay ito?",
+		"choices": [
+			{
+				"text": "GREEN",
+				"sign": "COLOR_GREEN",
+				"next": 8
+			},
+			{
+				"text": "BROWN",
+				"sign": "COLOR_BROWN",
+				"next": 9
+			},
+			{
+				"text": "YELLOW",
+				"sign": "COLOR_YELLOW",
+				"next": 10
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 8,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Tama! GREEN ang kulay ng dahon.",
+		"choices": [
+			{
+				"text": "GREEN",
+				"sign": "COLOR_GREEN",
+				"next": 11
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 9,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. Ang dahon ay GREEN. Tingnan mo ang kulay nito.",
+		"choices": [
+			{
+				"text": "GREEN",
+				"sign": "COLOR_GREEN",
+				"next": 11
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 10,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. Ang dahon ay GREEN. Tingnan mo ang kulay nito.",
+		"choices": [
+			{
+				"text": "GREEN",
+				"sign": "COLOR_GREEN",
+				"next": 11
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 11,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Magaling! Huli na. Tingnan mo ang saging. Anong kulay ito?",
+		"choices": [
+			{
+				"text": "YELLOW",
+				"sign": "COLOR_YELLOW",
+				"next": 12
+			},
+			{
+				"text": "BROWN",
+				"sign": "COLOR_BROWN",
+				"next": 13
+			},
+			{
+				"text": "BLUE",
+				"sign": "COLOR_BLUE",
+				"next": 14
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 12,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Tama! YELLOW ang kulay ng saging.",
+		"choices": [
+			{
+				"text": "YELLOW",
+				"sign": "COLOR_YELLOW",
+				"next": 15
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 13,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. YELLOW ang kulay ng saging. Subukan mong muli.",
+		"choices": [
+			{
+				"text": "YELLOW",
+				"sign": "COLOR_YELLOW",
+				"next": 15
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 14,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Hindi. YELLOW ang kulay ng saging. Subukan mong muli.",
+		"choices": [
+			{
+				"text": "YELLOW",
+				"sign": "COLOR_YELLOW",
+				"next": 15
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 15,
+		"type": "narrator",
+		"text": "Napansin ni Leo na mas madali niyang nakikilala ang mga kulay kapag iniuugnay niya ang mga ito sa mga bagay na nakikita niya sa paligid.",
+		"next": 16
+	},
+	{
+		"id": 16,
+		"type": "npc",
+		"speaker": "Tindero",
+		"text": "Tandaan mo, Leo. Hindi lang sa laro ginagamit ang mga kulay. Maaari mong gamitin ang mga senyas na ito kapag nakikipag-usap ka sa totoong buhay.",
+		"choices": [
+			{
+				"text": "SALAMAT",
+				"sign": "SPELL_SALAMAT",
+				"next": 17
+			},
+			{
+				"text": "OO",
+				"sign": "SPELL_OO",
+				"next": 17
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 17,
+		"type": "narrator",
+		"text": "Pag-alis ni Leo sa palengke, sinubukan niyang tingnan ang mga bagay sa paligid at pangalanan ang kanilang mga kulay gamit ang mga natutunan niyang senyas.",
+		"next": -1
+	}
 ]

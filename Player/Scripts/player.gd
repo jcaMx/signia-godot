@@ -18,6 +18,14 @@ func _ready():
 	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
 		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
+	# Auto-detect level_id from current scene filename if not set
+	if get_tree().current_scene != null:
+		var scene_file = get_tree().current_scene.scene_file_path.get_file()
+		if scene_file.contains("scene_"):
+			var num_str = scene_file.replace("scene_", "").replace(".tscn", "")
+			if num_str.is_valid_int():
+				level_id = int(num_str)
+
 	# Get all waypoint nodes
 	waypoints = get_parent().get_node("Waypoints").get_children()
 	

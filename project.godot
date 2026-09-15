@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Signia"
-run/main_scene="uid://c0k8kpn5kyofl"
+run/main_scene="uid://bgbthsh61udw8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Scenes/icon.svg"
 
@@ -23,6 +23,7 @@ SignProcessor="*uid://blipsq3j2jr36"
 FSLInputBridge="*uid://u68k45l17vjv"
 LevelManager="*uid://ce00xe7e06xcj"
 SaveManager="*uid://ce3ottck5l0dd"
+SceneChanger="*res://Scripts/SceneChanger.gd"
 
 [display]
 
@@ -52,3 +53,4 @@ pause={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true

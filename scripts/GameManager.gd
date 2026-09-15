@@ -146,8 +146,7 @@ func submit_sign(sign_id: String) -> bool:
 
 			return submit_letter(processed_letter)
 
-		var normalized_sign_id = SignProcessor.normalize_sign_id(sign_id)
-		if normalized_sign_id != pending_sign_id:
+		if not SignProcessor.are_signs_matching(sign_id, pending_sign_id):
 			invalid_gesture()
 			return false
 
@@ -165,10 +164,9 @@ func submit_sign(sign_id: String) -> bool:
 		for choice in active_choices:
 			if typeof(choice) != TYPE_DICTIONARY:
 				continue
-			var choice_sign = SignProcessor.normalize_sign_id(String(choice.get("sign", "")))
-			var target = SignProcessor.get_challenge_target(choice_sign)
+			var choice_sign = String(choice.get("sign", ""))
 
-			if choice_sign == normalized_sign or target == normalized_sign:
+			if SignProcessor.are_signs_matching(sign_id, choice_sign):
 				_complete_choice(choice)
 				return true
 

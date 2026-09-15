@@ -9,7 +9,7 @@
 	"id": 1,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Leo, pwede mo bang tulungan si Aling Rosa sa palengke?",
+	"text": "Leo, pwede mo bang tulungan si Aling Rosa para sa pamimili ng pagkain sa palengke?",
 	"choices": [
 	  {
 		"text": "YES",
@@ -61,7 +61,7 @@
 	"id": 4,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Una, bumili ka ng pagkain. Pagkatapos, pumili ka ng inumin. Huwag kalimutan ang kulay ng supot.",
+	"text": "Una, bumili ka ng pagkain at prutas. Pagkatapos, pumili ka ng isda at gulay. Pasali na rin ng inumin na buko juice. Huwag kalimutan ang kulay ng supot.",
 	"choices": [
 	  {
 		"text": "UNDERSTAND",

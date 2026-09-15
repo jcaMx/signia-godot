@@ -93,7 +93,7 @@ func process_sign(sign_id: String):
 		return
 
 	for choice in _sanitize_choices(node.get("choices", [])):
-		if String(choice.get("sign", "")) == sign_id:
+		if SignProcessor.are_signs_matching(sign_id, String(choice.get("sign", ""))):
 			_advance_to(choice.get("next", -1))
 			return
 

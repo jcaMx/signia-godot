@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://bx1wkv1015k36" path="res://Tiles/plaza-tileset1.png" id="15_iituq"]
 [ext_resource type="PackedScene" uid="uid://c81ktnjs7n70g" path="res://Scenes/npc.tscn" id="15_pru5n"]
 [ext_resource type="Texture2D" uid="uid://drt4n5emq4nbm" path="res://Player/Sprites/NPC 1.png" id="16_6he4u"]
-[ext_resource type="PackedScene" uid="uid://c1qtnbx1lt1lk" path="res://Scenes/UI/ui.tscn" id="17_wmr55"]
 [ext_resource type="Texture2D" uid="uid://chm1wcti137ko" path="res://Player/Sprites/npcs 2.png" id="21_qjfui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pi2fq"]
@@ -10622,10 +10621,8 @@ require_continue_input_after_dialogue = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC_Mira" unique_id=164550514]
 position = Vector2(0.18735895, 45.331997)
-scale = Vector2(0.041855372, -0.58748484)
+scale = Vector2(0.048453957, -0.7456463)
 sprite_frames = SubResource("SpriteFrames_cuyd0")
-
-[node name="UI" parent="." unique_id=1134992687 instance=ExtResource("17_wmr55")]
 
 [node name="NPC_Mira2" parent="." unique_id=1353749418 instance=ExtResource("15_pru5n")]
 position = Vector2(2231, 143)

@@ -16,6 +16,13 @@ func _ready():
 	continue_button.disabled = not has_save
 
 	if get_tree().current_scene == self:
+		var web_chapter = LevelManager.check_web_launch_chapter()
+		if web_chapter > 0 and LevelManager.level_scenes.has(web_chapter):
+			get_tree().paused = false
+			get_tree().change_scene_to_file.call_deferred(
+				LevelManager.get_current_level_scene()
+			)
+			return
 		open_menu()
 	else:
 		hide()

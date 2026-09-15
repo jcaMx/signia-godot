@@ -37,3 +37,35 @@ func update_waypoint_progress(index: int):
 func complete_level():
 	SaveManager.mark_level_completed(current_level)
 	level_completed.emit(current_level)
+
+
+func check_web_launch_chapter() -> int:
+	if not OS.has_feature("web"):
+		return -1
+
+	var js_eval = """
+	(function() {
+		try {
+			var params = new URLSearchParams(window.location.search);
+			var chap = params.get('chapter') || params.get('level') || params.get('scene');
+			if (chap && !isNaN(parseInt(chap))) {
+				return parseInt(chap);
+			}
+		} catch(e) {}
+		return -1;
+	})()
+	"""
+
+	var result = JavaScriptBridge.eval(js_eval)
+	if result != null:
+		var parsed_id := -1
+		if typeof(result) == TYPE_INT:
+			parsed_id = result
+		elif typeof(result) == TYPE_FLOAT:
+			parsed_id = int(result)
+
+		if parsed_id > 0 and level_scenes.has(parsed_id):
+			current_level = parsed_id
+			return parsed_id
+
+	return -1

@@ -7,8 +7,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6teu"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1951869854]
-layer = 7
 process_mode = 3
+layer = 7
 script = ExtResource("1_bjiom")
 
 [node name="Panel" type="Panel" parent="." unique_id=439719899]

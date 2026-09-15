@@ -1,114 +1,114 @@
 [
   {
-    "id": 0,
-    "type": "narrator",
-    "text": "Sa gilid ng plaza, nilapitan ni Leo si Aling Rosa.",
-    "next": 1
+	"id": 0,
+	"type": "narrator",
+	"text": "Sa gilid ng plaza, nilapitan ni Leo si Aling Rosa.",
+	"next": 1
   },
   {
-    "id": 1,
-    "type": "npc",
-    "speaker": "Aling Rosa",
-    "text": "GOOD MORNING! Ikaw ba si Leo? Mabilis ba ako magsenyas para sa iyo?",
-    "choices": [
-      {
-        "text": "NICE TO MEET YOU",
-        "sign": "NICE_TO_MEET_YOU_SIGN",
-        "next": 4
-      },
-      {
-        "text": "FAST",
-        "sign": "FAST_SIGN",
-        "next": 2
-      },
-      {
-        "text": "SLOW",
-        "sign": "SLOW_SIGN",
-        "next": 3
-      },
-      {
-        "text": "UNDERSTAND",
-        "sign": "UNDERSTAND_SIGN",
-        "next": 4
-      }
-    ],
-    "next": -1
+	"id": 1,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "GOOD MORNING! Ikaw ba si Leo? Mabilis ba ako magsenyas para sa iyo?",
+	"choices": [
+	  {
+		"text": "NICE TO MEET YOU",
+		"sign": "NICE_TO_MEET_YOU_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "FAST",
+		"sign": "FAST_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 3
+	  },
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
   },
   {
-    "id": 2,
-    "type": "npc",
-    "speaker": "Aling Rosa",
-    "text": "Ay, pasensya na! Uulitin ko nang mas mabagal.",
-    "choices": [
-      {
-        "text": "SLOW",
-        "sign": "SLOW_SIGN",
-        "next": 4
-      },
-      {
-        "text": "THANK YOU",
-        "sign": "THANK_YOU_SIGN",
-        "next": 4
-      }
-    ],
-    "next": -1
+	"id": 2,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Ay, pasensya na! Uulitin ko nang mas mabagal.",
+	"choices": [
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 4
+	  }
+	],
+	"next": -1
   },
   {
-    "id": 3,
-    "type": "npc",
-    "speaker": "Aling Rosa",
-    "text": "Sige, babagalan ko. Naiintindihan mo ba ako ngayon?",
-    "choices": [
-      {
-        "text": "UNDERSTAND",
-        "sign": "UNDERSTAND_SIGN",
-        "next": 4
-      },
-      {
-        "text": "DON'T UNDERSTAND",
-        "sign": "DONT_UNDERSTAND_SIGN",
-        "next": 5
-      }
-    ],
-    "next": -1
+	"id": 3,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Sige, babagalan ko. Naiintindihan mo ba ako ngayon?",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "DON'T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 5
+	  }
+	],
+	"next": -1
   },
   {
-    "id": 4,
-    "type": "npc",
-    "speaker": "Aling Rosa",
-    "text": "Magalang ka pala! Ikinagagalak kitang makilala, Leo.",
-    "choices": [
-      {
-        "text": "THANK YOU",
-        "sign": "THANK_YOU_SIGN",
-        "next": 6
-      },
-      {
-        "text": "YES",
-        "sign": "YES_SIGN",
-        "next": 6
-      }
-    ],
-    "next": -1
+	"id": 4,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Magalang ka pala! Ikinagagalak kitang makilala, Leo.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  },
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
   },
   {
-    "id": 5,
-    "type": "npc",
-    "speaker": "Aling Rosa",
-    "text": "Huwag kang mag-alala, tutulungan kita mag-ensayo ng mga senyas.",
-    "choices": [
-      {
-        "text": "THANK YOU",
-        "sign": "THANK_YOU_SIGN",
-        "next": 6
-      }
-    ],
-    "next": -1
+	"id": 5,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Huwag kang mag-alala, tutulungan kita mag-ensayo ng mga senyas.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
   },
   {
-    "id": 6,
-    "type": "narrator",
-    "text": "Binigyan ni Aling Rosa si Leo ng mainit na ngiti habang nagpapatuloy siya sa pag-aayos ng paninda.",
-    "next": -1
+	"id": 6,
+	"type": "narrator",
+	"text": "Binigyan ni Aling Rosa si Leo ng mainit na ngiti habang nagpapatuloy siya sa pag-aayos ng paninda.",
+	"next": -1
   }
 ]

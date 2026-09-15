@@ -58,6 +58,29 @@ func mark_level_completed(level_id: int):
 
 	save_data["unlocked_level"] = max(save_data["unlocked_level"], level_id + 1)
 	save_game()
+	_notify_chapter_finished(level_id)
+
+
+func _notify_chapter_finished(level_id: int):
+	if not OS.has_feature("web"):
+		return
+
+	var js_eval = """
+	(function(levelId) {
+		try {
+			var payload = {
+				type: 'SIGNIA_CHAPTER_FINISHED',
+				level_id: levelId
+			};
+			if (window.parent && window.parent !== window) {
+				window.parent.postMessage(payload, '*');
+			}
+			window.dispatchEvent(new CustomEvent('signia_chapter_finished', { detail: payload }));
+		} catch(e) {}
+	})(%d);
+	""" % level_id
+
+	JavaScriptBridge.eval(js_eval)
 
 
 func _sync_to_web():
