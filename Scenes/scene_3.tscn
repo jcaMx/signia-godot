@@ -10548,20 +10548,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pru5n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6b535")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mycjd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Node2D" type="Node2D" unique_id=2072006031]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2043484322]
@@ -10604,9 +10590,6 @@ position = Vector2(35, -51)
 [node name="Point3" type="Marker2D" parent="Waypoints" unique_id=470481804]
 position = Vector2(630, -31)
 
-[node name="Point4" type="Marker2D" parent="Waypoints" unique_id=1124373691]
-position = Vector2(1104, -7)
-
 [node name="Point5" type="Marker2D" parent="Waypoints" unique_id=142336241]
 position = Vector2(1429, -52)
 
@@ -10623,17 +10606,6 @@ require_continue_input_after_dialogue = true
 position = Vector2(0.18735895, 45.331997)
 scale = Vector2(0.048453957, -0.7456463)
 sprite_frames = SubResource("SpriteFrames_cuyd0")
-
-[node name="NPC_Mira2" parent="." unique_id=1353749418 instance=ExtResource("15_pru5n")]
-position = Vector2(2231, 143)
-scale = Vector2(-11.042588, -0.687633)
-dialogue_file = "res://dialogues/s3_p6.json"
-require_continue_input_after_dialogue = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC_Mira2" unique_id=617332456]
-position = Vector2(0.18735895, 45.331997)
-scale = Vector2(0.041855372, -0.58748484)
-sprite_frames = SubResource("SpriteFrames_pru5n")
 
 [node name="NPC_blue" parent="." unique_id=944396360 instance=ExtResource("15_pru5n")]
 position = Vector2(252, -26)
@@ -10659,24 +10631,21 @@ texture = ExtResource("21_qjfui")
 region_enabled = true
 region_rect = Rect2(32, 208, 80, 144)
 
-[node name="NPC2" parent="." unique_id=1455007076 instance=ExtResource("15_pru5n")]
-position = Vector2(1312, -3)
-scale = Vector2(1.5376059, 1.2896636)
-dialogue_file = "res://dialogues/s3_p4.json"
-
-[node name="Sprite2D2" type="Sprite2D" parent="NPC2" unique_id=2110556403]
-position = Vector2(2.6014373, 17.834108)
-scale = Vector2(0.23851113, 0.29444256)
-texture = ExtResource("21_qjfui")
-region_enabled = true
-region_rect = Rect2(32, 368, 80, 144)
-
 [node name="NPC3" parent="." unique_id=1491208534 instance=ExtResource("15_pru5n")]
 position = Vector2(1623, -7)
 scale = Vector2(0.67452866, 0.72000015)
-dialogue_file = "res://dialogues/s3_p5.json"
+dialogue_file = "res://dialogues/s3_p4.json"
 
 [node name="Sprite2D2" type="Sprite2D" parent="NPC3" unique_id=154345611]
 texture = ExtResource("16_6he4u")
 region_enabled = true
 region_rect = Rect2(336, 272, 96, 97)
+
+[node name="NPC_Mira2" parent="." unique_id=544551701 instance=ExtResource("15_pru5n")]
+position = Vector2(2157, 101)
+dialogue_file = "res://dialogues/s3_p5.json"
+
+[node name="Sprite2D2" type="Sprite2D" parent="NPC_Mira2" unique_id=1785612659]
+texture = ExtResource("16_6he4u")
+hframes = 9
+vframes = 3
