@@ -14,6 +14,8 @@ var narrator_box_scene = preload("res://Scenes/narrator_box.tscn")
 @onready var main_menu = get_node_or_null("MainMenu")
 @onready var pause_menu = get_node_or_null("PauseMenu")
 @onready var chapter_finished = get_node_or_null("ChapterFinished")
+@onready var pause_button = get_node_or_null("PauseButton")
+@onready var settings_button = get_node_or_null("SettingsButton")
 
 
 func _ready():
@@ -31,6 +33,12 @@ func _ready():
 		narrator_box.name = "NarratorBox"
 		add_child(narrator_box)
 	narrator_box.hide()
+
+	if pause_button != null:
+		pause_button.pressed.connect(_on_pause_button_pressed)
+	if settings_button != null:
+		settings_button.pressed.connect(_on_settings_button_pressed)
+
 	hide()
 
 
@@ -69,6 +77,11 @@ func _process(_delta):
 	elif chapter_finished != null and chapter_finished.visible:
 		menu_open = true
 
+	if pause_button != null:
+		pause_button.visible = not menu_open
+	if settings_button != null:
+		settings_button.visible = not menu_open
+
 	if menu_open:
 		textbox.hide()
 		choicebox.hide()
@@ -81,6 +94,16 @@ func _process(_delta):
 
 	_sync_visible_boxes()
 	_update_dialogue_positions()
+
+
+func _on_pause_button_pressed():
+	if pause_menu != null and pause_menu.has_method("toggle_pause"):
+		pause_menu.toggle_pause()
+
+
+func _on_settings_button_pressed():
+	if pause_menu != null and pause_menu.has_method("open_settings"):
+		pause_menu.open_settings()
 
 
 func _update_dialogue_positions():

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://drt4n5emq4nbm" path="res://Player/Sprites/NPC 1.png" id="8_m4kpt"]
 [ext_resource type="Texture2D" uid="uid://chm1wcti137ko" path="res://Player/Sprites/npcs 2.png" id="11_v7s7v"]
 [ext_resource type="PackedScene" uid="uid://c1qtnbx1lt1lk" path="res://Scenes/UI/ui.tscn" id="12_q5byr"]
+[ext_resource type="AudioStream" uid="uid://ccu4oaj5t7gjr" path="res://Sounds/scene_2_bgm.mp3" id="14_qmqk1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5053"]
 texture = ExtResource("1_bma84")
@@ -17424,3 +17425,6 @@ scale = Vector2(0.13367061, 0.23318572)
 texture = ExtResource("11_v7s7v")
 region_enabled = true
 region_rect = Rect2(32, 208, 80, 144)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=88127344]
+stream = ExtResource("14_qmqk1")

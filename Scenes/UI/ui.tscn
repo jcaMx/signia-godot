@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://defbujk5e8k6f" path="res://Scenes/UI/ChapterFinished.tscn" id="7_h6tq4"]
 [ext_resource type="PackedScene" uid="uid://dfqi14wigohis" path="res://Scenes/user_input.tscn" id="8_t7te2"]
 [ext_resource type="PackedScene" uid="uid://bi7eyf1ysyqmo" path="res://Scenes/UI/progress_bar_ui.tscn" id="9_mbl0m"]
+[ext_resource type="Theme" uid="uid://cdto336wlv0lp" path="res://new_theme.tres" id="10_theme"]
+[ext_resource type="Texture2D" uid="uid://b87x291n4m650" path="res://UI/icon_pause.png" id="11_pause_icon"]
+[ext_resource type="Texture2D" uid="uid://c983628m4n761" path="res://UI/icon_settings.png" id="12_settings_icon"]
 
 [node name="UI" type="CanvasLayer" unique_id=1134992687]
 script = ExtResource("1_jfwrg")
@@ -38,8 +41,26 @@ layer = 5
 layer = 6
 
 [node name="PauseButton" type="Button" parent="." unique_id=684735467]
-offset_right = 8.0
-offset_bottom = 8.0
+unique_name_in_owner = true
+offset_left = 390.0
+offset_top = 8.0
+offset_right = 416.0
+offset_bottom = 34.0
+theme = ExtResource("10_theme")
+icon = ExtResource("11_pause_icon")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="." unique_id=981237465]
+unique_name_in_owner = true
+offset_left = 420.0
+offset_top = 8.0
+offset_right = 446.0
+offset_bottom = 34.0
+theme = ExtResource("10_theme")
+icon = ExtResource("12_settings_icon")
+icon_alignment = 1
+expand_icon = true
 
 [node name="ChapterFinished" parent="." unique_id=1951869854 instance=ExtResource("7_h6tq4")]
 layer = 7

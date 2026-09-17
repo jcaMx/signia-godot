@@ -39,7 +39,7 @@
 		"id": 3,
 		"type": "npc",
 		"speaker": "Tindero",
-		"text": "Mabuti! Tingnan mo ang prutas na ito. Anong kulay ito?",
+		"text": "Mabuti! Tingnan mo ang prutas sa gitna. Anong kulay nito?",
 		"choices": [
 			{
 				"text": "RED",

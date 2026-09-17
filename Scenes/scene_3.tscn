@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bx1wkv1015k36" path="res://Tiles/plaza-tileset1.png" id="15_iituq"]
 [ext_resource type="PackedScene" uid="uid://c81ktnjs7n70g" path="res://Scenes/npc.tscn" id="15_pru5n"]
 [ext_resource type="Texture2D" uid="uid://drt4n5emq4nbm" path="res://Player/Sprites/NPC 1.png" id="16_6he4u"]
+[ext_resource type="PackedScene" uid="uid://c1qtnbx1lt1lk" path="res://Scenes/UI/ui.tscn" id="21_h7rag"]
 [ext_resource type="Texture2D" uid="uid://chm1wcti137ko" path="res://Player/Sprites/npcs 2.png" id="21_qjfui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pi2fq"]
@@ -10649,3 +10650,7 @@ dialogue_file = "res://dialogues/s3_p5.json"
 texture = ExtResource("16_6he4u")
 hframes = 9
 vframes = 3
+
+[node name="UI" parent="." unique_id=1134992687 instance=ExtResource("21_h7rag")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=930460528]
