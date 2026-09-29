@@ -18,13 +18,31 @@ var is_requesting := false
 var last_raw_prediction := ""
 var current_active_mode := "alphabet"
 var catalog_request: HTTPRequest = null
+var browser_prediction_mode := false
+var last_mode_request := ""
+var browser_message_callback: JavaScriptObject
+var mode_request_elapsed := 0.0
 
 
 func _ready():
-	timer.timeout.connect(_on_timer_timeout)
-	http_request.request_completed.connect(_on_request_completed)
 	sign_detected.connect(FSLInputBridge.on_sign_detected)
-	fetch_backend_catalog()
+	if GameManager.has_signal("word_started"):
+		GameManager.word_started.connect(func(_tw, _sid): last_raw_prediction = "")
+	if GameManager.has_signal("word_progress_changed"):
+		GameManager.word_progress_changed.connect(func(_tw, _ci, _sm): last_raw_prediction = "")
+	if GameManager.has_signal("word_completed"):
+		GameManager.word_completed.connect(func(_tw, _sid): last_raw_prediction = "")
+	if GameManager.has_signal("word_cleared"):
+		GameManager.word_cleared.connect(func(): last_raw_prediction = "")
+	if OS.has_feature("web"):
+		browser_prediction_mode = true
+		browser_message_callback = JavaScriptBridge.create_callback(_on_browser_message)
+		JavaScriptBridge.get_interface("window").addEventListener("message", browser_message_callback)
+		set_process(true)
+	else:
+		timer.timeout.connect(_on_timer_timeout)
+		http_request.request_completed.connect(_on_request_completed)
+		fetch_backend_catalog()
 
 
 func fetch_backend_catalog():
@@ -64,6 +82,9 @@ func get_active_backend_mode() -> String:
 
 
 func _on_timer_timeout():
+	if browser_prediction_mode:
+		return
+
 	if is_requesting:
 		return
 
@@ -146,3 +167,72 @@ func _on_request_completed(_result, _response_code, _headers, body):
 		last_raw_prediction = raw_prediction
 		print("Detected [%s]: %s (Conf: %.2f)" % [mode, raw_prediction, raw_confidence])
 		sign_detected.emit(raw_prediction, raw_confidence)
+
+
+func _get_js_prop(obj, key: String, default_val = null):
+	if obj == null:
+		return default_val
+	if typeof(obj) == TYPE_DICTIONARY:
+		return obj.get(key, default_val)
+	if typeof(obj) == TYPE_OBJECT and obj is JavaScriptObject:
+		var val = obj[key]
+		return val if val != null else default_val
+	return default_val
+
+
+func _on_browser_message(args: Array) -> void:
+	if args.is_empty():
+		return
+	var event = args[0]
+	if event == null:
+		return
+
+	var data = _get_js_prop(event, "data")
+	if data == null:
+		return
+
+	if typeof(data) == TYPE_STRING:
+		var parsed = JSON.parse_string(data)
+		if typeof(parsed) == TYPE_DICTIONARY:
+			data = parsed
+
+	var msg_type = str(_get_js_prop(data, "type", ""))
+	if msg_type != "SIGNIA_PREDICTION":
+		return
+
+	var prediction = str(_get_js_prop(data, "prediction", ""))
+	var confidence = float(_get_js_prop(data, "confidence", 0.0))
+
+	if not GameManager.has_active_challenge() and not GameManager.has_active_choices():
+		print("[Browser FSL] Prediction ignored: no active challenge or choices. Prediction=%s" % prediction)
+		return
+
+	receive_browser_prediction(prediction, confidence)
+
+
+func receive_browser_prediction(prediction: String, confidence: float) -> void:
+	if prediction.is_empty():
+		last_raw_prediction = ""
+		return
+	if confidence < 0.50:
+		print("[Browser FSL] Below confidence threshold: %s (%.3f)" % [prediction, confidence])
+		return
+	if prediction == last_raw_prediction:
+		return
+
+	last_raw_prediction = prediction
+	print("[Browser FSL] Emitting [%s]: %s (Conf: %.3f)" % [get_active_backend_mode(), prediction, confidence])
+	sign_detected.emit(prediction, confidence)
+
+
+func _process(delta: float) -> void:
+	if not browser_prediction_mode:
+		return
+	mode_request_elapsed += delta
+	if mode_request_elapsed < 0.25:
+		return
+	mode_request_elapsed = 0.0
+	var target_mode := get_active_backend_mode()
+	if target_mode != last_mode_request:
+		last_mode_request = target_mode
+		JavaScriptBridge.eval("window.parent.postMessage({type: 'SIGNIA_MODE_REQUEST', mode: " + JSON.stringify(target_mode) + "}, window.location.origin);")

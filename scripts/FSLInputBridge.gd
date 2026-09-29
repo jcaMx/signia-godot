@@ -31,4 +31,7 @@ func receive_letter(letter: String):
 
 
 func on_sign_detected(sign_id: String, _confidence := 0.0):
+	print("[FSL Input] Received prediction: %s (challenge=%s choices=%s)" % [sign_id, GameManager.has_active_challenge(), GameManager.has_active_choices()])
 	receive_sign(sign_id)
+	if GameManager.has_active_challenge():
+		print("[FSL Input] After submit: target=%s input=%s status=%s" % [GameManager.target_word, GameManager.current_input, GameManager.status_message])
