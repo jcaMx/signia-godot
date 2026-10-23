@@ -12,6 +12,21 @@ const CHALLENGE_TYPE_DIRECT := "direct"
 
 const RESOLVE_URL := "http://127.0.0.1:5000/resolve_mode?sign="
 
+const COLOR_PREFIX := "COLOR_"
+
+const NUMBER_WORD_MAP := {
+	"1": "ONE",
+	"2": "TWO",
+	"3": "THREE",
+	"4": "FOUR",
+	"5": "FIVE",
+	"6": "SIX",
+	"7": "SEVEN",
+	"8": "EIGHT",
+	"9": "NINE",
+	"10": "TEN"
+}
+
 # Built-in base mappings (immediate startup defaults & offline fallback)
 const DEFAULT_CATEGORY_MAP := {
 	"GOOD_MORNING": "greeting",
@@ -34,14 +49,40 @@ const DEFAULT_CATEGORY_MAP := {
 	"WRONG": "survival",
 	"CORRECT": "survival",
 	"SLOW": "survival",
-	"FAST": "survival"
+	"FAST": "survival",
+
+	"RED": "color",
+	"BLUE": "color",
+	"GREEN": "color",
+	"YELLOW": "color",
+	"BROWN": "color",
+	"BLACK": "color",
+	"WHITE": "color",
+
+	"ONE": "number",
+	"TWO": "number",
+	"THREE": "number",
+	"FOUR": "number",
+	"FIVE": "number",
+
+	"FISH": "food",
+	"RICE": "food",
+	"MEAT": "food",
+	"CHICKEN": "food",
+
+	"JUICE": "drink",
+	"TEA": "drink",
+	"COLD": "drink",
+	"HOT": "drink",
+
+	"SORRY": "communication"
 }
 
 # -----------------------------------------------------------------------------
 # State & Signals
 # -----------------------------------------------------------------------------
 var category_map: Dictionary = {}
-var available_categories: Array = ["alphabet", "greeting", "survival"]
+var available_categories: Array = ["alphabet", "greeting", "survival", "color", "number", "food", "drink", "communication"]
 var is_initialized := false
 
 signal registry_updated
@@ -64,11 +105,16 @@ func get_challenge_target(sign_id: String) -> String:
 	var normalized = normalize_sign_id(sign_id)
 
 	if normalized.begins_with(SPELL_PREFIX):
-		return normalized.trim_prefix(SPELL_PREFIX)
+		return normalized.trim_prefix(SPELL_PREFIX).replace("_", "")
 	if normalized.begins_with(DIRECT_SIGN_PREFIX):
 		normalized = normalized.trim_prefix(DIRECT_SIGN_PREFIX)
+	if normalized.begins_with(COLOR_PREFIX):
+		normalized = normalized.trim_prefix(COLOR_PREFIX)
 	if normalized.ends_with(DIRECT_SIGN_SUFFIX):
 		normalized = normalized.trim_suffix(DIRECT_SIGN_SUFFIX)
+
+	if NUMBER_WORD_MAP.has(normalized):
+		normalized = NUMBER_WORD_MAP[normalized]
 
 	return normalized
 

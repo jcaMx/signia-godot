@@ -29,7 +29,7 @@ func _ready():
 	# Get all waypoint nodes
 	waypoints = get_parent().get_node("Waypoints").get_children()
 	
-	LevelManager.setup_level(level_id, waypoints.size())
+	LevelManager.setup_level(level_id, get_parent())
 	LevelManager.update_waypoint_progress(current_index)
 	
 	# Prevent errors if no waypoints exist

@@ -43,7 +43,7 @@ theme_override_fonts/font = ExtResource("2_ay6ds")
 theme_override_font_sizes/font_size = 11
 theme_override_styles/background = SubResource("StyleBoxFlat_bg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
-value = 50.0
+value = 0.0
 
 [node name="Label" type="Label" parent="ProgressBar" unique_id=1081418376]
 unique_name_in_owner = true

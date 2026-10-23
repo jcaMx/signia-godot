@@ -2,14 +2,14 @@
 	{
 		"id": 0,
 		"type": "narrator",
-		"text": "Sa gitna ng plaza, mas naging pamilyar kay Leo ang ritmo ng usapan ng mga tao.",
+		"text": "In the center of the plaza, the rhythm of everyone's conversations grew more familiar to Leo.",
 		"next": 1
 	},
 	{
 		"id": 1,
 		"type": "npc",
 		"speaker": "Mang Ben",
-		"text": "Kumusta, Leo? Naiintindihan mo na ba sila kahit kaunti?",
+		"text": "How are things, Leo? Do you understand them even just a little?",
 		"choices": [
 			{
 				"text": "UNDERSTAND",
@@ -17,7 +17,7 @@
 				"next": 2
 			},
 			{
-				"text": "DON’T UNDERSTAND",
+				"text": "DON'T UNDERSTAND",
 				"sign": "DONT_UNDERSTAND_SIGN",
 				"next": 3
 			}
@@ -28,7 +28,7 @@
 		"id": 2,
 		"type": "npc",
 		"speaker": "Mang Ben",
-		"text": "Mabuti. Hindi kailangang perpekto agad. Ang mahalaga, nakikinig ka.",
+		"text": "Good. It doesn't need to be perfect right away. What matters is that you're listening.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -42,7 +42,7 @@
 		"id": 3,
 		"type": "npc",
 		"speaker": "Mang Ben",
-		"text": "Ayos lang iyon. Kapag nahihirapan ka, maaari kang magsenyas ng SLOW.",
+		"text": "That's alright. Whenever you find it difficult, you can sign SLOW.",
 		"choices": [
 			{
 				"text": "UNDERSTAND",
@@ -55,7 +55,7 @@
 	{
 		"id": 4,
 		"type": "narrator",
-		"text": "Sa unang gabi ni Leo sa plaza, natutunan niyang hindi masama ang malito. Mas mahalaga ang magtanong, makinig, at subukang muli.",
+		"text": "On his first evening at the plaza, Leo learned that getting confused is okay. What matters most is asking, listening, and trying again.",
 		"next": -1
 	}
 ]

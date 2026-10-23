@@ -2,8 +2,8 @@
 	{
 		"id": 0,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "O, Leo! Ano ang gusto mong bilhin?",
+		"speaker": "Elder Vendor",
+		"text": "Oh, Leo! What would you like to buy?",
 		"choices": [
 			{
 				"text": "FISH",
@@ -31,8 +31,8 @@
 	{
 		"id": 1,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Isda? Meron ako. Ilang kilo ang gusto mo?",
+		"speaker": "Elder Vendor",
+		"text": "Fish? I have that. How many kilos would you like?",
 		"choices": [
 			{
 				"text": "1 KG",
@@ -60,8 +60,8 @@
 	{
 		"id": 2,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Bigas? Meron ako. Ilang kilo ang gusto mo?",
+		"speaker": "Elder Vendor",
+		"text": "Rice? I have that. How many kilos would you like?",
 		"choices": [
 			{
 				"text": "1 KG",
@@ -89,8 +89,8 @@
 	{
 		"id": 3,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Karne? Pasensya na, wala akong karne sa tindahan ngayon.",
+		"speaker": "Elder Vendor",
+		"text": "Meat? I'm sorry, I don't have meat at the stall today.",
 		"choices": [
 			{
 				"text": "OK",
@@ -108,8 +108,8 @@
 	{
 		"id": 4,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Manok? Pasensya na, wala akong manok sa tindahan ngayon.",
+		"speaker": "Elder Vendor",
+		"text": "Chicken? I'm sorry, I don't have chicken at the stall today.",
 		"choices": [
 			{
 				"text": "OK",
@@ -127,8 +127,8 @@
 	{
 		"id": 5,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Isang kilo ng isda. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "One kilo of fish. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -141,8 +141,8 @@
 	{
 		"id": 6,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Dalawang kilo ng isda. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Two kilos of fish. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -155,8 +155,8 @@
 	{
 		"id": 7,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Tatlong kilo ng isda. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Three kilos of fish. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -169,8 +169,8 @@
 	{
 		"id": 8,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Limang kilo ng isda. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Five kilos of fish. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -183,8 +183,8 @@
 	{
 		"id": 9,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Isang kilo ng bigas. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "One kilo of rice. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -197,8 +197,8 @@
 	{
 		"id": 10,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Dalawang kilo ng bigas. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Two kilos of rice. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -211,8 +211,8 @@
 	{
 		"id": 11,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Tatlong kilo ng bigas. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Three kilos of rice. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -225,8 +225,8 @@
 	{
 		"id": 12,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Limang kilo ng bigas. Sige, ihahanda ko.",
+		"speaker": "Elder Vendor",
+		"text": "Five kilos of rice. Alright, I'll prepare it.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -239,8 +239,8 @@
 	{
 		"id": 13,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Pumili ka na lang ng ibang pagkain na mayroon ako.",
+		"speaker": "Elder Vendor",
+		"text": "Please choose another food item that I have in stock.",
 		"choices": [
 			{
 				"text": "OK",
@@ -253,7 +253,7 @@
 	{
 		"id": 14,
 		"type": "narrator",
-		"text": "Nakuha ni Leo ang kanyang binili. Natutunan niyang mahalagang sabihin hindi lamang kung ano ang gusto niya, kundi pati kung gaano karami ang kailangan niya.",
+		"text": "Leo received his purchase. He learned that it's important not only to say what you want, but also how much you need.",
 		"next": -1
 	}
 ]

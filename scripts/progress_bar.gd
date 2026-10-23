@@ -9,6 +9,7 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	LevelManager.progress_changed.connect(_on_progress_changed)
 	_sync_visibility()
+	_on_progress_changed(LevelManager.get_current_progress_value(), LevelManager.get_current_progress_total())
 
 
 func _process(_delta):

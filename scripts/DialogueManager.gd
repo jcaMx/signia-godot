@@ -58,6 +58,7 @@ func choose(choice_index: int):
 	if choice_index < 0 or choice_index >= choices.size():
 		return
 
+	LevelManager.register_dialogue_answer(current_source, current_id)
 	_advance_to(choices[choice_index].get("next", -1))
 
 
@@ -94,6 +95,7 @@ func process_sign(sign_id: String):
 
 	for choice in _sanitize_choices(node.get("choices", [])):
 		if SignProcessor.are_signs_matching(sign_id, String(choice.get("sign", ""))):
+			LevelManager.register_dialogue_answer(current_source, current_id)
 			_advance_to(choice.get("next", -1))
 			return
 
@@ -145,6 +147,7 @@ func consume_player_continue_request():
 
 
 func end():
+	var finished_source := current_source
 	pending_player_continue = require_player_continue_after_end
 	active = false
 	current_id = -1
@@ -155,6 +158,8 @@ func end():
 	active_speaker_node = null
 	require_player_continue_after_end = false
 	GameManager.clear_active_choices()
+	if not finished_source.is_empty():
+		LevelManager.register_dialogue_finished(finished_source)
 	dialogue_ended.emit()
 
 

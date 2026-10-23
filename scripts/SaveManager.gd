@@ -7,6 +7,8 @@ var save_data := {
 	"current_level": 1,
 	"unlocked_level": 1,
 	"waypoint_index": 0,
+	"answer_progress": 0,
+	"total_answers": 0,
 	"completed_levels": [],
 	"completed_tasks": [],
 	"volume": 1.0
@@ -16,6 +18,8 @@ var save_data := {
 func save_game():
 	save_data["current_level"] = LevelManager.current_level
 	save_data["waypoint_index"] = LevelManager.current_waypoint_index
+	save_data["answer_progress"] = LevelManager.current_answers_count
+	save_data["total_answers"] = LevelManager.total_answers_count
 	save_data["completed_tasks"] = GameManager.completed_tasks
 
 	# 1. Save to local user file (IndexedDB in Web export)

@@ -2,8 +2,8 @@
 	{
 		"id": 0,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Gusto mo ba ng inumin?",
+		"speaker": "Elder Vendor",
+		"text": "Would you like a drink?",
 		"choices": [
 			{
 				"text": "JUICE",
@@ -21,8 +21,8 @@
 	{
 		"id": 1,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Juice? Meron akong buko juice. Gusto mo ba ng malamig?",
+		"speaker": "Elder Vendor",
+		"text": "Juice? I have coconut juice. Would you like it cold?",
 		"choices": [
 			{
 				"text": "COLD",
@@ -40,12 +40,12 @@
 	{
 		"id": 2,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Tea? Pasensya na, wala akong tea dito.",
+		"speaker": "Elder Vendor",
+		"text": "Tea? I'm sorry, I don't have tea here.",
 		"choices": [
 			{
 				"text": "OK",
-				"sign": "SIGN_OK",
+				"sign": "SPELL_OK",
 				"next": 0
 			},
 			{
@@ -59,8 +59,8 @@
 	{
 		"id": 3,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Oo, malamig ang buko juice. Ilan ang gusto mo?",
+		"speaker": "Elder Vendor",
+		"text": "Yes, the coconut juice is cold. How many would you like?",
 		"choices": [
 			{
 				"text": "1",
@@ -83,8 +83,8 @@
 	{
 		"id": 4,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Isa lang? Para sa iyo?",
+		"speaker": "Elder Vendor",
+		"text": "Just one? For yourself?",
 		"choices": [
 			{
 				"text": "YES",
@@ -102,8 +102,8 @@
 	{
 		"id": 5,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Dalawa? Para sa iyo at kay Mira?",
+		"speaker": "Elder Vendor",
+		"text": "Two? For you and Mira?",
 		"choices": [
 			{
 				"text": "YES",
@@ -121,8 +121,8 @@
 	{
 		"id": 6,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Tatlo? Para sa iyo, kay Mira, at kay Mang Ben?",
+		"speaker": "Elder Vendor",
+		"text": "Three? For you, Mira, and Mang Ben?",
 		"choices": [
 			{
 				"text": "YES",
@@ -140,8 +140,8 @@
 	{
 		"id": 7,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Sige. Isang malamig na buko juice para sa iyo.",
+		"speaker": "Elder Vendor",
+		"text": "Alright. One cold coconut juice for you.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -154,8 +154,8 @@
 	{
 		"id": 8,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Sige, ilan ang gusto mo?",
+		"speaker": "Elder Vendor",
+		"text": "Alright, how many would you like?",
 		"choices": [
 			{
 				"text": "1",
@@ -178,8 +178,8 @@
 	{
 		"id": 9,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Sige. Dalawang malamig na buko juice para sa iyo at kay Mira.",
+		"speaker": "Elder Vendor",
+		"text": "Alright. Two cold coconut juices for you and Mira.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -192,8 +192,8 @@
 	{
 		"id": 10,
 		"type": "npc",
-		"speaker": "Tatay Tindero",
-		"text": "Sige. Tatlong malamig na buko juice para sa iyo, kay Mira, at kay Mang Ben.",
+		"speaker": "Elder Vendor",
+		"text": "Alright. Three cold coconut juices for you, Mira, and Mang Ben.",
 		"choices": [
 			{
 				"text": "THANK YOU",
@@ -206,7 +206,7 @@
 	{
 		"id": 11,
 		"type": "narrator",
-		"text": "Nakuha ni Leo ang kanyang biniling inumin. Natutunan niyang sabihin hindi lamang kung ano ang gusto niya, kundi pati kung gaano karami ang kailangan niya.",
+		"text": "Leo received the drinks he bought. He learned to state not only what he wanted, but also how many he needed.",
 		"next": -1
 	}
 ]

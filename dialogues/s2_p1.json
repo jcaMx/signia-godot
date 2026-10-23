@@ -2,14 +2,14 @@
   {
 	"id": 0,
 	"type": "narrator",
-	"text": "Dumating sina Leo at Mang Ben sa plaza ng Luntian ngayong hapon.",
+	"text": "Leo and Mang Ben arrived at the Luntian plaza this afternoon.",
 	"next": 1
   },
   {
 	"id": 1,
 	"type": "npc",
 	"speaker": "Mang Ben",
-	"text": "Leo, hapon na. Ano ang nababagay na bati ngayong hapon sa plaza?",
+	"text": "Leo, it's afternoon. What greeting is fitting for this afternoon at the plaza?",
 	"choices": [
 	  {
 		"text": "GOOD AFTERNOON",
@@ -33,7 +33,7 @@
 	"id": 2,
 	"type": "npc",
 	"speaker": "Mang Ben",
-	"text": "Magaling! Handa ka na bang makipag-usap sa mga taga-baryo?",
+	"text": "Great job! Are you ready to talk with the villagers?",
 	"choices": [
 	  {
 		"text": "YES",
@@ -52,7 +52,7 @@
 	"id": 3,
 	"type": "npc",
 	"speaker": "Mang Ben",
-	"text": "Hapon na ngayon, kaya GOOD AFTERNOON ang mas angkop. Naiintindihan mo ba?",
+	"text": "It's afternoon now, so GOOD AFTERNOON is more appropriate. Do you understand?",
 	"choices": [
 	  {
 		"text": "UNDERSTAND",
@@ -70,14 +70,14 @@
   {
 	"id": 4,
 	"type": "narrator",
-	"text": "Tumango si Mang Ben at pumasok na sila sa maingay at masayang plaza.",
+	"text": "Mang Ben nodded, and they stepped into the lively and bustling plaza.",
 	"next": -1
   },
   {
 	"id": 5,
 	"type": "npc",
 	"speaker": "Mang Ben",
-	"text": "Huwag kang mag-alala. Dahan-dahan lang tayong mag-uusap rito.",
+	"text": "Don't worry. We'll take our conversations slowly here.",
 	"choices": [
 	  {
 		"text": "UNDERSTAND",

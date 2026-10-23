@@ -2,14 +2,14 @@
   {
 	"id": 0,
 	"type": "narrator",
-	"text": "Nakita ni Leo si Mira sa gitna ng plaza. Agad itong kumaway nang mapansin si Leo.",
+	"text": "Leo spotted Mira in the middle of the plaza. She immediately waved as soon as she saw him.",
 	"next": 1
   },
   {
 	"id": 1,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "HELLO, Leo! Nakabalik ka sa plaza! HOW ARE YOU?",
+	"text": "HELLO, Leo! You're back at the plaza! HOW ARE YOU?",
 	"choices": [
 	  {
 		"text": "I'M FINE",
@@ -33,7 +33,7 @@
 	"id": 2,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Mabuti naman kung ganoon! Mas kalmado ka na ngayon kaysa kanina.",
+	"text": "Glad to hear that! You look much calmer now than earlier.",
 	"choices": [
 	  {
 		"text": "THANK YOU",
@@ -52,7 +52,7 @@
 	"id": 3,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Mabuti rin ako! Handa ka na bang mag-ensayo sa plaza kasama ang iba?",
+	"text": "I'm doing well too! Are you ready to practice at the plaza with the others?",
 	"choices": [
 	  {
 		"text": "YES",
@@ -71,7 +71,7 @@
 	"id": 4,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Ayos lang! Ang ibig kong sabihin ay kumusta ka?",
+	"text": "It's okay! What I meant was, how are you?",
 	"choices": [
 	  {
 		"text": "I'M FINE",
@@ -89,7 +89,7 @@
   {
 	"id": 5,
 	"type": "narrator",
-	"text": "Masayang ngumiti si Mira at itinuro si Aling Rosa na nasa kalapit na tindahan.",
+	"text": "Mira smiled warmly and pointed towards Aling Rosa at a nearby stall.",
 	"next": -1
   }
 ]

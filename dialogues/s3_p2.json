@@ -2,34 +2,29 @@
 	{
 		"id": 0,
 		"type": "narrator",
-		"text": "Pagdating ni Leo sa palengke, napansin niya ang iba't ibang kulay ng mga prutas at gulay sa mga tindahan.",
+		"text": "When Leo arrived at the market, he noticed the various colors of fruits and vegetables in the stalls.",
 		"next": 1
 	},
 	{
 		"id": 1,
 		"type": "narrator",
-		"text": "Sa isang maliit na puwesto, may mga prutas na maayos na nakahilera ayon sa kanilang kulay.",
+		"text": "At a small stall, fruits were neatly arranged according to their color.",
 		"next": 2
 	},
 	{
 		"id": 2,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Leo! Marunong ka na bang magsenyas ng mga kulay?",
+		"speaker": "Vendor",
+		"text": "Leo! Do you know how to sign colors yet?",
 		"choices": [
 			{
-				"text": "OO",
-				"sign": "SPELL_OO",
+				"text": "YES",
+				"sign": "SPELL_YES",
 				"next": 3
 			},
 			{
-				"text": "KONTI",
-				"sign": "SPELL_KONTI",
-				"next": 3
-			},
-			{
-				"text": "HINDI",
-				"sign": "SPELL_HINDI",
+				"text": "NO",
+				"sign": "SPELL_NO",
 				"next": 3
 			}
 		],
@@ -38,8 +33,8 @@
 	{
 		"id": 3,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Mabuti! Tingnan mo ang prutas sa gitna. Anong kulay nito?",
+		"speaker": "Vendor",
+		"text": "Good! Look at the fruit in the middle. What color is this?",
 		"choices": [
 			{
 				"text": "RED",
@@ -62,8 +57,8 @@
 	{
 		"id": 4,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Tama! Pula ang mansanas. Magandang halimbawa iyan ng kulay RED.",
+		"speaker": "Vendor",
+		"text": "Correct! The tomato is red. That's a good example of the color RED.",
 		"choices": [
 			{
 				"text": "RED",
@@ -76,8 +71,8 @@
 	{
 		"id": 5,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. Ang mansanas ay RED. Subukan mong tingnan muli.",
+		"speaker": "Vendor",
+		"text": "No. The apple is RED. Try looking at it again.",
 		"choices": [
 			{
 				"text": "RED",
@@ -90,8 +85,8 @@
 	{
 		"id": 6,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. Ang mansanas ay RED. Subukan mong tingnan muli.",
+		"speaker": "Vendor",
+		"text": "No. The apple is RED. Try looking at it again.",
 		"choices": [
 			{
 				"text": "RED",
@@ -104,8 +99,8 @@
 	{
 		"id": 7,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Ngayon naman, tingnan mo ang dahon. Anong kulay ito?",
+		"speaker": "Vendor",
+		"text": "Now then, take a look at the leaf. What color is this?",
 		"choices": [
 			{
 				"text": "GREEN",
@@ -128,8 +123,8 @@
 	{
 		"id": 8,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Tama! GREEN ang kulay ng dahon.",
+		"speaker": "Vendor",
+		"text": "Correct! GREEN is the color of the leaf.",
 		"choices": [
 			{
 				"text": "GREEN",
@@ -142,8 +137,8 @@
 	{
 		"id": 9,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. Ang dahon ay GREEN. Tingnan mo ang kulay nito.",
+		"speaker": "Vendor",
+		"text": "No. The leaf is GREEN. Look closely at its color.",
 		"choices": [
 			{
 				"text": "GREEN",
@@ -156,8 +151,8 @@
 	{
 		"id": 10,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. Ang dahon ay GREEN. Tingnan mo ang kulay nito.",
+		"speaker": "Vendor",
+		"text": "No. The leaf is GREEN. Look closely at its color.",
 		"choices": [
 			{
 				"text": "GREEN",
@@ -170,8 +165,8 @@
 	{
 		"id": 11,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Magaling! Huli na. Tingnan mo ang saging. Anong kulay ito?",
+		"speaker": "Vendor",
+		"text": "Great job! Last one. Look at the banana. What color is this?",
 		"choices": [
 			{
 				"text": "YELLOW",
@@ -194,8 +189,8 @@
 	{
 		"id": 12,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Tama! YELLOW ang kulay ng saging.",
+		"speaker": "Vendor",
+		"text": "Correct! YELLOW is the color of the banana.",
 		"choices": [
 			{
 				"text": "YELLOW",
@@ -208,8 +203,8 @@
 	{
 		"id": 13,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. YELLOW ang kulay ng saging. Subukan mong muli.",
+		"speaker": "Vendor",
+		"text": "No. YELLOW is the color of the banana. Try again.",
 		"choices": [
 			{
 				"text": "YELLOW",
@@ -222,8 +217,8 @@
 	{
 		"id": 14,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Hindi. YELLOW ang kulay ng saging. Subukan mong muli.",
+		"speaker": "Vendor",
+		"text": "No. YELLOW is the color of the banana. Try again.",
 		"choices": [
 			{
 				"text": "YELLOW",
@@ -236,23 +231,23 @@
 	{
 		"id": 15,
 		"type": "narrator",
-		"text": "Napansin ni Leo na mas madali niyang nakikilala ang mga kulay kapag iniuugnay niya ang mga ito sa mga bagay na nakikita niya sa paligid.",
+		"text": "Leo noticed that it was easier to recognize colors when he associated them with objects he saw around him.",
 		"next": 16
 	},
 	{
 		"id": 16,
 		"type": "npc",
-		"speaker": "Tindero",
-		"text": "Tandaan mo, Leo. Hindi lang sa laro ginagamit ang mga kulay. Maaari mong gamitin ang mga senyas na ito kapag nakikipag-usap ka sa totoong buhay.",
+		"speaker": "Vendor",
+		"text": "Remember, Leo. Colors aren't just for practice. You can use these signs whenever you communicate in real life.",
 		"choices": [
 			{
-				"text": "SALAMAT",
-				"sign": "SPELL_SALAMAT",
+				"text": "THANK YOU",
+				"sign": "SPELL_THANK_YOU",
 				"next": 17
 			},
 			{
-				"text": "OO",
-				"sign": "SPELL_OO",
+				"text": "YES",
+				"sign": "SPELL_YES",
 				"next": 17
 			}
 		],
@@ -261,7 +256,7 @@
 	{
 		"id": 17,
 		"type": "narrator",
-		"text": "Pag-alis ni Leo sa palengke, sinubukan niyang tingnan ang mga bagay sa paligid at pangalanan ang kanilang mga kulay gamit ang mga natutunan niyang senyas.",
+		"text": "Leaving the market, Leo tried observing things around him and naming their colors using the signs he had learned.",
 		"next": -1
 	}
 ]

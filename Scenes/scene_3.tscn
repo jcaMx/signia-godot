@@ -10647,6 +10647,8 @@ position = Vector2(2157, 101)
 dialogue_file = "res://dialogues/s3_p5.json"
 
 [node name="Sprite2D2" type="Sprite2D" parent="NPC_Mira2" unique_id=1785612659]
+position = Vector2(2.5624752, 12.437498)
+scale = Vector2(0.651666, 0.5294715)
 texture = ExtResource("16_6he4u")
 hframes = 9
 vframes = 3

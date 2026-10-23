@@ -140,25 +140,15 @@ func _on_request_completed(_result, _response_code, _headers, body):
 	var raw_prediction = str(data.get("raw_prediction", ""))
 	var raw_confidence = float(data.get("raw_confidence", 0.0))
 	var mode = str(data.get("mode", ""))
-	var frame_source = str(data.get("frame_source", ""))
+	#var frame_source = str(data.get("frame_source", ""))
 	var buffer_size = int(data.get("buffer_size", 0))
 	var buffer_msg = str(data.get("message", ""))
 
 	# Update Debug UI
 	if label != null:
-		var status_info = ""
-		if mode != "alphabet" and raw_prediction == "":
-			if buffer_msg != "":
-				status_info = "\nStatus: " + buffer_msg
-			elif buffer_size > 0:
-				status_info = "\nBuffering: %d/30 frames" % buffer_size
-
 		label.text = (
-			"Mode: " + mode
-			+ "\nFrame Source: " + frame_source
-			+ "\nRaw prediction: " + raw_prediction
+			"Raw prediction: " + raw_prediction
 			+ "\nRaw Conf: " + str(raw_confidence)
-			+ status_info
 		)
 
 	if raw_prediction == "":

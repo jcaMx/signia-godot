@@ -2,14 +2,14 @@
   {
 	"id": 0,
 	"type": "narrator",
-	"text": "Kinabukasan, mas masigla ang baryo ng Luntian. Mula sa plaza, maririnig ang tawanan at ingay ng mga taong naghahanda para sa pagtitipon.",
+	"text": "The next day, the village of Luntian was even more lively. From the plaza, laughter and chatter echoed as people prepared for the gathering.",
 	"next": 1
   },
   {
 	"id": 1,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Leo, pwede mo bang tulungan si Aling Rosa para sa pamimili ng pagkain sa palengke?",
+	"text": "Leo, could you help Aling Rosa buy groceries at the market?",
 	"choices": [
 	  {
 		"text": "YES",
@@ -28,7 +28,7 @@
 	"id": 2,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Salamat! Kailangan natin ng pagkain at inumin para bukas.",
+	"text": "Thank you! We need food and drinks for tomorrow.",
 	"choices": [
 	  {
 		"text": "THANK YOU",
@@ -47,7 +47,7 @@
 	"id": 3,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Ayos lang kung kinakabahan ka. Pero kaya mo ito, Leo. Simpleng pamimili lang muna.",
+	"text": "It's fine if you're nervous. But you can do this, Leo. Just some simple errands for now.",
 	"choices": [
 	  {
 		"text": "YES",
@@ -61,7 +61,7 @@
 	"id": 4,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Una, bumili ka ng pagkain at prutas. Pagkatapos, pumili ka ng isda at gulay. Pasali na rin ng inumin na buko juice. Huwag kalimutan ang kulay ng supot.",
+	"text": "First, buy food and fruits. Next, choose fish and vegetables. Include some buko juice for drinks as well. And don't forget the color of the bag.",
 	"choices": [
 	  {
 		"text": "UNDERSTAND",
@@ -69,7 +69,7 @@
 		"next": 5
 	  },
 	  {
-		"text": "DON’T UNDERSTAND",
+		"text": "DON'T UNDERSTAND",
 		"sign": "DONT_UNDERSTAND_SIGN",
 		"next": 6
 	  }
@@ -79,14 +79,14 @@
   {
 	"id": 5,
 	"type": "narrator",
-	"text": "Tumango si Leo. Sa unang pagkakataon, siya ang maglalakad mag-isa papunta sa palengke.",
+	"text": "Leo nodded. For the first time, he would be walking to the market on his own.",
 	"next": -1
   },
   {
 	"id": 6,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Sige, uulitin ko. Pagkain muna, tapos inumin, tapos piliin ang tamang kulay ng supot.",
+	"text": "Alright, I'll repeat it. Food first, then drinks, then choose the right color for the bag.",
 	"choices": [
 	  {
 		"text": "UNDERSTAND",
