@@ -285,7 +285,7 @@
 			{
 				"text": "NONE",
 				"sign": "SPELL_NONE",
-				"next": 19
+				"next": 20
 			}
 		],
 		"next": -1
@@ -296,10 +296,30 @@
 		"speaker": "Mira",
 		"text": "Ahh, is your map missing? Don't worry, Mang Ben can help you.",
 		"choices": [],
-		"next": 20
+		"next": 21
 	},
 	{
 		"id": 20,
+		"type": "npc",
+		"speaker": "Mira",
+		"text": "Alright. If you have any problem, just head east, and you'll find Mang Ben.",
+		"choices": [
+			{
+				"text": "THANK YOU",
+				"sign": "SPELL_THANK_YOU",
+				"next": 22
+			},
+			{
+				"text": "OK",
+				"sign": "SPELL_OK",
+				"next": 22
+			}
+		],
+		"next": 22
+	},
+	
+	{
+		"id": 21,
 		"type": "npc",
 		"speaker": "Mira",
 		"text": "Just head east, and you'll find Mang Ben.",
@@ -315,10 +335,10 @@
 				"next": 21
 			}
 		],
-		"next": 21
+		"next": 22
 	},
 	{
-		"id": 21,
+		"id": 22,
 		"type": "narrator",
 		"text": "Leo headed over to the eastern part of the village.",
 		"next": -1

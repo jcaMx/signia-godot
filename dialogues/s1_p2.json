@@ -8,7 +8,7 @@
 	{
 		"id": 1,
 		"type": "narrator",
-		"text": "Beneath a large tree, an elderly man was carefully organizing old boxes and tools.",
+		"text": "Near the oak trees, an elderly man was feeding the roosters.",
 		"next": 2
 	},
 	{
@@ -95,8 +95,8 @@
 		"text": "It's quite normal for newcomers to get lost here. Many paths in the village look identical.",
 		"choices": [
 			{
-				"text": "A LITTLE",
-				"sign": "SPELL_A_LITTLE",
+				"text": "I SEE",
+				"sign": "SPELL_I_SEE",
 				"next": 9
 			},
 			{
@@ -152,8 +152,8 @@
 				"next": 12
 			},
 			{
-				"text": "PRACTICE",
-				"sign": "SPELL_PRACTICE",
+				"text": "I SEE",
+				"sign": "SPELL_I_SEE",
 				"next": 12
 			}
 		],
@@ -186,13 +186,13 @@
 		"text": "If you'd like, I can accompany you to the plaza tomorrow. There's a lot you can learn there.",
 		"choices": [
 			{
-				"text": "YES",
-				"sign": "SPELL_YES",
+				"text": "ALRIGHT",
+				"sign": "SPELL_ALRIGHT",
 				"next": 14
 			},
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
+				"text": "SURE",
+				"sign": "SPELL_SURE",
 				"next": 14
 			}
 		],

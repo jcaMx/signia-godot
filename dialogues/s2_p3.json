@@ -1,291 +1,296 @@
 [
-	{
-		"id": 0,
-		"type": "narrator",
-		"text": "At the side of the plaza, Leo approached Aling Rosa.",
-		"next": 1
-	},
-	{
-		"id": 1,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Good morning! Are you Leo?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 2
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 3
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Are you new to Luntian?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 4
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 5
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Oh, sorry! I thought you were Leo.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "SIGN_UNDERSTAND",
-				"next": 6
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 6
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Do you know how to sign?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 7
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 8
-			},
-			{
-				"text": "DON'T KNOW",
-				"sign": "SIGN_DONT_KNOW",
-				"next": 9
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 5,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Oh, I thought you were new here.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 7
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 6,
-		"type": "narrator",
-		"text": "Aling Rosa realized her mistake and smiled at Leo.",
-		"next": -1
-	},
-	{
-		"id": 7,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "That's good! Do you understand me?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 10
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 11
-			},
-			{
-				"text": "DON'T KNOW",
-				"sign": "SIGN_DONT_KNOW",
-				"next": 11
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 8,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "That's okay. I can help you practice.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "SIGN_UNDERSTAND",
-				"next": 10
-			},
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 10
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 9,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "That's okay. You can keep practicing.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "SIGN_UNDERSTAND",
-				"next": 10
-			},
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 10
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 10,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Do you know Mira?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 12
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 13
-			},
-			{
-				"text": "DON'T KNOW",
-				"sign": "SIGN_DONT_KNOW",
-				"next": 13
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 11,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "That's okay. I'll sign more slowly.",
-		"choices": [
-			{
-				"text": "SLOW",
-				"sign": "SIGN_SLOW",
-				"next": 15
-			},
-			{
-				"text": "FAST",
-				"sign": "SIGN_FAST",
-				"next": 16
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 12,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "That's good! She's a bright kid and knows a lot around Luntian.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 14
-			},
-			{
-				"text": "UNDERSTAND",
-				"sign": "SIGN_UNDERSTAND",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 13,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "You will meet many people here.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 14,
-		"type": "narrator",
-		"text": "Aling Rosa smiled warmly at Leo. He felt more confident talking to the people of Luntian.",
-		"next": -1
-	},
-	{
-		"id": 15,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "Okay, I'll sign slowly so you can understand me.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "SIGN_UNDERSTAND",
-				"next": 10
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 16,
-		"type": "npc",
-		"speaker": "Aling Rosa",
-		"text": "I can sign faster if you are comfortable.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 10
-			},
-			{
-				"text": "SLOW",
-				"sign": "SIGN_SLOW",
-				"next": 15
-			}
-		],
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "At the side of the plaza, Leo noticed a friendly woman near the bench.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Good morning, dear! Are you Leo?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 2
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Ah! I knew it. You're the new kid in town, right?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 4
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Oh! My apologies, dear. I must be getting old!",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "SIGN_UNDERSTAND",
+		"next": 6
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Welcome to Luntian! So, do you know how to sign?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 7
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 8
+	  },
+	  {
+		"text": "A LITTLE",
+		"sign": "SIGN_A_LITTLE",
+		"next": 9
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Oh? Then I must have heard the wrong story. My memory isn't what it used to be!",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 7
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "narrator",
+	"text": "Aling Rosa laughed softly and returned to arranging the vegetables.",
+	"next": 4
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Oh, good! Then let me see. Do you understand me?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 10
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 11
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "SIGN_DONT_KNOW",
+		"next": 11
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "That's perfectly fine, dear. Everyone starts somewhere.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 10
+	  },
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 10
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "A little? That's already a good start! Keep practicing and you'll get better.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 10
+	  },
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 10
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Wonderful! Oh, do you know Mira?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 12
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 13
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "SIGN_DONT_KNOW",
+		"next": 13
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "No worries! Maybe I'm signing too fast. What do you prefer?",
+	"choices": [
+	  {
+		"text": "SLOW",
+		"sign": "SIGN_SLOW",
+		"next": 15
+	  },
+	  {
+		"text": "FAST",
+		"sign": "SIGN_FAST",
+		"next": 16
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 12,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Mira! That girl is always running around helping everyone.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 14
+	  },
+	  {
+		"text": "UNDERSTAND",
+		"sign": "SIGN_UNDERSTAND",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "You'll meet her soon enough. She seems to know everyone in Luntian!",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 14
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "SIGN_DONT_KNOW",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 14,
+	"type": "narrator",
+	"text": "Aling Rosa gave Leo a warm smile. Her friendly personality made him feel more at ease in Luntian.",
+	"next": -1
+  },
+  {
+	"id": 15,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Slow it is! Take your time, dear. There's no rush here.",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "SIGN_UNDERSTAND",
+		"next": 10
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 16,
+	"type": "npc",
+	"speaker": "Aling Rosa",
+	"text": "Fast? Oh, look at you! Maybe you're more confident than you seem.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 10
+	  },
+	  {
+		"text": "SLOW",
+		"sign": "SIGN_SLOW",
+		"next": 15
+	  }
+	],
+	"next": -1
+  }
 ]
