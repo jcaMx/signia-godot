@@ -30,6 +30,14 @@ func _ready():
 	waypoints = get_parent().get_node("Waypoints").get_children()
 	
 	LevelManager.setup_level(level_id, get_parent())
+
+	# Restore player position to saved waypoint if saved for this level
+	if SaveManager.save_data.get("current_level") == level_id:
+		var saved_waypoint = int(SaveManager.save_data.get("waypoint_index", 0))
+		if saved_waypoint > 0 and saved_waypoint < waypoints.size():
+			current_index = saved_waypoint
+			global_position = waypoints[saved_waypoint].global_position
+
 	LevelManager.update_waypoint_progress(current_index)
 	
 	# Prevent errors if no waypoints exist

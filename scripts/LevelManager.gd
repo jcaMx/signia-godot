@@ -67,13 +67,28 @@ func setup_level(level_id: int, context = null):
 						dialogue_answered_counts[path_str] = 0
 						total_answers_count += count
 
+	# Restore saved progress if this level matches the save data
+	if SaveManager.save_data.get("current_level") == level_id:
+		var saved_wp = int(SaveManager.save_data.get("waypoint_index", 0))
+		if saved_wp > 0 and saved_wp <= total_waypoints:
+			current_waypoint_index = saved_wp
+
+		var saved_ans = int(SaveManager.save_data.get("answer_progress", 0))
+		if saved_ans > 0:
+			current_answers_count = min(saved_ans, total_answers_count)
+
+		var saved_questions = SaveManager.save_data.get("answered_questions", [])
+		if typeof(saved_questions) == TYPE_ARRAY:
+			for q_key in saved_questions:
+				answered_questions[String(q_key)] = true
+
 	if total_answers_count > 0:
 		use_dialogue_progression = true
-		print("[LevelManager] Level %d initialized with dialogue progression: 0/%d answers required across %d dialogues." % [current_level, total_answers_count, dialogue_totals.size()])
+		print("[LevelManager] Level %d initialized with dialogue progression: %d/%d answers required across %d dialogues." % [current_level, current_answers_count, total_answers_count, dialogue_totals.size()])
 		progress_changed.emit(current_answers_count, total_answers_count)
 	else:
 		use_dialogue_progression = false
-		print("[LevelManager] Level %d initialized with waypoint progression: 0/%d waypoints." % [current_level, total_waypoints])
+		print("[LevelManager] Level %d initialized with waypoint progression: %d/%d waypoints." % [current_level, current_waypoint_index, total_waypoints])
 		progress_changed.emit(current_waypoint_index, total_waypoints)
 
 

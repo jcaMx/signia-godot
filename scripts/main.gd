@@ -5,6 +5,7 @@ func _ready():
 
 
 func _load_initial_scene():
+	SaveManager.load_game()
 	var requested_chapter := _get_requested_chapter()
 
 	if LevelManager.level_scenes.has(requested_chapter):

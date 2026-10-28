@@ -21,6 +21,16 @@ func save_game():
 	save_data["answer_progress"] = LevelManager.current_answers_count
 	save_data["total_answers"] = LevelManager.total_answers_count
 	save_data["completed_tasks"] = GameManager.completed_tasks
+	save_data["answered_questions"] = LevelManager.answered_questions.keys()
+
+	var total = LevelManager.get_current_progress_total()
+	var current = LevelManager.get_current_progress_value()
+	var pct = 0
+	if total > 0:
+		pct = int(round(float(current) / float(total) * 100.0))
+	save_data["progress_percent"] = pct
+	save_data["current_progress_value"] = current
+	save_data["current_progress_total"] = total
 
 	# 1. Save to local user file (IndexedDB in Web export)
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -29,6 +39,13 @@ func save_game():
 
 	# 2. Web bridge: Sync with host website via localStorage & window.postMessage
 	_sync_to_web()
+
+
+func apply_save_data(new_data: Dictionary):
+	if new_data.is_empty():
+		return
+	for key in new_data:
+		save_data[key] = new_data[key]
 
 
 func load_game() -> bool:
@@ -133,6 +150,11 @@ func _load_from_web() -> Dictionary:
 				return typeof window.SIGNIA_INITIAL_SAVE === 'string' 
 					? window.SIGNIA_INITIAL_SAVE 
 					: JSON.stringify(window.SIGNIA_INITIAL_SAVE);
+			}
+			if (window.parent && window.parent !== window && window.parent.SIGNIA_INITIAL_SAVE) {
+				return typeof window.parent.SIGNIA_INITIAL_SAVE === 'string'
+					? window.parent.SIGNIA_INITIAL_SAVE
+					: JSON.stringify(window.parent.SIGNIA_INITIAL_SAVE);
 			}
 			if (window.localStorage) {
 				return window.localStorage.getItem('%s') || '';
