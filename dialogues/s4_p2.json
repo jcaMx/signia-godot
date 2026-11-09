@@ -1,0 +1,103 @@
+[
+	{
+		"id": 0,
+		"type": "npc",
+		"speaker": "Teacher Ana",
+		"text": "Good morning! You must be our new student.",
+		"choices": [
+			{
+				"text": "GOOD MORNING",
+				"sign": "SIGN_GOOD_MORNING",
+				"next": 1
+			},
+			{
+				"text": "HELLO",
+				"sign": "SIGN_HELLO",
+				"next": 1
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 1,
+		"type": "npc",
+		"speaker": "Teacher Ana",
+		"text": "May I know who you are?",
+		"choices": [
+			{
+				"text": "LEO",
+				"sign": "SPELL_LEO",
+				"next": 2
+			},
+			{
+				"text": "I DON'T KNOW",
+				"sign": "SIGN_DONT_KNOW",
+				"next": 3
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 2,
+		"type": "npc",
+		"speaker": "Teacher Ana",
+		"text": "Welcome, Leo! It's nice to meet you.",
+		"choices": [
+			{
+				"text": "THANK YOU",
+				"sign": "SIGN_THANK_YOU",
+				"next": 4
+			},
+			{
+				"text": "NICE TO MEET YOU",
+				"sign": "SIGN_NICE_TO_MEET_YOU",
+				"next": 4
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 3,
+		"type": "npc",
+		"speaker": "Teacher Ana",
+		"text": "That's alright! You can tell me your name when you're ready.",
+		"choices": [
+			{
+				"text": "LEO",
+				"sign": "SPELL_LEO",
+				"next": 2
+			},
+			{
+				"text": "I",
+				"sign": "SIGN_I",
+				"next": 2
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 4,
+		"type": "npc",
+		"speaker": "Teacher Ana",
+		"text": "You may find a seat while waiting for class to start.",
+		"choices": [
+			{
+				"text": "THANK YOU",
+				"sign": "SIGN_THANK_YOU",
+				"next": 5
+			},
+			{
+				"text": "YES",
+				"sign": "SIGN_YES",
+				"next": 5
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 5,
+		"type": "narrator",
+		"text": "Leo thanked Teacher Ana and began looking for an available seat in the classroom.",
+		"next": -1
+	}
+]

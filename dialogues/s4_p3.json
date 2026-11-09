@@ -1,0 +1,66 @@
+
+[
+  {
+	"id": 0,
+	"type": "npc",
+	"speaker": "Nico",
+	"text": "Hey! You're the new student, right? I'm Nico.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 1
+	  },
+	  {
+		"text": "HELLO",
+		"sign": "SIGN_HELLO",
+		"next": 1
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Nico",
+	"text": "There's an empty seat at the back! You can sit there.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 2
+	  },
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Nico",
+	"text": "Come on! I'll show you where it is.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 3
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "narrator",
+	"text": "Nico pointed toward the back of the classroom. Leo followed him, hoping to find a place to sit.",
+	"next": -1
+  }
+]

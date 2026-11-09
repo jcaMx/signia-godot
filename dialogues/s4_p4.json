@@ -1,0 +1,78 @@
+
+[
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Just as Leo approached the empty seat, a girl suddenly rushed toward it and dropped her bag on the desk.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Sheena",
+	"text": "Excuse me! This seat is mine now.",
+	"choices": [
+	  {
+		"text": "SORRY",
+		"sign": "SIGN_SORRY",
+		"next": 2
+	  },
+	  {
+		"text": "NO",
+		"sign": "SIGN_NO",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Sheena",
+	"text": "Well, find another seat. Don't just stand there.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 4
+	  },
+	  {
+		"text": "SORRY",
+		"sign": "SIGN_SORRY",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Sheena",
+	"text": "What? I got here first. Go find another one!",
+	"choices": [
+	  {
+		"text": "SORRY",
+		"sign": "SIGN_SORRY",
+		"next": 4
+	  },
+	  {
+		"text": "YES",
+		"sign": "SIGN_YES",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "narrator",
+	"text": "Leo stepped back, surprised by Sheena's attitude. Nico noticed what happened and looked at Leo apologetically.",
+	"next": 5
+  },
+  {
+	"id": 5,
+	"type": "narrator",
+	"text": "It seemed that Leo's first day would not be as peaceful as he had hoped.",
+	"next": -1
+  }
+]

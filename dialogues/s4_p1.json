@@ -1,0 +1,20 @@
+[
+	{
+		"id": 0,
+		"type": "narrator",
+		"text": "It was Leo's first day of class in Luntian. He walked into the school with his bag over his shoulder, feeling both excited and nervous.",
+		"next": 1
+	},
+	{
+		"id": 1,
+		"type": "narrator",
+		"text": "The classroom was already filled with students chatting and laughing. Since the class had not started yet, everyone was busy finding seats and talking with their friends.",
+		"next": 2
+	},
+	{
+		"id": 2,
+		"type": "narrator",
+		"text": "Leo stepped inside and looked around. He hoped his first day would be a good one.",
+		"next": -1
+	}
+]
