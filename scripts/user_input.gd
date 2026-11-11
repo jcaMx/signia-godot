@@ -1,8 +1,18 @@
 extends CanvasLayer
 
-@onready var input_label = $Panel/CurrentInputLabel
-@onready var status_label = $Panel/StatusLabel
+@onready var panel: Panel = $Panel
+@onready var input_label: Label = $Panel.find_child("CurrentInputLabel", true, false)
+@onready var status_label: Label = $Panel.find_child("StatusLabel", true, false)
+@onready var vbox: VBoxContainer = $Panel.find_child("VBoxContainer", true, false)
 @export var keyboard_debug_enabled := true
+
+const COLOR_NORMAL := Color.WHITE
+const COLOR_ERROR := Color(1.0, 0.35, 0.35)
+const COLOR_SUCCESS := Color(0.35, 0.95, 0.45)
+
+const BASE_BOTTOM_Y := 255.0
+const MIN_PANEL_HEIGHT := 49.0
+const PANEL_PADDING_Y := 12.0
 
 func _ready():
 	if not GameManager.word_started.is_connected(_on_word_started):
@@ -67,5 +77,29 @@ func _on_word_cleared():
 
 
 func _refresh():
-	status_label.text = GameManager.status_message
+	var msg: String = GameManager.status_message
+	status_label.text = msg
 	input_label.text = GameManager.get_display_input()
+
+	if msg.is_empty():
+		status_label.add_theme_color_override("font_color", COLOR_NORMAL)
+	else:
+		var lower_msg := msg.to_lower()
+		if lower_msg.contains("error") or lower_msg.contains("incorrect") or lower_msg.contains("wrong") or lower_msg.contains("invalid") or lower_msg.contains("does not match"):
+			status_label.add_theme_color_override("font_color", COLOR_ERROR)
+		elif lower_msg.contains("correct") or lower_msg.contains("detected"):
+			status_label.add_theme_color_override("font_color", COLOR_SUCCESS)
+		else:
+			status_label.add_theme_color_override("font_color", COLOR_NORMAL)
+
+	_update_panel_layout.call_deferred()
+
+
+func _update_panel_layout():
+	if vbox == null or panel == null:
+		return
+
+	var content_height: float = vbox.get_combined_minimum_size().y + PANEL_PADDING_Y
+	var new_height: float = max(MIN_PANEL_HEIGHT, content_height)
+	panel.offset_top = BASE_BOTTOM_Y - new_height
+	panel.offset_bottom = BASE_BOTTOM_Y

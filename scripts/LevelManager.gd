@@ -8,7 +8,10 @@ var current_level := 1
 var level_scenes := {
 	1: "res://Scenes/scene_1.tscn",
 	2: "res://Scenes/scene_2.tscn",
-	3: "res://Scenes/scene_3.tscn"
+	3: "res://Scenes/scene_3.tscn",
+	4: "res://Scenes/scene_4.tscn",
+	5: "res://Scenes/scene_5.tscn",
+	6: "res://Scenes/scene_6.tscn"
 }
 
 

@@ -8,7 +8,8 @@ signal chapter_finished(level_id)
 
 const STATUS_PROMPT := "Sign the appropriate option to choose an answer"
 const STATUS_DIRECT_PROMPT := "Perform the matching sign to choose an answer"
-const STATUS_INVALID := "Gesture does not match any choices. Try again."
+const STATUS_INVALID := "Gesture is incorrect. Please sign the appropriate option."
+const STATUS_INVALID_DIRECT := "Gesture is incorrect. Please perform the matching sign."
 const STATUS_CORRECT := "Correct!"
 
 var current_level = 1
