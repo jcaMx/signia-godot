@@ -141,7 +141,7 @@ func get_active_speaker_node() -> Node:
 
 
 func should_wait_for_player_continue() -> bool:
-	return pending_player_continue
+	return false
 
 
 func consume_player_continue_request():
@@ -150,7 +150,7 @@ func consume_player_continue_request():
 
 func end():
 	var finished_source := current_source
-	pending_player_continue = require_player_continue_after_end
+	pending_player_continue = false
 	active = false
 	current_id = -1
 	current_source = ""

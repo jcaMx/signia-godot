@@ -114,19 +114,9 @@ func _advance_waypoint_if_reached():
 		SaveManager.save_game()
 
 
-func _unhandled_input(event):
-	if not waiting_for_continue_input:
-		return
-
-	if event is InputEventKey and event.pressed and not event.echo:
-		waiting_for_continue_input = false
-		DialogueManager.consume_player_continue_request()
-		get_viewport().set_input_as_handled()
-
-
 func _on_dialogue_ended():
-	if DialogueManager.should_wait_for_player_continue():
-		waiting_for_continue_input = true
+	waiting_for_continue_input = false
+	DialogueManager.consume_player_continue_request()
 
 
 func update_animation(direction):

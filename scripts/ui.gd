@@ -35,11 +35,29 @@ func _ready():
 	narrator_box.hide()
 
 	if pause_button != null:
+		pause_button.focus_mode = Control.FOCUS_NONE
 		pause_button.pressed.connect(_on_pause_button_pressed)
 	if settings_button != null:
+		settings_button.focus_mode = Control.FOCUS_NONE
 		settings_button.pressed.connect(_on_settings_button_pressed)
 
 	hide()
+
+
+func _unhandled_input(event: InputEvent):
+	if not visible or not DialogueManager.active:
+		return
+
+	if (main_menu != null and main_menu.visible) or (pause_menu != null and pause_menu.visible) or (chapter_finished != null and chapter_finished.visible):
+		return
+
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if DialogueManager.is_current_node_narrator():
+			if narrator_box != null and narrator_box.has_method("handle_advance_click") and narrator_box.handle_advance_click():
+				get_viewport().set_input_as_handled()
+		else:
+			if textbox != null and textbox.has_method("handle_advance_click") and textbox.handle_advance_click():
+				get_viewport().set_input_as_handled()
 
 
 func _on_dialogue_started():

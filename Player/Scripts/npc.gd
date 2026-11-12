@@ -32,7 +32,7 @@ func _on_body_entered(body):
 		push_warning("%s has no dialogue file assigned." % name)
 		return
 
-	DialogueManager.start(dialogue_path, self, require_continue_input_after_dialogue)
+	DialogueManager.start(dialogue_path, self, false)
 
 
 func get_dialogue_anchor_position() -> Vector2:

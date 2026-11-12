@@ -19,12 +19,12 @@
 		"choices": [
 			{
 				"text": "YES",
-				"sign": "SPELL_YES",
+				"sign": "SIGN_YES",
 				"next": 3
 			},
 			{
 				"text": "NO",
-				"sign": "SPELL_NO",
+				"sign": "SIGN_NO",
 				"next": 3
 			}
 		],
@@ -38,17 +38,17 @@
 		"choices": [
 			{
 				"text": "RED",
-				"sign": "COLOR_RED",
+				"sign": "SIGN_RED",
 				"next": 4
 			},
 			{
 				"text": "BLUE",
-				"sign": "COLOR_BLUE",
+				"sign": "SIGN_BLUE",
 				"next": 5
 			},
 			{
 				"text": "GREEN",
-				"sign": "COLOR_GREEN",
+				"sign": "SIGN_GREEN",
 				"next": 6
 			}
 		],
@@ -62,7 +62,7 @@
 		"choices": [
 			{
 				"text": "RED",
-				"sign": "COLOR_RED",
+				"sign": "SIGN_RED",
 				"next": 7
 			}
 		],
@@ -76,7 +76,7 @@
 		"choices": [
 			{
 				"text": "RED",
-				"sign": "COLOR_RED",
+				"sign": "SIGN_RED",
 				"next": 7
 			}
 		],
@@ -90,7 +90,7 @@
 		"choices": [
 			{
 				"text": "RED",
-				"sign": "COLOR_RED",
+				"sign": "SIGN_RED",
 				"next": 7
 			}
 		],
@@ -104,17 +104,17 @@
 		"choices": [
 			{
 				"text": "GREEN",
-				"sign": "COLOR_GREEN",
+				"sign": "SIGN_GREEN",
 				"next": 8
 			},
 			{
 				"text": "BROWN",
-				"sign": "COLOR_BROWN",
+				"sign": "SIGN_BROWN",
 				"next": 9
 			},
 			{
 				"text": "YELLOW",
-				"sign": "COLOR_YELLOW",
+				"sign": "SIGN_YELLOW",
 				"next": 10
 			}
 		],
@@ -128,7 +128,7 @@
 		"choices": [
 			{
 				"text": "GREEN",
-				"sign": "COLOR_GREEN",
+				"sign": "SIGN_GREEN",
 				"next": 11
 			}
 		],
@@ -142,7 +142,7 @@
 		"choices": [
 			{
 				"text": "GREEN",
-				"sign": "COLOR_GREEN",
+				"sign": "SIGN_GREEN",
 				"next": 11
 			}
 		],
@@ -156,7 +156,7 @@
 		"choices": [
 			{
 				"text": "GREEN",
-				"sign": "COLOR_GREEN",
+				"sign": "SIGN_GREEN",
 				"next": 11
 			}
 		],
@@ -170,17 +170,17 @@
 		"choices": [
 			{
 				"text": "YELLOW",
-				"sign": "COLOR_YELLOW",
+				"sign": "SIGN_YELLOW",
 				"next": 12
 			},
 			{
 				"text": "BROWN",
-				"sign": "COLOR_BROWN",
+				"sign": "SIGN_BROWN",
 				"next": 13
 			},
 			{
 				"text": "BLUE",
-				"sign": "COLOR_BLUE",
+				"sign": "SIGN_BLUE",
 				"next": 14
 			}
 		],

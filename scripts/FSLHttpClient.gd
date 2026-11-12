@@ -73,10 +73,15 @@ func get_active_backend_mode() -> String:
 		return SignProcessor.get_backend_mode_for_sign(GameManager.pending_sign_id)
 
 	if GameManager.has_active_choices() and not GameManager.active_choices.is_empty():
-		var first_choice = GameManager.active_choices[0]
-		if typeof(first_choice) == TYPE_DICTIONARY:
-			var sign_val = String(first_choice.get("sign", ""))
-			return SignProcessor.get_backend_mode_for_sign(sign_val)
+		var fallback_mode := "alphabet"
+		for choice in GameManager.active_choices:
+			if typeof(choice) == TYPE_DICTIONARY:
+				var sign_val = String(choice.get("sign", ""))
+				var resolved = SignProcessor.get_backend_mode_for_sign(sign_val)
+				if resolved != "alphabet":
+					return resolved
+				fallback_mode = resolved
+		return fallback_mode
 
 	return "alphabet"
 
@@ -223,7 +228,7 @@ func _process(delta: float) -> void:
 	if not browser_prediction_mode:
 		return
 	mode_request_elapsed += delta
-	if mode_request_elapsed < 0.25:
+	if mode_request_elapsed < 0.05:
 		return
 	mode_request_elapsed = 0.0
 	var target_mode := get_active_backend_mode()

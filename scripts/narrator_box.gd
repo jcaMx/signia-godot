@@ -74,20 +74,26 @@ func _get_label_multiline_height(label: Label, width: float) -> float:
 	return ceil(font.get_multiline_string_size(label.text, label.horizontal_alignment, width, font_size).y)
 
 
+func handle_advance_click() -> bool:
+	if not DialogueManager.active:
+		return false
+
+	if tween and tween.is_running():
+		tween.kill()
+		content_label.visible_ratio = 1.0
+		return true
+
+	if not DialogueManager.can_accept_advance_input():
+		return true
+
+	DialogueManager.advance()
+	return true
+
+
 func _gui_input(event: InputEvent):
 	if not DialogueManager.active:
 		return
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		if tween and tween.is_running():
-			tween.kill()
-			content_label.visible_ratio = 1.0
+		if handle_advance_click():
 			accept_event()
-			return
-
-		if not DialogueManager.can_accept_advance_input():
-			accept_event()
-			return
-
-		DialogueManager.advance()
-		accept_event()

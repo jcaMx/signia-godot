@@ -1575,7 +1575,6 @@ region_rect = Rect2(1102.718, 1911.6772, 273.99292, 484.38037)
 [node name="NPC_narrator" parent="." unique_id=1983428763 instance=ExtResource("4_utpcy")]
 position = Vector2(411, 87)
 dialogue_file = "res://dialogues/s4_p1.json"
-require_continue_input_after_dialogue = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1141829796]
 position = Vector2(378, 128)

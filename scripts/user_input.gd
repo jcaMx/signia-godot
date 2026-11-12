@@ -35,7 +35,7 @@ func _unhandled_input(event):
 
 	if event is InputEventKey and event.pressed and not event.echo:
 		if GameManager.uses_direct_sign_ui():
-			if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or event.keycode == KEY_SPACE:
+			if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
 				GameManager.submit_sign(GameManager.pending_sign_id)
 				get_viewport().set_input_as_handled()
 			return

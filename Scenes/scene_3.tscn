@@ -10601,7 +10601,6 @@ position = Vector2(1947, 50)
 position = Vector2(-225, 50.999996)
 scale = Vector2(-10.811064, -0.69917285)
 dialogue_file = "res://dialogues/s3_p1.json"
-require_continue_input_after_dialogue = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC_Mira" unique_id=164550514]
 position = Vector2(0.18735895, 45.331997)
