@@ -18,10 +18,9 @@ var require_player_continue_after_end := false
 var pending_player_continue := false
 
 
-func start(dialogue_source, speaker_node: Node = null, require_continue_after_end: bool = false):
-	if dialogue_source is String:
-		dialogue_source = _resolve_res_path(dialogue_source)
-	var nodes = _resolve_dialogue_source(dialogue_source)
+func start(dialogue_source, speaker_node: Node = null, require_continue_after_end: bool = false, resume_node: int = -1):
+	var normalized_source = _normalize_dialogue_path(dialogue_source) if dialogue_source is String else dialogue_source
+	var nodes = _resolve_dialogue_source(normalized_source)
 	if nodes.is_empty():
 		push_warning("DialogueManager.start received an empty dialogue source.")
 		return
@@ -33,8 +32,10 @@ func start(dialogue_source, speaker_node: Node = null, require_continue_after_en
 
 	dialogue_nodes = node_map
 	dialogue_order = nodes
-	current_source = dialogue_source if dialogue_source is String else ""
+	current_source = normalized_source if normalized_source is String else ""
 	current_id = _resolve_start_id(nodes, node_map)
+	if node_map.has(resume_node):
+		current_id = resume_node
 	active_speaker_node = speaker_node
 	require_player_continue_after_end = require_continue_after_end
 	pending_player_continue = false
@@ -163,6 +164,8 @@ func end():
 	if not finished_source.is_empty():
 		LevelManager.register_dialogue_finished(finished_source)
 	dialogue_ended.emit()
+	if not finished_source.is_empty():
+		SaveManager.save_game()
 
 
 func _emit_current_node():
@@ -189,6 +192,7 @@ func _emit_current_node():
 		GameManager.clear_active_choices()
 
 	dialogue_updated.emit(speaker, text, choices)
+	SaveManager.save_game()
 
 
 func _advance_to(next_id):
@@ -217,32 +221,37 @@ func _resolve_dialogue_source(dialogue_source) -> Array:
 	return []
 
 
-
-func _resolve_res_path(path: String) -> String:
+func _normalize_dialogue_path(dialogue_path: String) -> String:
+	var path = String(dialogue_path).strip_edges()
 	if path.begins_with("uid://"):
-		var uid_val = ResourceUID.text_to_id(path)
-		if uid_val != ResourceUID.INVALID_ID and ResourceUID.has_id(uid_val):
-			return ResourceUID.get_id_path(uid_val)
+		var uid_id = ResourceUID.text_to_id(path)
+		if uid_id != ResourceUID.INVALID_ID and ResourceUID.has_id(uid_id):
+			return ResourceUID.get_id_path(uid_id)
 	return path
 
+
+func _resolve_res_path(path: String) -> String:
+	return _normalize_dialogue_path(path)
+
+
 func _load_dialogue_file(dialogue_path: String) -> Array:
-	dialogue_path = _resolve_res_path(dialogue_path)
-	if dialogue_path.is_empty():
+	var resolved_path = _normalize_dialogue_path(dialogue_path)
+	if resolved_path.is_empty():
 		push_error("DialogueManager received an empty dialogue path.")
 		return []
 
-	if not FileAccess.file_exists(dialogue_path):
-		push_error("Dialogue file does not exist: %s" % dialogue_path)
+	if not FileAccess.file_exists(resolved_path):
+		push_error("Dialogue file does not exist: %s" % resolved_path)
 		return []
 
-	var file = FileAccess.open(dialogue_path, FileAccess.READ)
+	var file = FileAccess.open(resolved_path, FileAccess.READ)
 	if file == null:
-		push_error("DialogueManager failed to open: %s" % dialogue_path)
+		push_error("DialogueManager failed to open: %s" % resolved_path)
 		return []
 
 	var parsed = JSON.parse_string(file.get_as_text())
 	if typeof(parsed) != TYPE_ARRAY:
-		push_error("Dialogue JSON must be an array of nodes: %s" % dialogue_path)
+		push_error("Dialogue JSON must be an array of nodes: %s" % resolved_path)
 		return []
 
 	return parsed

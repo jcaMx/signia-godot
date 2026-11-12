@@ -15,37 +15,38 @@ var chapter_finish_triggered := false
 
 
 func _ready():
+	SaveManager.restoring = true
+	if not SaveManager.has_loaded_initial and not SaveManager.restart_pending:
+		SaveManager.load_game()
+
 	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
 		DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
-	# Auto-detect level_id from current scene filename if not set
-	if get_tree().current_scene != null:
+	var web_chapter = LevelManager.check_web_launch_chapter()
+	if web_chapter > 0:
+		level_id = web_chapter
+	elif get_tree().current_scene != null:
 		var scene_file = get_tree().current_scene.scene_file_path.get_file()
 		if scene_file.contains("scene_"):
 			var num_str = scene_file.replace("scene_", "").replace(".tscn", "")
 			if num_str.is_valid_int():
 				level_id = int(num_str)
 
-	# Get all waypoint nodes
 	waypoints = get_parent().get_node("Waypoints").get_children()
-	
+
 	LevelManager.setup_level(level_id, get_parent())
 
-	# Restore player position to saved waypoint if saved for this level
-	if SaveManager.save_data.get("current_level") == level_id:
-		var saved_waypoint = int(SaveManager.save_data.get("waypoint_index", 0))
-		if saved_waypoint > 0 and saved_waypoint < waypoints.size():
-			current_index = saved_waypoint
-			global_position = waypoints[saved_waypoint].global_position
-
+	SaveManager.apply_player_position(self)
 	LevelManager.update_waypoint_progress(current_index)
-	
-	# Prevent errors if no waypoints exist
+	SaveManager.restore_player.call_deferred(self)
+
 	if waypoints.is_empty():
 		print("No waypoints found!")
 
 
 func _physics_process(_delta):
+	if SaveManager.restoring:
+		return
 	_advance_waypoint_if_reached()
 
 	if DialogueManager.active or waiting_for_continue_input or not can_move:
@@ -53,16 +54,14 @@ func _physics_process(_delta):
 		play_idle_animation()
 		move_and_slide()
 		return
-	# Stop if there are no waypoints
+
 	if waypoints.is_empty():
 		velocity = Vector2.ZERO
 		play_idle_animation()
 		move_and_slide()
 		return
 
-	# Finished all waypoints
 	if current_index >= waypoints.size():
-		
 		if loop_path:
 			current_index = 0
 		else:
@@ -77,25 +76,13 @@ func _physics_process(_delta):
 
 		return
 
-
-	# Current target waypoint
 	var target = waypoints[current_index].global_position
-
-	# Direction to target
 	var direction = (target - global_position).normalized()
-
-	# Save last movement direction
 	last_direction = direction
-
-	# Movement
 	velocity = direction * speed
 
 	move_and_slide()
-
-	# Animation
 	update_animation(direction)
-
-	# Check if waypoint reached
 	_advance_waypoint_if_reached()
 
 
@@ -120,18 +107,12 @@ func _on_dialogue_ended():
 
 
 func update_animation(direction):
-
-	# Horizontal movement
 	if abs(direction.x) > abs(direction.y):
-
 		if direction.x > 0:
 			sprite.play("walk_right")
 		else:
 			sprite.play("walk_left")
-
-	# Vertical movement
 	else:
-
 		if direction.y > 0:
 			sprite.play("walk_down")
 		else:
@@ -139,18 +120,12 @@ func update_animation(direction):
 
 
 func play_idle_animation():
-
-	# Horizontal idle
 	if abs(last_direction.x) > abs(last_direction.y):
-
 		if last_direction.x > 0:
 			sprite.play("idle_right")
 		else:
 			sprite.play("idle_left")
-
-	# Vertical idle
 	else:
-
 		if last_direction.y > 0:
 			sprite.play("idle_down")
 		else:

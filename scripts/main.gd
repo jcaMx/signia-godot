@@ -1,5 +1,6 @@
 extends Node
 
+
 func _ready():
 	_load_initial_scene.call_deferred()
 
@@ -8,7 +9,7 @@ func _load_initial_scene():
 	SaveManager.load_game()
 	var requested_chapter := _get_requested_chapter()
 
-	if LevelManager.level_scenes.has(requested_chapter):
+	if requested_chapter > 0 or LevelManager.level_scenes.has(requested_chapter):
 		LevelManager.current_level = requested_chapter
 		get_tree().change_scene_to_file.call_deferred(LevelManager.get_current_level_scene())
 	else:

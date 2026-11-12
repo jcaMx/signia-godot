@@ -327,12 +327,12 @@
 			{
 				"text": "THANK YOU",
 				"sign": "SPELL_THANK_YOU",
-				"next": 21
+				"next": 22
 			},
 			{
 				"text": "OK",
 				"sign": "SPELL_OK",
-				"next": 21
+				"next": 22
 			}
 		],
 		"next": 22

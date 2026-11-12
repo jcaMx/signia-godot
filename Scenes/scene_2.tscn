@@ -17426,5 +17426,7 @@ texture = ExtResource("11_v7s7v")
 region_enabled = true
 region_rect = Rect2(32, 208, 80, 144)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=88127344]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=282153511]
 stream = ExtResource("14_qmqk1")
+autoplay = true
+parameters/looping = true

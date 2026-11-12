@@ -12,10 +12,9 @@ func _ready():
 	quit_button.pressed.connect(_on_quit_pressed)
 	continue_button.pressed.connect(_on_continue_pressed)
 
-	var has_save = SaveManager.load_game()
-	continue_button.disabled = not has_save
-
 	if get_tree().current_scene == self:
+		var has_save = SaveManager.load_game()
+		continue_button.disabled = not has_save
 		var web_chapter = LevelManager.check_web_launch_chapter()
 		if web_chapter > 0 and LevelManager.level_scenes.has(web_chapter):
 			get_tree().paused = false
@@ -46,12 +45,17 @@ func _on_play_pressed():
 			"current_level": 1,
 			"unlocked_level": 1,
 			"waypoint_index": 0,
+			"answer_progress": 0,
+			"total_answers": 0,
 			"completed_levels": [],
 			"completed_tasks": [],
+			"answered_questions": [],
+			"player_checkpoint": {},
+			"dialogue_checkpoint": {},
 			"volume": current_volume
 		}
 		SaveManager.save_game()
-		
+
 		get_tree().paused = false
 		get_tree().change_scene_to_file(
 			LevelManager.get_current_level_scene()

@@ -38,7 +38,6 @@ func _ready():
 	if volume_up_button != null:
 		volume_up_button.pressed.connect(_on_volume_up_pressed)
 
-	# Initialize slider value based on current audio server volume
 	var current_db = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
 	var current_vol = db_to_linear(current_db)
 	if volume_slider != null:
@@ -108,6 +107,7 @@ func _on_settings_back_pressed():
 
 
 func _on_restart_pressed():
+	SaveManager.prepare_chapter_restart()
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 

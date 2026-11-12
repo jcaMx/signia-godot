@@ -13,6 +13,38 @@ You can perform a fresh Web export directly from the terminal without opening th
 & "C:\Users\Acer\Downloads\Godot_v4.6.2-stable_win64.exe\Godot_v4.6.2-stable_win64_console.exe" --headless --path "c:\Users\Acer\Games\signia" --export-release "Web"
 ```
 
+
+# 1. Define Godot executable path and project directories
+$godot = "C:\Users\Acer\Downloads\Godot_v4.6.2-stable_win64.exe\Godot_v4.6.2-stable_win64_console.exe"
+$projectDir = "C:\Users\Acer\Games\signia"
+$exportPck = "$projectDir\chap4\chap4.pck"
+
+# 2. Export Godot Web Pack headlessly
+& $godot --headless --path $projectDir --export-pack "Web" $exportPck
+
+# 3. Synchronize to all targets
+# Godot web folder:
+Copy-Item $exportPck "$projectDir\web-exp-chap4\chap4.pck" -Force
+
+# Frontend game package:
+Copy-Item $exportPck "C:\Projects\signia-frontend\public\signia-game\index.pck" -Force
+
+# Backend base and chapter packages:
+Copy-Item $exportPck "C:\Projects\signia-backend\storage\app\stories\base.pck" -Force
+Copy-Item $exportPck "C:\Projects\signia-backend\storage\app\stories\chapter_4_1776007200.pck" -Force
+Copy-Item $exportPck "C:\Projects\signia-backend\storage\app\stories\chapter_4_1794411981.pck" -Force
+
+# 4. Update the byte size in index.html for Godot's web preloader
+$pckSize = (Get-Item "C:\Projects\signia-frontend\public\signia-game\index.pck").Length
+$htmlPath = "C:\Projects\signia-frontend\public\signia-game\index.html"
+(Get-Content $htmlPath) -replace '"index\.pck":\d+', "`"index.pck`":$pckSize" | Set-Content $htmlPath
+
+Write-Host "Export and synchronization complete! New package size: $pckSize bytes"
+
+
+
+
+
 > **Note:** The export path is pre-configured in `export_presets.cfg` to automatically build files into:
 > `c:\Projects\signia-frontend\public\signia-game\`
 

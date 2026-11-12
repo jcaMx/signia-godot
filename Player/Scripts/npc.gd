@@ -32,6 +32,9 @@ func _on_body_entered(body):
 		push_warning("%s has no dialogue file assigned." % name)
 		return
 
+	if LevelManager.is_dialogue_completed(dialogue_path):
+		return
+
 	DialogueManager.start(dialogue_path, self, false)
 
 
