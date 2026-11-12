@@ -187,6 +187,10 @@ func _on_browser_message(args: Array) -> void:
 			data = parsed
 
 	var msg_type = str(_get_js_prop(data, "type", ""))
+	if msg_type == "SIGNIA_TOGGLE_DEBUG_CHOICES":
+		var forced = _get_js_prop(data, "clickable", null)
+		GameManager.toggle_choice_clickability(forced)
+		return
 	if msg_type != "SIGNIA_PREDICTION":
 		return
 

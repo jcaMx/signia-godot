@@ -5,6 +5,8 @@ signal word_progress_changed(target_word, current_input, status_message)
 signal word_completed(target_word, sign_id)
 signal word_cleared()
 signal chapter_finished(level_id)
+signal choice_clickability_changed(is_clickable: bool)
+var debug_clickable_choices: bool = false
 
 const STATUS_PROMPT := "Sign the appropriate option to choose an answer"
 const STATUS_DIRECT_PROMPT := "Perform the matching sign to choose an answer"
@@ -320,3 +322,20 @@ func finish_chapter():
 
 	chapter_is_finished = true
 	chapter_finished.emit(LevelManager.current_level)
+
+
+func _input(event: InputEvent):
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_F2:
+			toggle_choice_clickability()
+
+
+func toggle_choice_clickability(forced_state = null):
+	if forced_state != null:
+		debug_clickable_choices = bool(forced_state)
+	else:
+		debug_clickable_choices = !debug_clickable_choices
+	print("[GameManager] Choice clickability toggled: %s" % ("ENABLED (Clickable)" if debug_clickable_choices else "DISABLED (Gestures Only)"))
+	choice_clickability_changed.emit(debug_clickable_choices)
+	if OS.has_feature("web") and forced_state == null:
+		JavaScriptBridge.eval("if (window.parent && window.parent !== window) { window.parent.postMessage({ type: 'SIGNIA_DEBUG_CHOICES_STATE', clickable: %s }, '*'); }" % ("true" if debug_clickable_choices else "false"))

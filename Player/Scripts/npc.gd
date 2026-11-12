@@ -24,6 +24,10 @@ func _on_body_entered(body):
 		return
 
 	var dialogue_path = String(dialogue_file)
+	if dialogue_path.begins_with("uid://"):
+		var uid_val = ResourceUID.text_to_id(dialogue_path)
+		if uid_val != ResourceUID.INVALID_ID and ResourceUID.has_id(uid_val):
+			dialogue_path = ResourceUID.get_id_path(uid_val)
 	if dialogue_path.is_empty():
 		push_warning("%s has no dialogue file assigned." % name)
 		return

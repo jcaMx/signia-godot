@@ -1519,7 +1519,7 @@ tile_set = SubResource("TileSet_cjcyo")
 [node name="NPC_Teacher_ana" parent="." unique_id=1396886692 instance=ExtResource("4_utpcy")]
 position = Vector2(157, 67)
 scale = Vector2(1.0893204, 1.0520122)
-dialogue_file = "uid://dlpirf5lo6vmo"
+dialogue_file = "res://dialogues/s4_p2.json"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC_Teacher_ana" unique_id=1702810429]
 position = Vector2(0.9180031, 18.060629)
@@ -1551,7 +1551,7 @@ position = Vector2(266, 285)
 
 [node name="NPC_Sheena" parent="." unique_id=1562789033 instance=ExtResource("4_utpcy")]
 position = Vector2(87, 268)
-dialogue_file = "uid://y3i4xd1k3xym"
+dialogue_file = "res://dialogues/s4_p4.json"
 
 [node name="Sprite2D2" type="Sprite2D" parent="NPC_Sheena" unique_id=1271231540]
 position = Vector2(11.125, -1.5000042)
@@ -1563,7 +1563,7 @@ region_rect = Rect2(289.31073, 1901.7804, 165.70917, 489.5951)
 [node name="NPC_Nico" parent="." unique_id=573151401 instance=ExtResource("4_utpcy")]
 position = Vector2(71, 126)
 scale = Vector2(0.7963401, 0.55999875)
-dialogue_file = "uid://c4y6y4l3n8l3k"
+dialogue_file = "res://dialogues/s4_p3.json"
 
 [node name="Sprite2D2" type="Sprite2D" parent="NPC_Nico" unique_id=1700911530]
 position = Vector2(-1.2557448, 5.357155)
@@ -1574,7 +1574,8 @@ region_rect = Rect2(1102.718, 1911.6772, 273.99292, 484.38037)
 
 [node name="NPC_narrator" parent="." unique_id=1983428763 instance=ExtResource("4_utpcy")]
 position = Vector2(411, 87)
-dialogue_file = "uid://bom7if8s73tk7"
+dialogue_file = "res://dialogues/s4_p1.json"
+require_continue_input_after_dialogue = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1141829796]
 position = Vector2(378, 128)

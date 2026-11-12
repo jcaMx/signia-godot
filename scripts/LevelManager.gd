@@ -62,7 +62,7 @@ func setup_level(level_id: int, context = null):
 		for npc in npcs:
 			var d_file = npc.get("dialogue_file")
 			if d_file != null:
-				var path_str := String(d_file)
+				var path_str := _resolve_res_path(String(d_file))
 				if not path_str.is_empty() and not dialogue_totals.has(path_str):
 					var count = get_canonical_answer_count(path_str)
 					if count > 0:
@@ -109,7 +109,16 @@ func _find_all_npcs(node: Node) -> Array[Node]:
 	return result
 
 
+
+func _resolve_res_path(path: String) -> String:
+	if path.begins_with("uid://"):
+		var uid_val = ResourceUID.text_to_id(path)
+		if uid_val != ResourceUID.INVALID_ID and ResourceUID.has_id(uid_val):
+			return ResourceUID.get_id_path(uid_val)
+	return path
+
 func get_canonical_answer_count(dialogue_path: String) -> int:
+	dialogue_path = _resolve_res_path(dialogue_path)
 	if dialogue_path.is_empty():
 		return 0
 
@@ -161,6 +170,7 @@ func get_canonical_answer_count(dialogue_path: String) -> int:
 
 
 func register_dialogue_answer(dialogue_path: String, node_id: int):
+	dialogue_path = _resolve_res_path(dialogue_path)
 	if not use_dialogue_progression or dialogue_path.is_empty():
 		return
 

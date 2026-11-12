@@ -19,6 +19,8 @@ var pending_player_continue := false
 
 
 func start(dialogue_source, speaker_node: Node = null, require_continue_after_end: bool = false):
+	if dialogue_source is String:
+		dialogue_source = _resolve_res_path(dialogue_source)
 	var nodes = _resolve_dialogue_source(dialogue_source)
 	if nodes.is_empty():
 		push_warning("DialogueManager.start received an empty dialogue source.")
@@ -215,7 +217,16 @@ func _resolve_dialogue_source(dialogue_source) -> Array:
 	return []
 
 
+
+func _resolve_res_path(path: String) -> String:
+	if path.begins_with("uid://"):
+		var uid_val = ResourceUID.text_to_id(path)
+		if uid_val != ResourceUID.INVALID_ID and ResourceUID.has_id(uid_val):
+			return ResourceUID.get_id_path(uid_val)
+	return path
+
 func _load_dialogue_file(dialogue_path: String) -> Array:
+	dialogue_path = _resolve_res_path(dialogue_path)
 	if dialogue_path.is_empty():
 		push_error("DialogueManager received an empty dialogue path.")
 		return []
