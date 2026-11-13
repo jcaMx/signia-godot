@@ -9,16 +9,16 @@
 		"id": 1,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Leo! You're back. How was the market?",
+		"text": "Leo! You're back. What did you need to ask the vendors at the market?",
 		"choices": [
 			{
-				"text": "IM FINE",
-				"sign": "IM_FINE_SIGN",
+				"text": "HOW MUCH",
+				"sign": "SIGN_HOW_MUCH",
 				"next": 2
 			},
 			{
-				"text": "DON'T UNDERSTAND",
-				"sign": "DONT_UNDERSTAND_SIGN",
+				"text": "WHERE",
+				"sign": "SIGN_WHERE",
 				"next": 3
 			}
 		],
@@ -28,55 +28,31 @@
 		"id": 2,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "You look exhausted, but you still did it.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "YES_SIGN",
-				"next": 4
-			},
-			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
-				"next": 4
-			}
-		],
-		"next": -1
+		"text": "You look exhausted, but you still did it. Asking HOW MUCH helps you find out the price.",
+		"next": 4
 	},
 	{
 		"id": 3,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "It's alright. Sometimes it's really challenging when everyone at the market is in a rush.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "UNDERSTAND_SIGN",
-				"next": 4
-			},
-			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
-				"next": 4
-			}
-		],
-		"next": -1
+		"text": "It's all right. The market can be busy. Asking WHERE helps you find the things you need.",
+		"next": 4
 	},
 	{
 		"id": 4,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Even if you made mistakes, you came back to set things right.",
+		"text": "Even if you made mistakes, you kept trying to communicate. Which question would you like to practice?",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
+				"text": "HOW MUCH",
+				"sign": "SIGN_HOW_MUCH",
 				"next": 5
 			},
 			{
-				"text": "UNDERSTAND",
-				"sign": "UNDERSTAND_SIGN",
-				"next": 5
+				"text": "WHERE",
+				"sign": "SIGN_WHERE",
+				"next": 7
 			}
 		],
 		"next": -1
@@ -85,25 +61,20 @@
 		"id": 5,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "That's what's important, Leo. It doesn't have to be perfect right away. What matters is that you're trying to communicate.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "YES_SIGN",
-				"next": 6
-			},
-			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
-				"next": 6
-			}
-		],
-		"next": -1
+		"text": "That's a useful question when you want to know the price. It doesn't have to be perfect right away.",
+		"next": 6
 	},
 	{
 		"id": 6,
 		"type": "narrator",
 		"text": "For the first time, he was able to face the village all on his own.",
 		"next": -1
+	},
+	{
+		"id": 7,
+		"type": "npc",
+		"speaker": "Mira",
+		"text": "That's a useful question when you're looking for something. Keep practicing, Leo!",
+		"next": 6
 	}
 ]

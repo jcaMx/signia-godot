@@ -1,212 +1,315 @@
 [
-	{
-		"id": 0,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Would you like a drink?",
-		"choices": [
-			{
-				"text": "JUICE",
-				"sign": "SIGN_JUICE",
-				"next": 1
-			},
-			{
-				"text": "TEA",
-				"sign": "SIGN_TEA",
-				"next": 2
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 1,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Juice? I have coconut juice. Would you like it cold?",
-		"choices": [
-			{
-				"text": "COLD",
-				"sign": "SIGN_COLD",
-				"next": 3
-			},
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 3
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Tea? I'm sorry, I don't have tea here.",
-		"choices": [
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 0
-			},
-			{
-				"text": "SORRY",
-				"sign": "SIGN_SORRY",
-				"next": 0
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Yes, the coconut juice is cold. How many would you like?",
-		"choices": [
-			{
-				"text": "1",
-				"sign": "SIGN_1",
-				"next": 4
-			},
-			{
-				"text": "2",
-				"sign": "SIGN_2",
-				"next": 5
-			},
-			{
-				"text": "3",
-				"sign": "SIGN_3",
-				"next": 6
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Just one? For yourself?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 7
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 8
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 5,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Two? For you and Mira?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 9
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 8
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 6,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Three? For you, Mira, and Mang Ben?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SIGN_YES",
-				"next": 10
-			},
-			{
-				"text": "NO",
-				"sign": "SIGN_NO",
-				"next": 8
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 7,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Alright. One cold coconut juice for you.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 11
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 8,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Alright, how many would you like?",
-		"choices": [
-			{
-				"text": "1",
-				"sign": "SIGN_1",
-				"next": 4
-			},
-			{
-				"text": "2",
-				"sign": "SIGN_2",
-				"next": 5
-			},
-			{
-				"text": "3",
-				"sign": "SIGN_3",
-				"next": 6
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 9,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Alright. Two cold coconut juices for you and Mira.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 11
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 10,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Alright. Three cold coconut juices for you, Mira, and Mang Ben.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 11
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 11,
-		"type": "narrator",
-		"text": "Leo received the drinks he bought. He learned to state not only what he wanted, but also how many he needed.",
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Would you like a drink?",
+	"choices": [
+	  {
+		"text": "JUICE",
+		"sign": "SIGN_JUICE",
+		"next": 1
+	  },
+	  {
+		"text": "TEA",
+		"sign": "SIGN_TEA",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I have coconut juice. Would you like it COLD or HOT?",
+	"choices": [
+	  {
+		"text": "COLD",
+		"sign": "SIGN_COLD",
+		"next": 3
+	  },
+	  {
+		"text": "HOT",
+		"sign": "SIGN_HOT",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'm sorry, I don't have tea today. Would you like me to REPEAT today's drink options or tell you WHERE to find tea?",
+	"choices": [
+	  {
+		"text": "REPEAT",
+		"sign": "SIGN_REPEAT",
+		"next": 5
+	  },
+	  {
+		"text": "WHERE",
+		"sign": "SIGN_WHERE",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Cold coconut juice it is! Would you like to ask HOW MUCH it costs or HOW MANY you can order?",
+	"choices": [
+	  {
+		"text": "HOW MUCH",
+		"sign": "SIGN_HOW_MUCH",
+		"next": 7
+	  },
+	  {
+		"text": "HOW MANY",
+		"sign": "SIGN_HOW_MANY",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Hot coconut juice it is! Would you like to ask HOW MUCH it costs or HOW MANY you can order?",
+	"choices": [
+	  {
+		"text": "HOW MUCH",
+		"sign": "SIGN_HOW_MUCH",
+		"next": 9
+	  },
+	  {
+		"text": "HOW MANY",
+		"sign": "SIGN_HOW_MANY",
+		"next": 10
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I have coconut juice. Would you like it COLD or HOT?",
+	"choices": [
+	  {
+		"text": "COLD",
+		"sign": "SIGN_COLD",
+		"next": 3
+	  },
+	  {
+		"text": "HOT",
+		"sign": "SIGN_HOT",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Another stall near the plaza may have tea.",
+	"next": 20
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'll calculate the total once you decide on the amount. How many cold coconut juices would you like?",
+	"choices": [
+	  {
+		"text": "1",
+		"sign": "SIGN_1",
+		"next": 13
+	  },
+	  {
+		"text": "2",
+		"sign": "SIGN_2",
+		"next": 14
+	  },
+	  {
+		"text": "3",
+		"sign": "SIGN_3",
+		"next": 15
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "You can order one, two, or three cold coconut juices. Which amount would you like?",
+	"choices": [
+	  {
+		"text": "1",
+		"sign": "SIGN_1",
+		"next": 13
+	  },
+	  {
+		"text": "2",
+		"sign": "SIGN_2",
+		"next": 14
+	  },
+	  {
+		"text": "3",
+		"sign": "SIGN_3",
+		"next": 15
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'll calculate the total once you decide on the amount. How many hot coconut juices would you like?",
+	"choices": [
+	  {
+		"text": "1",
+		"sign": "SIGN_1",
+		"next": 16
+	  },
+	  {
+		"text": "2",
+		"sign": "SIGN_2",
+		"next": 17
+	  },
+	  {
+		"text": "3",
+		"sign": "SIGN_3",
+		"next": 18
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "You can order one, two, or three hot coconut juices. Which amount would you like?",
+	"choices": [
+	  {
+		"text": "1",
+		"sign": "SIGN_1",
+		"next": 16
+	  },
+	  {
+		"text": "2",
+		"sign": "SIGN_2",
+		"next": 17
+	  },
+	  {
+		"text": "3",
+		"sign": "SIGN_3",
+		"next": 18
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "One cold coconut juice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 14,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Two cold coconut juices. I'll prepare them for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 15,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Three cold coconut juices. I'll prepare them for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 16,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "One hot coconut juice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 17,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Two hot coconut juices. I'll prepare them for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 18,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Three hot coconut juices. I'll prepare them for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 19,
+	"type": "narrator",
+	"text": "Leo received his drinks and practiced asking how much something costs and how many he wanted.",
+	"next": -1
+  },
+  {
+	"id": 20,
+	"type": "narrator",
+	"text": "Leo thanked the vendor and continued through the market to look for tea.",
+	"next": -1
+  }
 ]

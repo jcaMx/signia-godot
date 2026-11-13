@@ -7,13 +7,13 @@
 	"text": "Hey! You're the new student, right? I'm Nico.",
 	"choices": [
 	  {
-		"text": "YES",
-		"sign": "SIGN_YES",
+		"text": "HELLO",
+		"sign": "SIGN_HELLO",
 		"next": 1
 	  },
 	  {
-		"text": "HELLO",
-		"sign": "SIGN_HELLO",
+		"text": "NICE TO MEET YOU",
+		"sign": "SIGN_NICE_TO_MEET_YOU",
 		"next": 1
 	  }
 	],
@@ -23,17 +23,17 @@
 	"id": 1,
 	"type": "npc",
 	"speaker": "Nico",
-	"text": "There's an empty seat at the back! You can sit there.",
+	"text": "There's an empty seat at the back. Would you like me to show you WHERE it is or REPEAT the directions?",
 	"choices": [
 	  {
-		"text": "THANK YOU",
-		"sign": "SIGN_THANK_YOU",
+		"text": "WHERE",
+		"sign": "SIGN_WHERE",
 		"next": 2
 	  },
 	  {
-		"text": "YES",
-		"sign": "SIGN_YES",
-		"next": 2
+		"text": "REPEAT",
+		"sign": "SIGN_REPEAT",
+		"next": 4
 	  }
 	],
 	"next": -1
@@ -43,24 +43,19 @@
 	"type": "npc",
 	"speaker": "Nico",
 	"text": "Come on! I'll show you where it is.",
-	"choices": [
-	  {
-		"text": "YES",
-		"sign": "SIGN_YES",
-		"next": 3
-	  },
-	  {
-		"text": "THANK YOU",
-		"sign": "SIGN_THANK_YOU",
-		"next": 3
-	  }
-	],
-	"next": -1
+	"next": 3
   },
   {
 	"id": 3,
 	"type": "narrator",
 	"text": "Nico pointed toward the back of the classroom. Leo followed him, hoping to find a place to sit.",
 	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Nico",
+	"text": "The empty seat is at the back of the classroom.",
+	"next": 3
   }
 ]

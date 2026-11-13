@@ -1,259 +1,399 @@
 [
-	{
-		"id": 0,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Oh, Leo! What would you like to buy?",
-		"choices": [
-			{
-				"text": "FISH",
-				"sign": "SIGN_FISH",
-				"next": 1
-			},
-			{
-				"text": "RICE",
-				"sign": "SIGN_RICE",
-				"next": 2
-			},
-			{
-				"text": "MEAT",
-				"sign": "SIGN_MEAT",
-				"next": 3
-			},
-			{
-				"text": "CHICKEN",
-				"sign": "SIGN_CHICKEN",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 1,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Fish? I have that. How many kilos would you like?",
-		"choices": [
-			{
-				"text": "1 KG",
-				"sign": "SIGN_1",
-				"next": 5
-			},
-			{
-				"text": "2 KG",
-				"sign": "SIGN_2",
-				"next": 6
-			},
-			{
-				"text": "3 KG",
-				"sign": "SIGN_3",
-				"next": 7
-			},
-			{
-				"text": "5 KG",
-				"sign": "SIGN_5",
-				"next": 8
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Rice? I have that. How many kilos would you like?",
-		"choices": [
-			{
-				"text": "1 KG",
-				"sign": "SIGN_1",
-				"next": 9
-			},
-			{
-				"text": "2 KG",
-				"sign": "SIGN_2",
-				"next": 10
-			},
-			{
-				"text": "3 KG",
-				"sign": "SIGN_3",
-				"next": 11
-			},
-			{
-				"text": "5 KG",
-				"sign": "SIGN_5",
-				"next": 12
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Meat? I'm sorry, I don't have meat at the stall today.",
-		"choices": [
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 13
-			},
-			{
-				"text": "SORRY",
-				"sign": "SIGN_SORRY",
-				"next": 13
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Chicken? I'm sorry, I don't have chicken at the stall today.",
-		"choices": [
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 13
-			},
-			{
-				"text": "SORRY",
-				"sign": "SIGN_SORRY",
-				"next": 13
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 5,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "One kilo of fish. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 6,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Two kilos of fish. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 7,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Three kilos of fish. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 8,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Five kilos of fish. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 9,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "One kilo of rice. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 10,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Two kilos of rice. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 11,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Three kilos of rice. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 12,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Five kilos of rice. Alright, I'll prepare it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SIGN_THANK_YOU",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 13,
-		"type": "npc",
-		"speaker": "Elder Vendor",
-		"text": "Please choose another food item that I have in stock.",
-		"choices": [
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 0
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 14,
-		"type": "narrator",
-		"text": "Leo received his purchase. He learned that it's important not only to say what you want, but also how much you need.",
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Oh, Leo! What would you like to buy?",
+	"choices": [
+	  {
+		"text": "FISH",
+		"sign": "SIGN_FISH",
+		"next": 1
+	  },
+	  {
+		"text": "RICE",
+		"sign": "SIGN_RICE",
+		"next": 2
+	  },
+	  {
+		"text": "MEAT",
+		"sign": "SIGN_MEAT",
+		"next": 3
+	  },
+	  {
+		"text": "CHICKEN",
+		"sign": "SIGN_CHICKEN",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Fish? I have that. Would you like to ask HOW MUCH it costs or HOW MANY kilos you can order?",
+	"choices": [
+	  {
+		"text": "HOW MUCH",
+		"sign": "SIGN_HOW_MUCH",
+		"next": 15
+	  },
+	  {
+		"text": "HOW MANY",
+		"sign": "SIGN_HOW_MANY",
+		"next": 16
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Rice? I have that. Would you like to ask HOW MUCH it costs or HOW MANY kilos you can order?",
+	"choices": [
+	  {
+		"text": "HOW MUCH",
+		"sign": "SIGN_HOW_MUCH",
+		"next": 17
+	  },
+	  {
+		"text": "HOW MANY",
+		"sign": "SIGN_HOW_MANY",
+		"next": 18
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'm sorry, I don't have meat today. Would you like me to REPEAT what's available or tell you WHERE you might find it?",
+	"choices": [
+	  {
+		"text": "REPEAT",
+		"sign": "SIGN_REPEAT",
+		"next": 13
+	  },
+	  {
+		"text": "WHERE",
+		"sign": "SIGN_WHERE",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'm sorry, I don't have chicken today. Would you like me to REPEAT what's available or tell you WHERE you might find it?",
+	"choices": [
+	  {
+		"text": "REPEAT",
+		"sign": "SIGN_REPEAT",
+		"next": 20
+	  },
+	  {
+		"text": "WHERE",
+		"sign": "SIGN_WHERE",
+		"next": 21
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "One kilo of fish. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Two kilos of fish. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Three kilos of fish. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Five kilos of fish. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "One kilo of rice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Two kilos of rice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Three kilos of rice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 12,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Five kilos of rice. I'll prepare it for you.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SIGN_THANK_YOU",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I have fish and rice today. Which would you like instead?",
+	"choices": [
+	  {
+		"text": "FISH",
+		"sign": "SIGN_FISH",
+		"next": 1
+	  },
+	  {
+		"text": "RICE",
+		"sign": "SIGN_RICE",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 14,
+	"type": "narrator",
+	"text": "Leo received his purchase and learned to say what he wanted and how much he needed.",
+	"next": -1
+  },
+  {
+	"id": 15,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'll calculate the total after I weigh your order. How many kilos would you like?",
+	"choices": [
+	  {
+		"text": "1 KG",
+		"sign": "SIGN_1",
+		"next": 5
+	  },
+	  {
+		"text": "2 KG",
+		"sign": "SIGN_2",
+		"next": 6
+	  },
+	  {
+		"text": "3 KG",
+		"sign": "SIGN_3",
+		"next": 7
+	  },
+	  {
+		"text": "5 KG",
+		"sign": "SIGN_5",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 16,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Fish is sold by the kilo. How many kilos would you like?",
+	"choices": [
+	  {
+		"text": "1 KG",
+		"sign": "SIGN_1",
+		"next": 5
+	  },
+	  {
+		"text": "2 KG",
+		"sign": "SIGN_2",
+		"next": 6
+	  },
+	  {
+		"text": "3 KG",
+		"sign": "SIGN_3",
+		"next": 7
+	  },
+	  {
+		"text": "5 KG",
+		"sign": "SIGN_5",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 17,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I'll calculate the total after I weigh your order. How many kilos of rice would you like?",
+	"choices": [
+	  {
+		"text": "1 KG",
+		"sign": "SIGN_1",
+		"next": 9
+	  },
+	  {
+		"text": "2 KG",
+		"sign": "SIGN_2",
+		"next": 10
+	  },
+	  {
+		"text": "3 KG",
+		"sign": "SIGN_3",
+		"next": 11
+	  },
+	  {
+		"text": "5 KG",
+		"sign": "SIGN_5",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 18,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "Rice is sold by the kilo. How many kilos would you like?",
+	"choices": [
+	  {
+		"text": "1 KG",
+		"sign": "SIGN_1",
+		"next": 9
+	  },
+	  {
+		"text": "2 KG",
+		"sign": "SIGN_2",
+		"next": 10
+	  },
+	  {
+		"text": "3 KG",
+		"sign": "SIGN_3",
+		"next": 11
+	  },
+	  {
+		"text": "5 KG",
+		"sign": "SIGN_5",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 19,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "There's another stall at the far end of the market that may have meat.",
+	"next": 22
+  },
+  {
+	"id": 20,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "I have fish and rice today. Which would you like instead?",
+	"choices": [
+	  {
+		"text": "FISH",
+		"sign": "SIGN_FISH",
+		"next": 1
+	  },
+	  {
+		"text": "RICE",
+		"sign": "SIGN_RICE",
+		"next": 2
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 21,
+	"type": "npc",
+	"speaker": "Elder Vendor",
+	"text": "There's another stall at the far end of the market that may have chicken.",
+	"next": 22
+  },
+  {
+	"id": 22,
+	"type": "narrator",
+	"text": "Leo thanked the vendor and continued through the market to look for what he needed.",
+	"next": -1
+  }
 ]

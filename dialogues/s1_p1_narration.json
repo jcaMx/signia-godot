@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+		"type": "narrator",
+		"text": "After a long journey, Leo arrived in Luntian with his family. They had moved to the quiet village to start a new chapter, and Leo was the new kid in town. ",
+		"next": 1
+	},
+	{
+		"id": 1,
+		"type": "narrator",
+		"text": "While his family settled into their new home, he stepped outside, excited to explore but a little nervous about starting over.",
+		"next": 2
+	},
+	{
+		"id": 2,
+		"type": "narrator",
+		"text": "The village felt unfamiliar. As Leo followed a narrow path, he noticed that many people used signs to communicate.",
+		"next": 3
+	},
+	{
+		"id": 3,
+		"type": "narrator",
+		"text": "A young girl waved when she noticed Leo seemed unsure where to go. As the new kid in town, he saw a chance to make his first friend in Luntian. Choose a response by signing.",
+		"next": -1
+	}
+]

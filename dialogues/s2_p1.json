@@ -43,7 +43,7 @@
 	  {
 		"text": "NO",
 		"sign": "NO_SIGN",
-		"next": 5
+		"next": 6
 	  }
 	],
 	"next": -1
@@ -52,13 +52,8 @@
 	"id": 3,
 	"type": "npc",
 	"speaker": "Mang Ben",
-	"text": "It's afternoon now, so GOOD AFTERNOON is more appropriate. Do you understand?",
+	"text": "It's afternoon now, so GOOD AFTERNOON is more appropriate. Do it one more time.",
 	"choices": [
-	  {
-		"text": "UNDERSTAND",
-		"sign": "UNDERSTAND_SIGN",
-		"next": 4
-	  },
 	  {
 		"text": "GOOD AFTERNOON",
 		"sign": "GOOD_AFTERNOON_SIGN",
@@ -69,12 +64,18 @@
   },
   {
 	"id": 4,
-	"type": "narrator",
-	"text": "Mang Ben nodded, and they stepped into the lively and bustling plaza.",
-	"next": -1
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Very good. Feel free to talk with the villagers. "
   },
   {
 	"id": 5,
+	"type": "narrator",
+	"text": "Mang Ben nodded, and Leo stepped into the lively and bustling plaza.",
+	"next": -1
+  },
+  {
+	"id": 6,
 	"type": "npc",
 	"speaker": "Mang Ben",
 	"text": "Don't worry. We'll take our conversations slowly here.",
@@ -82,12 +83,12 @@
 	  {
 		"text": "UNDERSTAND",
 		"sign": "UNDERSTAND_SIGN",
-		"next": 4
+		"next": 5
 	  },
 	  {
 		"text": "DON'T UNDERSTAND",
 		"sign": "DONT_UNDERSTAND_SIGN",
-		"next": 4
+		"next": 5
 	  }
 	],
 	"next": -1

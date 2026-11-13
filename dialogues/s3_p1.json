@@ -31,13 +31,13 @@
 	"text": "Thank you! We need food and drinks for tomorrow.",
 	"choices": [
 	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 4
-	  },
-	  {
 		"text": "UNDERSTAND",
 		"sign": "UNDERSTAND_SIGN",
+		"next": 4
+	  }, 
+	  {
+		"text":"YES",
+		"sign": "YES_SIGN",
 		"next": 4
 	  }
 	],
@@ -94,8 +94,8 @@
 		"next": 5
 	  },
 	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
+		"text": "YES",
+		"sign": "YES_SIGN",
 		"next": 5
 	  }
 	],

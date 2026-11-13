@@ -238,17 +238,17 @@
 		"id": 16,
 		"type": "npc",
 		"speaker": "Vendor",
-		"text": "Remember, Leo. Colors aren't just for practice. You can use these signs whenever you communicate in real life.",
+		"text": "Before you go, would you like me to repeat any color signs, or are you ready to say goodbye?",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 17
+				"text": "REPEAT",
+				"sign": "SIGN_REPEAT",
+				"next": 18
 			},
 			{
-				"text": "YES",
-				"sign": "SPELL_YES",
-				"next": 17
+				"text": "GOODBYE",
+				"sign": "SIGN_GOODBYE",
+				"next": 19
 			}
 		],
 		"next": -1
@@ -258,5 +258,19 @@
 		"type": "narrator",
 		"text": "Leaving the market, Leo tried observing things around him and naming their colors using the signs he had learned.",
 		"next": -1
+	},
+	{
+		"id": 18,
+		"type": "npc",
+		"speaker": "Vendor",
+		"text": "Of course! Remember RED, GREEN, and YELLOW from the fruit and vegetables.",
+		"next": 17
+	},
+	{
+		"id": 19,
+		"type": "npc",
+		"speaker": "Vendor",
+		"text": "Goodbye, Leo! Keep practicing the colors you saw today.",
+		"next": 17
 	}
 ]

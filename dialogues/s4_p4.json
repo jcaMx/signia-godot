@@ -18,8 +18,8 @@
 		"next": 2
 	  },
 	  {
-		"text": "NO",
-		"sign": "SIGN_NO",
+		"text": "PLEASE",
+		"sign": "SIGN_PLEASE",
 		"next": 3
 	  }
 	],
@@ -30,38 +30,14 @@
 	"type": "npc",
 	"speaker": "Sheena",
 	"text": "Well, find another seat. Don't just stand there.",
-	"choices": [
-	  {
-		"text": "YES",
-		"sign": "SIGN_YES",
-		"next": 4
-	  },
-	  {
-		"text": "SORRY",
-		"sign": "SIGN_SORRY",
-		"next": 4
-	  }
-	],
-	"next": -1
+	"next": 4
   },
   {
 	"id": 3,
 	"type": "npc",
 	"speaker": "Sheena",
 	"text": "What? I got here first. Go find another one!",
-	"choices": [
-	  {
-		"text": "SORRY",
-		"sign": "SIGN_SORRY",
-		"next": 4
-	  },
-	  {
-		"text": "YES",
-		"sign": "SIGN_YES",
-		"next": 4
-	  }
-	],
-	"next": -1
+	"next": 4
   },
   {
 	"id": 4,

@@ -1,61 +1,99 @@
 [
-	{
-		"id": 0,
-		"type": "narrator",
-		"text": "In the center of the plaza, the rhythm of everyone's conversations grew more familiar to Leo.",
-		"next": 1
-	},
-	{
-		"id": 1,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "How are things, Leo? Do you understand them even just a little?",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "UNDERSTAND_SIGN",
-				"next": 2
-			},
-			{
-				"text": "DON'T UNDERSTAND",
-				"sign": "DONT_UNDERSTAND_SIGN",
-				"next": 3
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Good. It doesn't need to be perfect right away. What matters is that you're listening.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "That's alright. Whenever you find it difficult, you can sign SLOW.",
-		"choices": [
-			{
-				"text": "UNDERSTAND",
-				"sign": "UNDERSTAND_SIGN",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "narrator",
-		"text": "On his first evening at the plaza, Leo learned that getting confused is okay. What matters most is asking, listening, and trying again.",
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "As the plaza grew quieter, Leo felt more familiar with the rhythm of the conversations around him.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "How are things going, Leo? Are you beginning to understand the conversations around the plaza?",
+	"choices": [
+	  {
+		"text": "UNDERSTAND",
+		"sign": "UNDERSTAND_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON'T UNDERSTAND",
+		"sign": "DONT_UNDERSTAND_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's a good start! You don't have to understand everything right away. Listening and practice will help. Would you like to keep practicing together?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's all right. When a conversation is hard to follow, you can ask the other person to sign SLOW. Would you like me to slow down now?",
+	"choices": [
+	  {
+		"text": "SLOW",
+		"sign": "SLOW_SIGN",
+		"next": 7
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "narrator",
+	"text": "As evening settled over the plaza, Leo realized that confusion was part of learning. Asking for help, listening, and trying again would help him improve.",
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Great! Keep practicing, and you'll understand more each time.",
+	"next": 4
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "No problem. Take your time; I'm here if you need help.",
+	"next": 4
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Of course. I'll slow down so it's easier to follow.",
+	"next": 4
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "All right. We'll continue at this pace, but you can ask me to slow down anytime.",
+	"next": 4
+  }
 ]

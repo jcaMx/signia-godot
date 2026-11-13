@@ -1,207 +1,313 @@
 [
-	{
-		"id": 0,
-		"type": "narrator",
-		"text": "When Leo arrived at the eastern part of the village, he noticed it was quieter there compared to the plaza. A gentle breeze blew as the sun slowly began to set.",
-		"next": 1
-	},
-	{
-		"id": 1,
-		"type": "narrator",
-		"text": "Near the oak trees, an elderly man was feeding the roosters.",
-		"next": 2
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Are you Leo? You must be the one Mira was talking about.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SPELL_YES",
-				"next": 3
-			},
-			{
-				"text": "NO",
-				"sign": "SPELL_NO",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Ahh, good. Mira was a bit worried since you're new here in Luntian.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 5
-			},
-			{
-				"text": "YES",
-				"sign": "SPELL_YES",
-				"next": 5
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Forgive me. There are rarely new faces around here, so it's easy to notice.",
-		"choices": [
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 5
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 5,
-		"type": "narrator",
-		"text": "Leo noticed that although Mang Ben was quiet, he spoke gently and seemed accustomed to helping people in the village.",
-		"next": 6
-	},
-	{
-		"id": 6,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "She mentioned your map is missing. Is that right?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SPELL_YES",
-				"next": 7
-			},
-			{
-				"text": "NO",
-				"sign": "SPELL_NO",
-				"next": 8
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 7,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "It's quite normal for newcomers to get lost here. Many paths in the village look identical.",
-		"choices": [
-			{
-				"text": "I SEE",
-				"sign": "SPELL_I_SEE",
-				"next": 9
-			},
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 9
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 8,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Good to hear, then. But if you ever need help, don't hesitate to ask.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 9
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 9,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "Do you know how to sign yet, Leo?",
-		"choices": [
-			{
-				"text": "A LITTLE",
-				"sign": "SPELL_A_LITTLE",
-				"next": 10
-			},
-			{
-				"text": "NO",
-				"sign": "SPELL_NO",
-				"next": 11
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 10,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "That's a good start. What matters most is that you keep learning.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 12
-			},
-			{
-				"text": "I SEE",
-				"sign": "SPELL_I_SEE",
-				"next": 12
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 11,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "That's alright. Everyone starts with nothing. You'll learn step by step.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 12
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 12,
-		"type": "narrator",
-		"text": "As Leo listened to Mang Ben, he felt himself gradually growing comfortable in the village of Luntian.",
-		"next": 13
-	},
-	{
-		"id": 13,
-		"type": "npc",
-		"speaker": "Mang Ben",
-		"text": "If you'd like, I can accompany you to the plaza tomorrow. There's a lot you can learn there.",
-		"choices": [
-			{
-				"text": "ALRIGHT",
-				"sign": "SPELL_ALRIGHT",
-				"next": 14
-			},
-			{
-				"text": "SURE",
-				"sign": "SPELL_SURE",
-				"next": 14
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 14,
-		"type": "narrator",
-		"text": "The sky slowly darkened as a peaceful night settled over the village of Luntian.",
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "When Leo reached the eastern part of the village, he heard chickens clucking.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "narrator",
+	"text": "Near the oak trees, an elderly man was feeding the roosters.",
+	"next": 2
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Are you Leo? You must be the new student Mira mentioned.",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SPELL_YES",
+		"next": 3
+	  },
+	  {
+		"text": "NO",
+		"sign": "SPELL_NO",
+		"next": 4
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Ah, good. Mira was a bit worried since you're new to Luntian.",
+	"choices": [
+	  {
+		"text": "YEAH",
+		"sign": "SPELL_YEAH",
+		"next": 15
+	  },
+	  {
+		"text": "I SEE",
+		"sign": "SPELL_I_SEE",
+		"next": 16
+	  },
+	  {
+		"text": "SORRY",
+		"sign": "SPELL_SORRY",
+		"next": 17
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Oh, forgive me. Mira mentioned a new student, and I assumed it was you. I'm Mang Ben; let me know if you need help.",
+	"choices": [
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 5
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "narrator",
+	"text": "Leo noticed that Mang Ben spoke gently and seemed used to helping people in the village.",
+	"next": 6
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Mira mentioned that your map is missing. Is that right?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "SPELL_YES",
+		"next": 7
+	  },
+	  {
+		"text": "NO",
+		"sign": "SPELL_NO",
+		"next": 8
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "It's quite normal for newcomers to get lost here. Many paths in the village look alike.",
+	"choices": [
+	  {
+		"text": "I SEE",
+		"sign": "SPELL_I_SEE",
+		"next": 18
+	  },
+	  {
+		"text": "OK",
+		"sign": "SPELL_OK",
+		"next": 19
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Good to hear. If you ever need help, don't hesitate to ask.",
+	"choices": [
+	  {
+		"text": "THANK YOU",
+		"sign": "SPELL_THANK_YOU",
+		"next": 20
+	  },
+	  {
+		"text": "GOT IT",
+		"sign": "SPELL_GOT_IT",
+		"next": 21
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Do you know how to sign yet, Leo?",
+	"choices": [
+	  {
+		"text": "A LITTLE",
+		"sign": "SPELL_A_LITTLE",
+		"next": 10
+	  },
+	  {
+		"text": "NO",
+		"sign": "SPELL_NO",
+		"next": 11
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's a good start. What matters most is that you keep learning.",
+	"choices": [
+	  {
+		"text": "THANKS",
+		"sign": "SPELL_THANKS",
+		"next": 22
+	  },
+	  {
+		"text": "I SEE",
+		"sign": "SPELL_I_SEE",
+		"next": 23
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's all right. Everyone starts somewhere, and you'll learn step by step.",
+	"choices": [
+	  {
+		"text": "THANKS",
+		"sign": "SPELL_THANKS",
+		"next": 24
+	  },
+	  {
+		"text": "I SEE",
+		"sign": "SPELL_I_SEE",
+		"next": 25
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 12,
+	"type": "narrator",
+	"text": "As Leo listened to Mang Ben, he began to feel more comfortable in Luntian.",
+	"next": 13
+  },
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "If you'd like, I can accompany you to the plaza tomorrow. There's a lot you can learn there.",
+	"choices": [
+	  {
+		"text": "ALRIGHT",
+		"sign": "SPELL_ALRIGHT",
+		"next": 26
+	  },
+	  {
+		"text": "SURE",
+		"sign": "SPELL_SURE",
+		"next": 27
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 14,
+	"type": "narrator",
+	"text": "The sky slowly darkened as a peaceful night settled over Luntian.",
+	"next": -1
+  },
+  {
+	"id": 15,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's right. I hope you and your family are settling into the village.",
+	"next": 5
+  },
+  {
+	"id": 16,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "There are many friendly people here who can help you get to know Luntian.",
+	"next": 5
+  },
+  {
+	"id": 17,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "No need to apologize, Leo. Moving somewhere new can take time to get used to.",
+	"next": 5
+  },
+  {
+	"id": 18,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Take your time. The paths will become familiar as you explore.",
+	"next": 9
+  },
+  {
+	"id": 19,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "If you get turned around again, just ask someone for directions.",
+	"next": 9
+  },
+  {
+	"id": 20,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "You're welcome, Leo. I'll be glad to help if you need anything.",
+	"next": 9
+  },
+  {
+	"id": 21,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Good. Remember, you can always ask for help.",
+	"next": 9
+  },
+  {
+	"id": 22,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "You're welcome. Keep practicing at your own pace.",
+	"next": 12
+  },
+  {
+	"id": 23,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Exactly. The more you practice, the more comfortable you'll become.",
+	"next": 12
+  },
+  {
+	"id": 24,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "You're welcome, Leo. I'll be happy to help you learn.",
+	"next": 12
+  },
+  {
+	"id": 25,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "That's right. You'll learn one sign at a time.",
+	"next": 12
+  },
+  {
+	"id": 26,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Great! I'll meet you here tomorrow, and we can walk to the plaza together.",
+	"next": 14
+  },
+  {
+	"id": 27,
+	"type": "npc",
+	"speaker": "Mang Ben",
+	"text": "Wonderful! We'll explore the plaza together tomorrow.",
+	"next": 14
+  }
 ]

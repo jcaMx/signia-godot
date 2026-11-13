@@ -1,138 +1,187 @@
 [
-	{
-		"id": 0,
-		"type": "narrator",
-		"text": "Leo met up with Ariel, who was cheerfully playing.",
-		"next": 1
-	},
-	{
-		"id": 1,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "HELLO! Do you know the way to the market?",
-		"choices": [
-			{
-				"text": "KNOW",
-				"sign": "KNOW_SIGN",
-				"next": 2
-			},
-			{
-				"text": "DON'T KNOW",
-				"sign": "DONT_KNOW_SIGN",
-				"next": 3
-			},
-			{
-				"text": "HOW ARE YOU",
-				"sign": "HOW_ARE_YOU_SIGN",
-				"next": 4
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 2,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "Is it to the right?",
-		"choices": [
-			{
-				"text": "CORRECT",
-				"sign": "CORRECT_SIGN",
-				"next": 5
-			},
-			{
-				"text": "WRONG",
-				"sign": "WRONG_SIGN",
-				"next": 6
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 3,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "That's okay! I think it's just around the other corner.",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "YES_SIGN",
-				"next": 5
-			},
-			{
-				"text": "UNDERSTAND",
-				"sign": "UNDERSTAND_SIGN",
-				"next": 5
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 4,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "I'm doing well! But do you know the way?",
-		"choices": [
-			{
-				"text": "KNOW",
-				"sign": "KNOW_SIGN",
-				"next": 2
-			},
-			{
-				"text": "DON'T KNOW",
-				"sign": "DONT_KNOW_SIGN",
-				"next": 3
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 5,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "Nice meeting you, anyways. Thanks!",
-		"choices": [
-			{
-				"text": "NICE MEETING YOU TOO",
-				"sign": "NICE_TO_MEET_YOU_SIGN",
-				"next": 7
-			},
-			{
-				"text": "THANK YOU",
-				"sign": "THANK_YOU_SIGN",
-				"next": 7
-			},
-			{
-				"text": "YOU'RE WELCOME",
-				"sign": "YOURE_WELCOME_SIGN",
-				"next": 7
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 6,
-		"type": "npc",
-		"speaker": "Ariel",
-		"text": "Ah, I was mistaken then! It's to the left. Thanks for correcting me.",
-		"choices": [
-			{
-				"text": "YOU'RE WELCOME",
-				"sign": "YOURE_WELCOME_SIGN",
-				"next": 7
-			},
-			{
-				"text": "CORRECT",
-				"sign": "CORRECT_SIGN",
-				"next": 7
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 7,
-		"type": "narrator",
-		"text": "Ariel cheerfully waved before running back to his friends.",
-		"next": -1
-	}
+  {
+	"id": 0,
+	"type": "narrator",
+	"text": "Leo met Ariel, who was playing with friends near the plaza.",
+	"next": 1
+  },
+  {
+	"id": 1,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Hi, Leo! How are you? I'm looking for the market. Do you know the way?",
+	"choices": [
+	  {
+		"text": "I'M FINE",
+		"sign": "IM_FINE_SIGN",
+		"next": 4
+	  },
+	  {
+		"text": "KNOW",
+		"sign": "KNOW_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "DONT_KNOW_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 2,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "I think the market is to the right. Am I right?",
+	"choices": [
+	  {
+		"text": "CORRECT",
+		"sign": "CORRECT_SIGN",
+		"next": 5
+	  },
+	  {
+		"text": "WRONG",
+		"sign": "WRONG_SIGN",
+		"next": 6
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 3,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "No worries! I think the market may be around the next corner. Would you like to ask someone together?",
+	"choices": [
+	  {
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 8
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 9
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 4,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "I'm doing well too, thanks! Do you know the way to the market?",
+	"choices": [
+	  {
+		"text": "KNOW",
+		"sign": "KNOW_SIGN",
+		"next": 2
+	  },
+	  {
+		"text": "DON'T KNOW",
+		"sign": "DONT_KNOW_SIGN",
+		"next": 3
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 5,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "You're right! The market is to the right. Thanks for your help. It was nice meeting you!",
+	"choices": [
+	  {
+		"text": "NICE TO MEET YOU TOO",
+		"sign": "NICE_TO_MEET_YOU_SIGN",
+		"next": 10
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 11
+	  },
+	  {
+		"text": "YOU'RE WELCOME",
+		"sign": "YOURE_WELCOME_SIGN",
+		"next": 12
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Oh, I was mistaken—the market is to the left. Thanks for correcting me! It was nice meeting you.",
+	"choices": [
+	  {
+		"text": "YOU'RE WELCOME",
+		"sign": "YOURE_WELCOME_SIGN",
+		"next": 13
+	  },
+	  {
+		"text": "THANK YOU",
+		"sign": "THANK_YOU_SIGN",
+		"next": 14
+	  }
+	],
+	"next": -1
+  },
+  {
+	"id": 7,
+	"type": "narrator",
+	"text": "Ariel waved goodbye and headed off toward the market.",
+	"next": -1
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Sure! Let's ask the vendor over there together.",
+	"next": 7
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "That's okay. I'll ask someone else. Thanks for chatting with me!",
+	"next": 7
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "It was nice meeting you too, Leo. Have a good day!",
+	"next": 7
+  },
+  {
+	"id": 11,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "You're welcome! I'm glad I could help.",
+	"next": 7
+  },
+  {
+	"id": 12,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "Thanks, Leo. Take care!",
+	"next": 7
+  },
+  {
+	"id": 13,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "You're welcome! I hope you find the market.",
+	"next": 7
+  },
+  {
+	"id": 14,
+	"type": "npc",
+	"speaker": "Ariel",
+	"text": "You're welcome. Have a good day!",
+	"next": 7
+  }
 ]

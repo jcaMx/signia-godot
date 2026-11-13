@@ -9759,19 +9759,22 @@ position_smoothing_speed = 8.0
 [node name="Waypoints" type="Node2D" parent="." unique_id=1441469186]
 position = Vector2(206, 80)
 
-[node name="Point1" type="Marker2D" parent="Waypoints" unique_id=1095154764]
+[node name="Point1" type="Marker2D" parent="Waypoints" unique_id=110065333]
+position = Vector2(-81, -28)
+
+[node name="Point2" type="Marker2D" parent="Waypoints" unique_id=1095154764]
 position = Vector2(265, -25)
 
-[node name="Point2" type="Marker2D" parent="Waypoints" unique_id=1641854158]
+[node name="Point3" type="Marker2D" parent="Waypoints" unique_id=1641854158]
 position = Vector2(269, 325)
 
-[node name="Point3" type="Marker2D" parent="Waypoints" unique_id=820985725]
+[node name="Point4" type="Marker2D" parent="Waypoints" unique_id=820985725]
 position = Vector2(396, 326)
 
-[node name="Point4" type="Marker2D" parent="Waypoints" unique_id=1814857843]
+[node name="Point5" type="Marker2D" parent="Waypoints" unique_id=1814857843]
 position = Vector2(897, 316)
 
-[node name="Point5" type="Marker2D" parent="Waypoints" unique_id=86184762]
+[node name="Point6" type="Marker2D" parent="Waypoints" unique_id=86184762]
 position = Vector2(1001, 318)
 
 [node name="NPC_Mira" parent="." unique_id=1396886692 instance=ExtResource("11_jl8ns")]
@@ -9798,3 +9801,7 @@ stream = ExtResource("22_i2k7v")
 autoplay = true
 
 [node name="UI" parent="." unique_id=1134992687 instance=ExtResource("22_tu0fs")]
+
+[node name="NPC_narration" parent="." unique_id=510255900 instance=ExtResource("11_jl8ns")]
+position = Vector2(125, 50)
+dialogue_file = "res://dialogues/s1_p1_narration.json"

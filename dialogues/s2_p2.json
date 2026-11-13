@@ -2,14 +2,14 @@
   {
 	"id": 0,
 	"type": "narrator",
-	"text": "Leo spotted Mira in the middle of the plaza. She immediately waved as soon as she saw him.",
+	"text": "Leo spotted Mira in the middle of the plaza. She waved as soon as she saw him.",
 	"next": 1
   },
   {
 	"id": 1,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "HELLO, Leo! You're back at the plaza! HOW ARE YOU?",
+	"text": "Hi, Leo! I'm glad to see you again. How are you?",
 	"choices": [
 	  {
 		"text": "I'M FINE",
@@ -17,13 +17,13 @@
 		"next": 2
 	  },
 	  {
-		"text": "HOW ARE YOU",
-		"sign": "HOW_ARE_YOU_SIGN",
+		"text": "HELLO",
+		"sign": "HELLO_SIGN",
 		"next": 3
 	  },
 	  {
-		"text": "DON'T UNDERSTAND",
-		"sign": "DONT_UNDERSTAND_SIGN",
+		"text": "NICE TO MEET YOU",
+		"sign": "NICE_TO_MEET_YOU_SIGN",
 		"next": 4
 	  }
 	],
@@ -33,17 +33,17 @@
 	"id": 2,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "Glad to hear that! You look much calmer now than earlier.",
+	"text": "I'm glad you're doing well! Would you like to practice signing together?",
 	"choices": [
-	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 5
-	  },
 	  {
 		"text": "YES",
 		"sign": "YES_SIGN",
 		"next": 5
+	  },
+	  {
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 6
 	  }
 	],
 	"next": -1
@@ -52,17 +52,17 @@
 	"id": 3,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "I'm doing well too! Are you ready to practice at the plaza with the others?",
+	"text": "Hello to you too! It's nice to see you again. Would you like to practice signing together?",
 	"choices": [
 	  {
 		"text": "YES",
 		"sign": "YES_SIGN",
-		"next": 5
+		"next": 7
 	  },
 	  {
-		"text": "THANK YOU",
-		"sign": "THANK_YOU_SIGN",
-		"next": 5
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 8
 	  }
 	],
 	"next": -1
@@ -71,25 +71,67 @@
 	"id": 4,
 	"type": "npc",
 	"speaker": "Mira",
-	"text": "It's okay! What I meant was, how are you?",
+	"text": "We've met before, remember? But it's still nice to see you again. Would you like to practice signing together?",
 	"choices": [
 	  {
-		"text": "I'M FINE",
-		"sign": "IM_FINE_SIGN",
-		"next": 5
+		"text": "YES",
+		"sign": "YES_SIGN",
+		"next": 9
 	  },
 	  {
-		"text": "SLOW",
-		"sign": "SLOW_SIGN",
-		"next": 5
+		"text": "NO",
+		"sign": "NO_SIGN",
+		"next": 10
 	  }
 	],
 	"next": -1
   },
   {
 	"id": 5,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Great! Let's practice a few greetings together.",
+	"next": 11
+  },
+  {
+	"id": 6,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "That's okay. We can practice another time.",
+	"next": 11
+  },
+  {
+	"id": 7,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Wonderful! Let's practice a few greetings together.",
+	"next": 11
+  },
+  {
+	"id": 8,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "No problem. We can practice another time.",
+	"next": 11
+  },
+  {
+	"id": 9,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "I'd love to! Let's practice a few greetings together.",
+	"next": 11
+  },
+  {
+	"id": 10,
+	"type": "npc",
+	"speaker": "Mira",
+	"text": "Of course. We can practice another time.",
+	"next": 11
+  },
+  {
+	"id": 11,
 	"type": "narrator",
-	"text": "Mira smiled warmly and pointed towards Aling Rosa at a nearby stall.",
+	"text": "Mira smiled and pointed toward Aling Rosa at a nearby stall.",
 	"next": -1
   }
 ]

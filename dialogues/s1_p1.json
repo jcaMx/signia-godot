@@ -1,27 +1,52 @@
 [
 	{
 		"id": 0,
-		"type": "narrator",
-		"text": "After a long journey, Leo arrived at the quiet village of Luntian. The breeze was cool, and the faint chatter of children playing could be heard from the plaza.",
-		"next": 1
-	},
-	{
-		"id": 1,
-		"type": "narrator",
-		"text": "As Leo walked along the narrow path, he noticed something unique about how the people communicated here. Many of them were using signs while conversing.",
-		"next": 2
-	},
-	{
-		"id": 2,
-		"type": "narrator",
-		"text": "A young girl waved at Leo when she noticed he seemed lost. Make a sign to choose a response.",
-		"next": 3
-	},
-	{
-		"id": 3,
 		"type": "npc",
 		"speaker": "Mira",
 		"text": "Hey! Are you new here in the village?",
+		"choices": [
+			{
+				"text": "YES",
+				"sign": "SPELL_YES",
+				"next": 1
+			},
+			{
+				"text": "NO",
+				"sign": "SPELL_NO",
+				"next": 2
+			},
+			{
+				"text": "GOODBYE",
+				"sign": "SPELL_GOODBYE",
+				"next": 3
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 1,
+		"type": "npc",
+		"speaker": "Mira",
+		"text": "Awesome! You looked like a newcomer. By the way, I'm Mira.",
+		"choices": [
+			{
+				"text": "HI",
+				"sign": "SPELL_HI",
+				"next": 4
+			},
+			{
+				"text": "HELLO",
+				"sign": "SPELL_HELLO",
+				"next": 4
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 2,
+		"type": "npc",
+		"speaker": "Mira",
+		"text": "Really? I don't think I've seen you here before.",
 		"choices": [
 			{
 				"text": "YES",
@@ -31,12 +56,26 @@
 			{
 				"text": "NO",
 				"sign": "SPELL_NO",
-				"next": 5
+				"next": 4
+			}
+		],
+		"next": -1
+	},
+	{
+		"id": 3,
+		"type": "npc",
+		"speaker": "Mira",
+		"text": "Leaving already? We haven't even introduced ourselves yet.",
+		"choices": [
+			{
+				"text": "SORRY",
+				"sign": "SPELL_SORRY",
+				"next": 4
 			},
 			{
-				"text": "GOODBYE",
-				"sign": "SPELL_GOODBYE",
-				"next": 6
+				"text": "HI",
+				"sign": "SPELL_HI",
+				"next": 4
 			}
 		],
 		"next": -1
@@ -45,17 +84,22 @@
 		"id": 4,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Awesome! You looked like a newcomer. By the way, I'm Mira.",
+		"text": "What is your name?",
 		"choices": [
 			{
-				"text": "HI",
-				"sign": "SPELL_HI",
-				"next": 7
+				"text": "LEO",
+				"sign": "SPELL_LEO",
+				"next": 5
 			},
 			{
-				"text": "HELLO",
-				"sign": "SPELL_HELLO",
-				"next": 7
+				"text": "MAX",
+				"sign": "SPELL_MAX",
+				"next": 6
+			},
+			{
+				"text": "BOB",
+				"sign": "SPELL_BOB",
+				"next": 6
 			}
 		],
 		"next": -1
@@ -64,16 +108,16 @@
 		"id": 5,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Really? I don't think I've seen you here before.",
+		"text": "Leo? That's a nice name. Nice to meet you.",
 		"choices": [
 			{
-				"text": "YES",
-				"sign": "SPELL_YES",
+				"text": "THANKS",
+				"sign": "SPELL_THANKS",
 				"next": 7
 			},
 			{
-				"text": "NO",
-				"sign": "SPELL_NO",
+				"text": "OK",
+				"sign": "SPELL_OK",
 				"next": 7
 			}
 		],
@@ -83,17 +127,12 @@
 		"id": 6,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Leaving already? We haven't even introduced ourselves yet.",
+		"text": "Hmm... that doesn't seem right. Try again.",
 		"choices": [
 			{
-				"text": "SORRY",
-				"sign": "SPELL_SORRY",
-				"next": 7
-			},
-			{
-				"text": "HI",
-				"sign": "SPELL_HI",
-				"next": 7
+				"text": "LEO",
+				"sign": "SPELL_LEO",
+				"next": 5
 			}
 		],
 		"next": -1
@@ -102,21 +141,16 @@
 		"id": 7,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "What is your name?",
+		"text": "Where are you from, Leo?",
 		"choices": [
 			{
-				"text": "LEO",
-				"sign": "SPELL_LEO",
+				"text": "MANILA",
+				"sign": "SPELL_MANILA",
 				"next": 8
 			},
 			{
-				"text": "MAX",
-				"sign": "SPELL_MAX",
-				"next": 9
-			},
-			{
-				"text": "BOB",
-				"sign": "SPELL_BOB",
+				"text": "DAVAO",
+				"sign": "SPELL_DAVAO",
 				"next": 9
 			}
 		],
@@ -126,11 +160,11 @@
 		"id": 8,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Leo? That's a nice name. Nice to meet you.",
+		"text": "Ahh, so you're from Manila! No wonder I didn't recognize you. This village is quiet, but the people here are kind.",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
+				"text": "I SEE",
+				"sign": "SPELL_I_SEE",
 				"next": 10
 			},
 			{
@@ -145,49 +179,41 @@
 		"id": 9,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Hmm... that doesn't seem right. Try again.",
+		"text": "Ahh, so you're from Davao! That explains your unique way of speaking. This village is quiet, but the people here are kind.",
 		"choices": [
 			{
-				"text": "LEO",
-				"sign": "SPELL_LEO",
-				"next": 8
+				"text": "FINE",
+				"sign": "SPELL_FINE",
+				"next": 10
+			},
+			{
+				"text": "OK",
+				"sign": "SPELL_OK",
+				"next": 10
 			}
 		],
 		"next": -1
 	},
 	{
 		"id": 10,
-		"type": "npc",
-		"speaker": "Mira",
-		"text": "Where are you from, Leo?",
-		"choices": [
-			{
-				"text": "MANILA",
-				"sign": "SPELL_MANILA",
-				"next": 11
-			},
-			{
-				"text": "DAVAO",
-				"sign": "SPELL_DAVAO",
-				"next": 12
-			}
-		],
-		"next": -1
+		"type": "narrator",
+		"text": "Leo noticed that even though the village was quiet, the people seemed close to one another.",
+		"next": 11
 	},
 	{
 		"id": 11,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Ahh, so you're from Manila! No wonder I didn't recognize you. This village is quiet, but the people here are kind.",
+		"text": "Do you know how to sign?",
 		"choices": [
 			{
-				"text": "FINE",
-				"sign": "SPELL_FINE",
-				"next": 13
+				"text": "LITTLE",
+				"sign": "SPELL_LITTLE",
+				"next": 12
 			},
 			{
-				"text": "OK",
-				"sign": "SPELL_OK",
+				"text": "NO",
+				"sign": "SPELL_NO",
 				"next": 13
 			}
 		],
@@ -197,55 +223,50 @@
 		"id": 12,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Ahh, so you're Bisaya! That explains your unique way of speaking. This village is quiet, but the people here are kind.",
+		"text": "That's alright. Here in Luntian, we'll help you learn.",
 		"choices": [
 			{
-				"text": "FINE",
-				"sign": "SPELL_FINE",
-				"next": 13
-			},
-			{
-				"text": "OK",
-				"sign": "SPELL_OK",
-				"next": 13
+				"text": "THANKS",
+				"sign": "SPELL_THANKS",
+				"next": 14
 			}
 		],
 		"next": -1
 	},
 	{
 		"id": 13,
-		"type": "narrator",
-		"text": "Leo noticed that even though the village was quiet, the people seemed close to one another.",
-		"next": 14
-	},
-	{
-		"id": 14,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "Do you know how to sign?",
+		"text": "It's okay! I wasn't good at it before either. Just keep practicing until you get used to it.",
 		"choices": [
 			{
-				"text": "A LITTLE",
-				"sign": "SPELL_A_LITTLE",
-				"next": 15
-			},
-			{
-				"text": "NO",
-				"sign": "SPELL_NO",
-				"next": 16
+				"text": "THANKS",
+				"sign": "SPELL_THANKS",
+				"next": 14
 			}
 		],
 		"next": -1
 	},
 	{
+		"id": 14,
+		"type": "narrator",
+		"text": "Mira noticed that Leo was searching for something in his bag.",
+		"next": 15
+	},
+	{
 		"id": 15,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "That's alright. Here in Luntian, we'll help you learn.",
+		"text": "Oh Leo, is something wrong?",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
+				"text": "YES",
+				"sign": "SPELL_YES",
+				"next": 16
+			},
+			{
+				"text": "NONE",
+				"sign": "SPELL_NONE",
 				"next": 17
 			}
 		],
@@ -255,90 +276,50 @@
 		"id": 16,
 		"type": "npc",
 		"speaker": "Mira",
-		"text": "It's okay! I wasn't good at it before either. Just keep practicing until you get used to it.",
-		"choices": [
-			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 17
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 17,
-		"type": "narrator",
-		"text": "Mira noticed that Leo was searching for something in his bag.",
+		"text": "Ahh, is your map missing? Don't worry, Mang Ben can help you.",
+		"choices": [],
 		"next": 18
 	},
 	{
-		"id": 18,
-		"type": "npc",
-		"speaker": "Mira",
-		"text": "Oh Leo, is something wrong?",
-		"choices": [
-			{
-				"text": "YES",
-				"sign": "SPELL_YES",
-				"next": 19
-			},
-			{
-				"text": "NONE",
-				"sign": "SPELL_NONE",
-				"next": 20
-			}
-		],
-		"next": -1
-	},
-	{
-		"id": 19,
-		"type": "npc",
-		"speaker": "Mira",
-		"text": "Ahh, is your map missing? Don't worry, Mang Ben can help you.",
-		"choices": [],
-		"next": 21
-	},
-	{
-		"id": 20,
+		"id": 17,
 		"type": "npc",
 		"speaker": "Mira",
 		"text": "Alright. If you have any problem, just head east, and you'll find Mang Ben.",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 22
+				"text": "THANKS",
+				"sign": "SPELL_THANKS",
+				"next": 19
 			},
 			{
 				"text": "OK",
 				"sign": "SPELL_OK",
-				"next": 22
+				"next": 19
 			}
 		],
-		"next": 22
+		"next": 19
 	},
-	
 	{
-		"id": 21,
+		"id": 18,
 		"type": "npc",
 		"speaker": "Mira",
 		"text": "Just head east, and you'll find Mang Ben.",
 		"choices": [
 			{
-				"text": "THANK YOU",
-				"sign": "SPELL_THANK_YOU",
-				"next": 22
+				"text": "THANKS",
+				"sign": "SPELL_THANKS",
+				"next": 19
 			},
 			{
 				"text": "OK",
 				"sign": "SPELL_OK",
-				"next": 22
+				"next": 19
 			}
 		],
-		"next": 22
+		"next": 19
 	},
 	{
-		"id": 22,
+		"id": 19,
 		"type": "narrator",
 		"text": "Leo headed over to the eastern part of the village.",
 		"next": -1
