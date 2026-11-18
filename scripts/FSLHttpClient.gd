@@ -34,6 +34,8 @@ func _ready():
 		GameManager.word_completed.connect(func(_tw, _sid): last_raw_prediction = "")
 	if GameManager.has_signal("word_cleared"):
 		GameManager.word_cleared.connect(func(): last_raw_prediction = "")
+	if DialogueManager.has_signal("typing_finished"):
+		DialogueManager.typing_finished.connect(func(): last_raw_prediction = "")
 	if OS.has_feature("web"):
 		browser_prediction_mode = true
 		browser_message_callback = JavaScriptBridge.create_callback(_on_browser_message)

@@ -81,6 +81,10 @@ func _update_buttons_clickability():
 
 
 func _on_choice_pressed(choice_index: int):
+	if DialogueManager.is_typing:
+		DialogueManager.skip_typing()
+		return
+
 	if not is_effective_clickable():
 		return
 

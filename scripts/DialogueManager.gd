@@ -3,11 +3,14 @@ extends Node
 signal dialogue_started
 signal dialogue_updated(speaker, text, choices)
 signal dialogue_ended
+signal skip_typing_requested
+signal typing_finished
 
 const NODE_TYPE_NPC := "npc"
 const NODE_TYPE_NARRATOR := "narrator"
 
 var active := false
+var is_typing := false
 var current_id := -1
 var current_source := ""
 var dialogue_nodes: Dictionary = {}
@@ -45,8 +48,25 @@ func start(dialogue_source, speaker_node: Node = null, require_continue_after_en
 	_emit_current_node()
 
 
+func set_typing(typing: bool):
+	if is_typing == typing:
+		return
+	is_typing = typing
+	if not is_typing:
+		typing_finished.emit()
+
+
+func skip_typing() -> bool:
+	if is_typing:
+		is_typing = false
+		skip_typing_requested.emit()
+		typing_finished.emit()
+		return true
+	return false
+
+
 func choose(choice_index: int):
-	if not active:
+	if not active or is_typing:
 		return
 
 	var node = get_current_node()
@@ -69,6 +89,10 @@ func advance():
 	if not active:
 		return
 
+	if is_typing:
+		skip_typing()
+		return
+
 	var node = get_current_node()
 	if node.is_empty():
 		end()
@@ -85,7 +109,7 @@ func advance():
 
 
 func process_sign(sign_id: String):
-	if not active:
+	if not active or is_typing:
 		return
 
 	var node = get_current_node()
@@ -151,6 +175,7 @@ func consume_player_continue_request():
 
 func end():
 	var finished_source := current_source
+	is_typing = false
 	pending_player_continue = false
 	active = false
 	current_id = -1

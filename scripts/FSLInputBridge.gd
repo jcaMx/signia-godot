@@ -5,6 +5,9 @@ signal letter_received(letter)
 
 
 func receive_sign(sign_id: String):
+	if DialogueManager.is_typing:
+		return
+
 	if not DialogueManager.active and not GameManager.has_active_challenge() and not GameManager.has_active_choices():
 		return
 
@@ -18,6 +21,9 @@ func receive_sign(sign_id: String):
 
 
 func receive_letter(letter: String):
+	if DialogueManager.is_typing:
+		return
+
 	if not GameManager.has_active_challenge() and not GameManager.has_active_choices():
 		return
 

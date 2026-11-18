@@ -12,11 +12,6 @@
 	"text": "Hi, Leo! How are you? I'm looking for the market. Do you know the way?",
 	"choices": [
 	  {
-		"text": "I'M FINE",
-		"sign": "IM_FINE_SIGN",
-		"next": 4
-	  },
-	  {
 		"text": "KNOW",
 		"sign": "KNOW_SIGN",
 		"next": 2
@@ -132,7 +127,7 @@
   {
 	"id": 7,
 	"type": "narrator",
-	"text": "Ariel waved goodbye and headed off toward the market.",
+	"text": "Ariel waved goodbye to Leo.",
 	"next": -1
   },
   {

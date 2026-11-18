@@ -13,6 +13,14 @@ var tween: Tween
 
 func _ready():
 	_update_layout.call_deferred()
+	if not DialogueManager.skip_typing_requested.is_connected(_on_skip_typing_requested):
+		DialogueManager.skip_typing_requested.connect(_on_skip_typing_requested)
+
+
+func _on_skip_typing_requested():
+	if tween and tween.is_running():
+		tween.kill()
+		content_label.visible_ratio = 1.0
 
 
 func set_content(text: String, available_width: float = -1.0):
@@ -24,9 +32,18 @@ func set_content(text: String, available_width: float = -1.0):
 	if tween:
 		tween.kill()
 	content_label.visible_ratio = 0.0
+	if text.strip_edges().is_empty():
+		content_label.visible_ratio = 1.0
+		DialogueManager.set_typing(false)
+		return
+
 	var duration = max(0.2, text.length() * 0.02)
 	tween = create_tween()
+	DialogueManager.set_typing(true)
 	tween.tween_property(content_label, "visible_ratio", 1.0, duration)
+	tween.finished.connect(func():
+		DialogueManager.set_typing(false)
+	)
 
 
 func _update_layout():
@@ -81,6 +98,7 @@ func handle_advance_click() -> bool:
 	if tween and tween.is_running():
 		tween.kill()
 		content_label.visible_ratio = 1.0
+		DialogueManager.set_typing(false)
 		return true
 
 	if not DialogueManager.can_accept_advance_input():

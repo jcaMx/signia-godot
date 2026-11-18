@@ -49,6 +49,9 @@ func has_active_choices() -> bool:
 
 
 func select_choice(choice: Dictionary):
+	if DialogueManager.is_typing:
+		DialogueManager.skip_typing()
+		return
 	if typeof(choice) == TYPE_DICTIONARY and not choice.is_empty():
 		_complete_choice(choice)
 
@@ -71,6 +74,9 @@ func start_word(sign_id: String, next_id := -1):
 
 
 func submit_letter(letter: String) -> bool:
+	if DialogueManager.is_typing:
+		return false
+
 	var normalized_letter = SignProcessor.normalize_letter_input(letter)
 	if normalized_letter.is_empty():
 		return false
@@ -140,6 +146,9 @@ func add_letter(letter: String):
 
 
 func submit_sign(sign_id: String) -> bool:
+	if DialogueManager.is_typing:
+		return false
+
 	if has_active_challenge():
 		if uses_spelling_ui():
 			var processed_letter = SignProcessor.get_challenge_target(sign_id)
@@ -285,6 +294,9 @@ func cancel_word():
 
 
 func _complete_choice(choice: Dictionary):
+	if DialogueManager.is_typing:
+		return
+
 	var sign_id = String(choice.get("sign", ""))
 	var target = SignProcessor.get_challenge_target(sign_id)
 

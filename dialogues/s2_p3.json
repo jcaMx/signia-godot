@@ -58,11 +58,6 @@
 				"text": "NO",
 				"sign": "SIGN_NO",
 				"next": 6
-			}, 
-			{
-				"text": "WRONG",
-				"sign": "SIGN_WRONG",
-				"next": 6
 			}
 		],
 		"next": -1
@@ -71,7 +66,7 @@
 		"id": 4,
 		"type": "npc",
 		"speaker": "Aling Rosa",
-		"text": "Welcome to Luntian! So, do you know how to sign?",
+		"text": "So welcome to Luntian! So, do you know how to sign?",
 		"choices": [
 			{
 				"text": "YES",
@@ -108,7 +103,7 @@
 	{
 		"id": 6,
 		"type": "narrator",
-		"text": "Aling Rosa laughed softly and returned to arranging the vegetables.",
+		"text": "Aling Rosa laughed softly.",
 		"next": 4
 	},
 	{
@@ -142,12 +137,12 @@
 		"text": "That's perfectly fine, dear. Everyone starts somewhere.",
 		"choices": [
 			{
-				"text": "UNDERSTAND",
+				"text": "I UNDERSTAND",
 				"sign": "SIGN_UNDERSTAND",
 				"next": 10
 			},
 			{
-				"text": "DON'T UNDERSTAND",
+				"text": "I DON'T UNDERSTAND",
 				"sign": "SIGN_DONT_UNDERSTAND",
 				"next": 10
 			}

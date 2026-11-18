@@ -59,11 +59,45 @@ const DEFAULT_CATEGORY_MAP := {
 	"BLACK": "color",
 	"WHITE": "color",
 
-	"ONE": "number",
-	"TWO": "number",
-	"THREE": "number",
-	"FOUR": "number",
-	"FIVE": "number",
+	"ONE": "number-1-10",
+	"TWO": "number-1-10",
+	"THREE": "number-1-10",
+	"FOUR": "number-1-10",
+	"FIVE": "number-1-10",
+	"SIX": "number-1-10",
+	"SEVEN": "number-1-10",
+	"EIGHT": "number-1-10",
+	"NINE": "number-1-10",
+	"TEN": "number-1-10",
+	"1": "number-1-10",
+	"2": "number-1-10",
+	"3": "number-1-10",
+	"4": "number-1-10",
+	"5": "number-1-10",
+	"6": "number-1-10",
+	"7": "number-1-10",
+	"8": "number-1-10",
+	"9": "number-1-10",
+	"10": "number-1-10",
+
+	"ELEVEN": "number-11-100",
+	"TWELVE": "number-11-100",
+	"THIRTEEN": "number-11-100",
+	"FOURTEEN": "number-11-100",
+	"FIFTEEN": "number-11-100",
+	"SIXTEEN": "number-11-100",
+	"SEVENTEEN": "number-11-100",
+	"EIGHTEEN": "number-11-100",
+	"NINETEEN": "number-11-100",
+	"TWENTY": "number-11-100",
+	"THIRTY": "number-11-100",
+	"FORTY": "number-11-100",
+	"FIFTY": "number-11-100",
+	"SIXTY": "number-11-100",
+	"SEVENTY": "number-11-100",
+	"EIGHTY": "number-11-100",
+	"NINETY": "number-11-100",
+	"ONE_HUNDRED": "number-11-100",
 
 	"FISH": "food",
 	"RICE": "food",
@@ -75,14 +109,31 @@ const DEFAULT_CATEGORY_MAP := {
 	"COLD": "drink",
 	"HOT": "drink",
 
-	"SORRY": "communication"
+	"PLEASE": "communication",
+	"WELCOME": "communication",
+	"GOODBYE": "communication",
+	"WHAT": "communication",
+	"WHO": "communication",
+	"WHERE": "communication",
+	"WHEN": "communication",
+	"WHY": "communication",
+	"HOW": "communication",
+	"WHICH": "communication",
+	"HOW_MANY": "communication",
+	"HOW_MUCH": "communication",
+	"MAYBE": "communication",
+	"SIGN_LANGUAGE": "communication",
+	"NAME": "communication",
+	"SORRY": "communication",
+	"REPEAT": "communication",
+	"BECAUSE": "communication"
 }
 
 # -----------------------------------------------------------------------------
 # State & Signals
 # -----------------------------------------------------------------------------
 var category_map: Dictionary = {}
-var available_categories: Array = ["alphabet", "greeting", "survival", "color", "number", "food", "drink", "communication"]
+var available_categories: Array = ["alphabet", "greeting", "survival", "color", "number-1-10", "number-11-100", "food", "drink", "communication", "family", "days", "calendar", "pronoun", "relationships"]
 var is_initialized := false
 
 signal registry_updated
